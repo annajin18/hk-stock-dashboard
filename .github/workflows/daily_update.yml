@@ -9,9 +9,7 @@ on:
   workflow_dispatch: {}
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 concurrency:
   group: pages
@@ -20,6 +18,8 @@ concurrency:
 jobs:
   update-and-deploy:
     runs-on: ubuntu-latest
+    # 由自动更新机器人提交的代码不再重复触发构建,避免死循环
+    if: github.event_name != 'push' || github.actor != 'github-actions[bot]'
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
@@ -38,15 +38,14 @@ jobs:
       - name: 生成解禁概览页面
         run: python generate_unlock_html.py --no-ccass
 
-      - name: 收集待发布文件
+      - name: 提交更新后的页面
         run: |
-          mkdir -p _site
-          cp *.html _site/
-
-      - name: 上传发布内容
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: _site
-
-      - name: 部署到 GitHub Pages
-        uses: actions/deploy-pages@v4
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add *.html greenshoe_data.json unlock_data.json
+          if git diff --cached --quiet; then
+            echo "页面没有变化,无需提交"
+            exit 0
+          fi
+          git commit -m "每日自动更新 $(date +%F)"
+          git push
