@@ -1,6 +1,8 @@
 name: 每日自动更新
 
 on:
+  push:
+    branches: [main]
   schedule:
     # 每天北京时间 08:00 自动更新(UTC 00:00)
     - cron: '0 0 * * *'
