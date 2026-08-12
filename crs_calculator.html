@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRS计算器 | 港股数据助手</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PingFang+SC:wght@300;400;500;600;700&family=SF+Pro+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        appleBg: '#F5F5F7',
+                        appleCard: '#ffffff',
+                        appleBlue: '#007AFF',
+                        appleBlueLight: '#E6F0FF',
+                        appleBlueDarkBg: 'rgba(0,122,255,0.15)',
+                        appleRed: '#FF3B30',
+                        appleGreen: '#34C759',
+                        appleOrange: '#FF9500',
+                        applePurple: '#AF52DE',
+                        appleGrayTag: '#86868B',
+                        appleTextMain: '#1D1D1F',
+                        appleTextGray: '#86868B',
+                        appleLine: '#E5E5EA'
+                    },
+                    fontFamily: {
+                        pingfang: ['PingFang SC', 'system-ui', 'sans-serif'],
+                        sfpro: ['SF Pro Display', 'sans-serif']
+                    },
+                    borderRadius: {
+                        'appleBig': '20px',
+                        'appleMid': '16px',
+                        'appleSmall': '8px'
+                    },
+                    boxShadow: {
+                        appleCard: '0 4px 14px rgba(0,0,0,0.06)',
+                        appleHover: '0 6px 20px rgba(0,0,0,0.08)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .glass {
+                backdrop-filter: blur(20px);
+                background: rgba(255,255,255,0.75);
+            }
+            .glass-dark {
+                backdrop-filter: blur(20px);
+                background: rgba(30,30,30,0.75);
+            }
+        }
+        body {
+            background-color: #F5F5F7;
+            transition: background-color 0.3s ease;
+        }
+        .dark body {
+            background-color: #1C1C1E;
+        }
+    </style>
+</head>
+<body class="font-pingfang text-appleTextMain dark:text-white dark:bg-[#1C1C1E] transition-colors duration-300">
+    <header class="fixed top-0 left-0 right-0 h-[64px] glass dark:glass-dark z-50 border-b border-appleLine dark:border-gray-700">
+        <div class="container mx-auto h-full px-6 md:px-12 flex items-center justify-between">
+            <div class="flex items-center">
+                <h1 class="text-[17px] lg:text-[20px] font-semibold">港股数据助手</h1>
+            </div>
+            <nav class="hidden lg:flex gap-1 shrink-0">
+                <a href="hk_unlock_overview.html" class="px-3 py-2 rounded-appleSmall hover:bg-black/5 dark:hover:bg-white/10 transition-colors whitespace-nowrap">港股解禁概览</a>
+                <a href="hk_ggt_ru_tong.html" class="px-3 py-2 rounded-appleSmall hover:bg-black/5 dark:hover:bg-white/10 transition-colors whitespace-nowrap">港股通入通看板</a>
+                <a href="hk_greenshoe.html" class="px-3 py-2 rounded-appleSmall hover:bg-black/5 dark:hover:bg-white/10 transition-colors whitespace-nowrap">绿鞋使用跟踪</a>
+                <a href="hk_ipo_reminder.html" class="px-3 py-2 rounded-appleSmall hover:bg-black/5 dark:hover:bg-white/10 transition-colors whitespace-nowrap">港股打新提醒</a>
+                <a href="crs_calculator.html" class="px-3 py-2 rounded-appleSmall bg-appleBlue text-white font-medium whitespace-nowrap">CRS计算器</a>
+            </nav>
+            <div class="flex items-center gap-3 lg:gap-4">
+                <input id="stockSearch" type="text" placeholder="输入股票代码/名称" class="h-9 px-3 rounded-appleSmall bg-white/80 dark:bg-gray-800 border border-appleLine dark:border-gray-600 outline-none text-sm w-[120px] lg:w-[180px]">
+                <button id="searchBtn" class="hidden sm:block bg-appleBlue text-white px-3 lg:px-4 py-2 rounded-appleSmall text-sm">查询</button>
+                <button id="themeToggle" class="w-11 h-6 rounded-full bg-gray-300 dark:bg-appleBlue relative transition-colors">
+                    <span class="absolute top-[2px] left-[2px] w-5 h-5 bg-white rounded-full transition-all dark:left-[22px]"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 md:px-12 pt-[88px] pb-28 lg:pb-16">
+        <div class="min-h-[60vh] flex items-center justify-center">
+            <div class="bg-appleCard dark:bg-gray-800 rounded-appleBig p-10 md:p-14 shadow-appleCard text-center max-w-md w-full">
+                <p class="text-[72px] leading-none">🐣</p>
+                <h2 class="text-2xl font-bold mt-5">努力开发中..</h2>
+                <p class="text-appleTextGray mt-2 text-sm">这个版块正在加紧建设中，敬请期待</p>
+                <a href="hk_greenshoe.html" class="inline-block mt-6 text-appleBlue text-sm">← 先去看看绿鞋跟踪</a>
+            </div>
+        </div>
+
+        <footer class="border-t border-appleLine dark:border-gray-700 pt-8 text-sm text-appleTextGray flex flex-col md:flex-row justify-between gap-4">
+            <div>数据来源：TradeGoMart 绿鞋追踪、腾讯财经行情、港交所披露易、招股说明书</div>
+            <div>免责声明：页面数据仅资讯参考，不构成任何投资建议</div>
+            <div>推送设置 | 关于本站</div>
+        </footer>
+    </main>
+
+    <!-- 手机端底部导航 -->
+    <nav class="fixed bottom-0 left-0 right-0 lg:hidden z-50 border-t border-appleLine dark:border-gray-700 glass dark:glass-dark" style="padding-bottom: env(safe-area-inset-bottom);">
+        <div class="grid grid-cols-3 h-14">
+            <a href="hk_unlock_overview.html" class="flex flex-col items-center justify-center gap-0.5 text-[11px] text-appleTextGray active:bg-appleBlueLight/40">
+                <span class="text-lg leading-none">📊</span>解禁概览
+            </a>
+            <a href="hk_ggt_ru_tong.html" class="flex flex-col items-center justify-center gap-0.5 text-[11px] text-appleTextGray active:bg-appleBlueLight/40">
+                <span class="text-lg leading-none">📈</span>入通看板
+            </a>
+            <a href="hk_greenshoe.html" class="flex flex-col items-center justify-center gap-0.5 text-[11px] text-appleTextGray active:bg-appleBlueLight/40">
+                <span class="text-lg leading-none">👟</span>绿鞋跟踪
+            </a>
+        </div>
+    </nav>
+
+    <script>
+        const toggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        toggle.addEventListener('click', () => html.classList.toggle('dark'));
+
+        function doSearch() {
+            const val = document.getElementById('stockSearch').value.trim();
+            location.href = 'hk_greenshoe.html' + (val ? '?q=' + encodeURIComponent(val) : '');
+        }
+        document.getElementById('searchBtn').addEventListener('click', doSearch);
+        document.getElementById('stockSearch').addEventListener('keydown', e => {
+            if (e.key === 'Enter') doSearch();
+        });
+    </script>
+</body>
+</html>

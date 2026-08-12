@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>港股通入通看板 | 港股数据助手</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PingFang+SC:wght@300;400;500;600;700&family=SF+Pro+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        appleBg: '#F5F5F7',
+                        appleCard: '#ffffff',
+                        appleBlue: '#007AFF',
+                        appleBlueLight: '#E6F0FF',
+                        appleBlueDarkBg: 'rgba(0,122,255,0.15)',
+                        appleRed: '#FF3B30',
+                        appleGreen: '#46A7B9',
+                        appleOrange: '#C9A66B',
+                        applePurple: '#AF52DE',
+                        appleGrayTag: '#86868B',
+                        appleTextMain: '#1D1D1F',
+                        appleTextGray: '#86868B',
+                        appleLine: '#E5E5EA'
+                    },
+                    fontFamily: {
+                        pingfang: ['PingFang SC', 'system-ui', 'sans-serif'],
+                        sfpro: ['SF Pro Display', 'sans-serif']
+                    },
+                    borderRadius: {
+                        'appleBig': '20px',
+                        'appleMid': '16px',
+                        'appleSmall': '8px'
+                    },
+                    boxShadow: {
+                        appleCard: '0 4px 14px rgba(0,0,0,0.06)',
+                        appleHover: '0 6px 20px rgba(0,0,0,0.08)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .glass {
+                backdrop-filter: blur(20px);
+                background: rgba(255,255,255,0.75);
+            }
+            .glass-dark {
+                backdrop-filter: blur(20px);
+                background: rgba(30,30,30,0.75);
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+        }
+        body {
+            background-color: #F5F5F7;
+            transition: background-color 0.3s ease;
+        }
+        .dark body {
+            background-color: #1C1C1E;
+        }
+        .card-hover {
+            transition: all 0.25s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-3px);
+        }
+        /* 细滚动条 */
+        .nice-scroll::-webkit-scrollbar {
+            height: 6px;
+            width: 6px;
+        }
+        .nice-scroll::-webkit-scrollbar-thumb {
+            background: #d1d1d6;
+            border-radius: 4px;
+        }
+        .dark .nice-scroll::-webkit-scrollbar-thumb {
+            background: #48484a;
+        }
+        .nice-scroll::-webkit-scrollbar-track {
+            background: transparent;
+        }
+        /* 表格行悬浮 */
+        tbody tr.row-item {
+            transition: background 0.15s ease;
+        }
+        tbody tr.row-item:hover {
+            background: rgba(0, 122, 255, 0.06);
+        }
+        .dark tbody tr.row-item:hover {
+            background: rgba(0, 122, 255, 0.12);
+        }
+        /* 加载动画 */
+        .spinner {
+            width: 22px;
+            height: 22px;
+            border: 3px solid rgba(0,122,255,0.2);
+            border-top-color: #007AFF;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body class="font-pingfang text-appleTextMain dark:text-white dark:bg-[#1C1C1E] transition-colors duration-300">
+    <!-- 顶部悬浮导航 -->
+    <header class="fixed top-0 left-0 right-0 h-[64px] glass dark:glass-dark z-50 border-b border-appleLine dark:border-gray-700">
+        <div class="container mx-auto h-full px-6 md:px-12 flex items-center justify-between gap-4">
+            <div class="flex items-center shrink-0">
+                <h1 class="text-[20px] font-semibold whitespace-nowrap">港股数据助手</h1>
+            </div>
+            <nav class="hidden lg:flex gap-1 shrink-0">
+                <a href="hk_unlock_overview.html" class="px-3 py-2 rounded-appleSmall hover:bg-black/5 dark:hover:bg-white/10 transition-colors whitespace-nowrap">港股解禁概览</a>
+                <a href="hk_ggt_ru_tong.html" class="px-3 py-2 rounded-appleSmall bg-appleBlue text-white font-medium whitespace-nowrap">港股通入通看板</a>
+                <a href="hk_greenshoe.html" class="px-3 py-2 rounded-appleSmall hover:bg-black/5 dark:hover:bg-white/10 transition-colors whitespace-nowrap">绿鞋使用跟踪</a>
+                <a href="hk_ipo_reminder.html" class="px-3 py-2 rounded-appleSmall hover:bg-black/5 dark:hover:bg-white/10 transition-colors whitespace-nowrap">港股打新提醒</a>
+                <a href="crs_calculator.html" class="px-3 py-2 rounded-appleSmall hover:bg-black/5 dark:hover:bg-white/10 transition-colors whitespace-nowrap">CRS计算器</a>
+            </nav>
+            <div class="flex items-center gap-3">
+                <span class="text-sm text-appleTextGray hidden lg:block whitespace-nowrap" id="headerDate">数据加载中…</span>
+                <input id="searchInput" type="text" placeholder="搜股票代码/名称" class="h-9 px-3 rounded-appleSmall bg-white/80 dark:bg-gray-800 border border-appleLine dark:border-gray-600 outline-none text-sm w-[150px] md:w-[180px]">
+                <button id="themeToggle" class="w-11 h-6 rounded-full bg-gray-300 dark:bg-appleBlue relative transition-colors shrink-0" title="切换明暗模式">
+                    <span class="absolute top-[2px] left-[2px] w-5 h-5 bg-white rounded-full transition-all dark:left-[22px]"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 md:px-12 pt-[88px] pb-28 lg:pb-16">
+        <!-- 页面主标题 -->
+        <div class="my-10">
+            <h2 class="text-[32px] font-bold">港股通入通看板</h2>
+        </div>
+
+        <!-- 数据状态条 -->
+        <div class="bg-appleCard dark:bg-gray-800 rounded-appleMid px-6 py-4 shadow-appleCard mb-6 flex flex-wrap items-center gap-x-6 gap-y-2 text-sm">
+            <span class="flex items-center gap-2">
+                <span class="inline-block w-2 h-2 rounded-full bg-appleBlue animate-pulse"></span>
+                <span class="text-appleTextGray">数据日期</span>
+                <b id="dataDate" class="font-semibold">--</b>
+            </span>
+            <span><span class="text-appleTextGray">数据截止</span> <b id="endDate" class="font-semibold">--</b></span>
+            <span><span class="text-appleTextGray">生效日期</span> <b id="effDate" class="font-semibold text-appleBlue">--</b></span>
+            <span><span class="text-appleTextGray">预测期</span> <b id="cycle" class="font-semibold">--</b></span>
+            <span class="text-appleTextGray ml-auto">更新于 <span id="updatedAt">--</span> · 数据来源：智通财经数据中心</span>
+        </div>
+
+        <!-- 错误提示 -->
+        <div id="errorBanner" class="hidden mb-6 rounded-appleMid border border-appleRed/40 bg-red-50 dark:bg-red-900/20 px-6 py-4 text-sm flex flex-wrap items-center gap-4">
+            <span id="errorText" class="text-appleRed">数据加载失败。</span>
+            <button id="retryBtn" class="ml-auto px-4 py-2 rounded-appleSmall bg-appleRed text-white text-sm font-medium hover:opacity-90 transition-opacity">重试</button>
+        </div>
+
+        <!-- 调整日历：倒计时 + 关键时间点 -->
+        <div class="bg-appleCard dark:bg-gray-800 rounded-appleMid shadow-appleCard mb-6 px-6 py-5">
+            <div class="flex flex-wrap items-center gap-6">
+                <div class="text-center pr-6 md:pr-8 md:border-r border-appleLine dark:border-gray-700">
+                    <p class="text-appleTextGray text-xs">距离正式生效</p>
+                    <p class="text-[34px] font-bold text-appleBlue leading-tight mt-1" id="countdown">--</p>
+                    <p class="text-xs text-appleTextGray mt-1" id="countdownSub">--</p>
+                </div>
+                <div class="flex-1 min-w-0">
+                    <div class="flex items-center justify-between mb-2 gap-2">
+                        <div class="flex items-center gap-2">
+                            <h3 class="font-semibold text-sm">调整日历</h3>
+                            <span class="px-2 py-0.5 rounded-appleSmall bg-appleBlueLight dark:bg-appleBlueDarkBg text-appleBlue text-xs font-medium whitespace-nowrap">定期检讨</span>
+                        </div>
+                        <span class="text-xs text-appleTextGray whitespace-nowrap" id="tlCycle">当前周期 --</span>
+                    </div>
+                    <div class="overflow-x-auto nice-scroll">
+                        <div class="min-w-[380px]">
+                            <div class="flex justify-between text-xs text-appleTextGray mb-2">
+                                <span>数据截止 <b id="tlCut" class="text-appleTextMain dark:text-white font-semibold">--</b></span>
+                                <span>结果公布 <b id="tlEnd" class="text-appleTextMain dark:text-white font-semibold">--</b></span>
+                                <span>正式生效 <b id="tlEff" class="text-appleTextMain dark:text-white font-semibold">--</b></span>
+                            </div>
+                            <div class="relative pt-6">
+                                <div class="relative h-1.5 rounded-full bg-appleLine dark:bg-gray-700">
+                                    <div id="tlBar" class="absolute left-0 top-0 h-full rounded-full bg-appleBlue" style="width:0%"></div>
+                                    <div id="tlDot" class="absolute -top-[5px] w-3 h-3 rounded-full bg-white border-2 border-appleBlue shadow-md" style="left:0%"></div>
+                                </div>
+                                <div id="todayTag" class="absolute top-0 -translate-x-1/2 text-[11px] px-1.5 py-0.5 rounded bg-appleBlue text-white font-medium pointer-events-none whitespace-nowrap" style="left:0%">今天</div>
+                            </div>
+                            <div class="flex justify-between text-xs text-appleTextGray mt-3">
+                                <span>数据日期 <b id="tlDate" class="font-semibold">--</b></span>
+                                <span>正式名单以交易所公告为准</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 纳入门槛概览 -->
+        <div class="bg-appleCard dark:bg-gray-800 rounded-appleMid shadow-appleCard mb-6 px-6 py-5">
+            <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
+                <h3 class="font-semibold text-[16px]">纳入门槛概览</h3>
+                <span class="text-xs text-appleTextGray" id="thDate">门槛随市场市值变化 · 当前周期 --</span>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-5 gap-3">
+                <div class="rounded-appleSmall border border-appleLine dark:border-gray-700 p-4">
+                    <p class="text-xs text-appleTextGray">小型股</p>
+                    <p class="text-[22px] font-bold mt-1 text-appleBlue" id="thVal1">--</p>
+                    <p class="text-[11px] text-appleTextGray mt-0.5">定期纳入下限（覆盖率 94% 分位附近）</p>
+                </div>
+                <div class="rounded-appleSmall border border-appleLine dark:border-gray-700 p-4">
+                    <p class="text-xs text-appleTextGray">中型股</p>
+                    <p class="text-[22px] font-bold mt-1 text-applePurple" id="thVal2">--</p>
+                    <p class="text-[11px] text-appleTextGray mt-0.5">恒生综指中型股门槛</p>
+                </div>
+                <div class="rounded-appleSmall border border-appleLine dark:border-gray-700 p-4">
+                    <p class="text-xs text-appleTextGray">大型股</p>
+                    <p class="text-[22px] font-bold mt-1 text-appleOrange" id="thVal3">--</p>
+                    <p class="text-[11px] text-appleTextGray mt-0.5">恒生综指大型股门槛</p>
+                </div>
+                <div class="rounded-appleSmall border border-appleLine dark:border-gray-700 p-4">
+                    <p class="text-xs text-appleTextGray">快速纳入</p>
+                    <p class="text-[22px] font-bold mt-1 text-appleRed" id="thVal4">--</p>
+                    <p class="text-[11px] text-appleTextGray mt-0.5">大市值新股 / 市值跃升通道</p>
+                </div>
+                <div class="rounded-appleSmall border border-appleLine dark:border-gray-700 p-4">
+                    <p class="text-xs text-appleTextGray">特殊快速纳入</p>
+                    <p class="text-[22px] font-bold mt-1 text-appleRed" id="thVal5">--</p>
+                    <p class="text-[11px] text-appleTextGray mt-0.5">超大市值新股通道</p>
+                </div>
+            </div>
+            <p class="text-xs text-appleTextGray mt-3">已入通标的的维持 / 调出参考门槛：<b id="thOut" class="text-appleTextMain dark:text-white font-semibold">--</b>（市值低于该线将面临调出）；门槛随市场整体市值变化，最终以交易所正式公告为准。</p>
+        </div>
+
+        <!-- 榜单 -->
+        <div class="bg-appleCard dark:bg-gray-800 rounded-appleBig shadow-appleCard overflow-hidden">
+            <div class="border-b border-appleLine dark:border-gray-700 px-6 pt-4">
+                <!-- 分类 Tab -->
+                <div id="tabBar" class="flex gap-2 overflow-x-auto nice-scroll pb-0"></div>
+                <!-- 子筛选 -->
+                <div id="filterBar" class="flex gap-2 py-3 overflow-x-auto nice-scroll"></div>
+            </div>
+            <div class="overflow-x-auto nice-scroll">
+                <table class="w-full min-w-[1080px] text-sm">
+                    <thead>
+                        <tr class="text-left text-appleTextGray border-b border-appleLine dark:border-gray-700 bg-appleBg/60 dark:bg-gray-900/40">
+                            <th class="py-3 pl-6 pr-3 font-medium whitespace-nowrap">股票</th>
+                            <th class="py-3 px-3 font-medium whitespace-nowrap">日均市值</th>
+                            <th id="sortRatio" class="py-3 px-3 font-medium whitespace-nowrap cursor-pointer select-none hover:text-appleBlue transition-colors">
+                                <span class="inline-flex items-center gap-1">市值覆盖率 <span id="sortArrow" class="text-appleBlue text-xs">↓</span></span>
+                            </th>
+                            <th class="py-3 px-3 font-medium whitespace-nowrap">现价 / 参考价</th>
+                            <th class="py-3 px-3 font-medium whitespace-nowrap">预测状态</th>
+                            <th class="py-3 px-3 font-medium whitespace-nowrap">恒生综指类型</th>
+                            <th class="py-3 px-3 font-medium whitespace-nowrap">是否已入通</th>
+                            <th class="py-3 px-3 font-medium whitespace-nowrap">调整方式</th>
+                            <th class="py-3 pr-6 pl-3 font-medium whitespace-nowrap">生效日期</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody"></tbody>
+                </table>
+            </div>
+            <div id="loadMoreWrap" class="p-6 text-center border-t border-appleLine dark:border-gray-700">
+                <p id="listSummary" class="text-xs text-appleTextGray mb-3">--</p>
+                <button id="loadMoreBtn" class="hidden px-6 py-2.5 rounded-appleSmall bg-appleBlue text-white text-sm font-medium hover:opacity-90 transition-opacity">加载更多</button>
+            </div>
+        </div>
+    </main>
+
+    <!-- 个股入通详情弹窗 -->
+    <div id="detailModal" class="fixed inset-0 z-[60] hidden items-start justify-center bg-black/40 p-4 overflow-y-auto" style="display:none">
+        <div class="bg-white dark:bg-gray-800 rounded-appleBig max-w-2xl w-full shadow-2xl overflow-hidden my-6 md:my-10">
+            <!-- 弹窗头部 -->
+            <div class="flex items-start justify-between gap-4 px-6 py-5 border-b border-appleLine dark:border-gray-700">
+                <div>
+                    <div class="flex items-center gap-3 flex-wrap">
+                        <h3 class="text-[20px] font-bold" id="dtName">--</h3>
+                        <span class="text-sm text-appleGrayTag" id="dtCode">--</span>
+                        <span id="dtVerdict" class="px-2.5 py-1 rounded-appleSmall text-xs font-medium"></span>
+                    </div>
+                    <p class="text-xs text-appleTextGray mt-1.5" id="dtCycle">--</p>
+                </div>
+                <button id="dtClose" class="shrink-0 w-9 h-9 rounded-full bg-gray-100 dark:bg-gray-700 text-appleTextGray hover:text-appleTextMain dark:hover:text-white transition-colors text-lg leading-none" title="关闭">×</button>
+            </div>
+            <!-- 期次切换 -->
+            <div id="dtPeriodBar" class="flex gap-2 px-6 pt-4"></div>
+            <!-- 详情内容 -->
+            <div id="dtBody" class="px-6 py-5"></div>
+            <!-- 弹窗底部 -->
+            <div class="px-6 py-4 border-t border-appleLine dark:border-gray-700 text-xs text-appleTextGray leading-relaxed">
+                数据来自智通财经数据中心个股检测，仅供资讯参考；最终港股通名单以沪深交易所与港交所正式公告为准。
+            </div>
+        </div>
+    </div>
+
+    <!-- 最新调整公布弹窗 -->
+    <div id="publishModal" class="fixed inset-0 z-[60] hidden items-start justify-center bg-black/40 p-4 overflow-y-auto" style="display:none">
+        <div class="bg-white dark:bg-gray-800 rounded-appleBig max-w-2xl w-full shadow-2xl overflow-hidden my-6 md:my-10">
+            <div class="flex items-start justify-between gap-4 px-6 py-5 border-b border-appleLine dark:border-gray-700">
+                <div>
+                    <h3 class="text-[20px] font-bold">最新调整公布</h3>
+                    <p class="text-xs text-appleTextGray mt-1.5" id="pubMeta">--</p>
+                </div>
+                <button id="pubClose" class="shrink-0 w-9 h-9 rounded-full bg-gray-100 dark:bg-gray-700 text-appleTextGray hover:text-appleTextMain dark:hover:text-white transition-colors text-lg leading-none" title="关闭">×</button>
+            </div>
+            <div id="pubBody" class="px-6 py-5 max-h-[58vh] overflow-y-auto nice-scroll"></div>
+            <div class="px-6 py-4 border-t border-appleLine dark:border-gray-700 text-xs text-appleTextGray leading-relaxed">
+                数据来自智通财经数据中心，为已公布的港股通标的调整记录；仅供资讯参考，以沪深交易所及港交所正式公告为准。
+            </div>
+        </div>
+    </div>
+
+    <!-- 预测规则说明 -->
+    <section class="container mx-auto px-6 md:px-12 mb-8">
+        <details class="bg-appleCard dark:bg-gray-800 rounded-appleMid shadow-appleCard open:shadow-appleCard">
+            <summary class="px-6 py-4 font-semibold cursor-pointer select-none flex items-center justify-between">
+                <span class="flex items-center gap-2">预测规则说明 <span class="px-2 py-0.5 rounded-appleSmall bg-appleBlueLight dark:bg-appleBlueDarkBg text-appleBlue text-xs font-normal">一图看懂</span></span>
+                <span class="text-xs text-appleTextGray font-normal">点击展开 / 收起</span>
+            </summary>
+            <div class="px-6 pb-6">
+                <p class="text-sm text-appleTextGray mb-4">港股通入通分四条路径，市值门槛与上方「纳入门槛概览」一一对应（当前周期）：</p>
+                <div class="overflow-x-auto nice-scroll">
+                    <table class="w-full min-w-[960px] text-sm">
+                        <thead>
+                            <tr class="text-left text-appleTextGray text-xs border-b border-appleLine dark:border-gray-700">
+                                <th class="py-2.5 pr-3 font-medium whitespace-nowrap">规则</th>
+                                <th class="py-2.5 px-3 font-medium whitespace-nowrap">适用对象</th>
+                                <th class="py-2.5 px-3 font-medium whitespace-nowrap">市值门槛</th>
+                                <th class="py-2.5 px-3 font-medium whitespace-nowrap">考察口径</th>
+                                <th class="py-2.5 px-3 font-medium whitespace-nowrap">入通时点</th>
+                                <th class="py-2.5 pl-3 font-medium whitespace-nowrap">速度评级</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-b border-appleLine/60 dark:border-gray-700/60">
+                                <td class="py-3 pr-3 whitespace-nowrap"><span class="px-2 py-0.5 rounded-appleSmall bg-appleBlueLight dark:bg-appleBlueDarkBg text-appleBlue text-xs font-medium">常规纳入</span></td>
+                                <td class="py-3 px-3">大多数港股（存量 + 上市半年新股）</td>
+                                <td class="py-3 px-3 whitespace-nowrap">≥ <b id="rtMv1" class="text-appleTextMain dark:text-white font-semibold">--</b></td>
+                                <td class="py-3 px-3 whitespace-nowrap">半年检讨：6.30 / 12.31 截止</td>
+                                <td class="py-3 px-3 whitespace-nowrap">检讨后约 3月 / 9月 生效</td>
+                                <td class="py-3 pl-3 whitespace-nowrap">慢（等半年）</td>
+                            </tr>
+                            <tr class="border-b border-appleLine/60 dark:border-gray-700/60">
+                                <td class="py-3 pr-3 whitespace-nowrap"><span class="px-2 py-0.5 rounded-appleSmall bg-purple-50 dark:bg-purple-900/25 text-applePurple text-xs font-medium">中型股季度快纳</span></td>
+                                <td class="py-3 px-3">Q1 / Q3 上市的新股</td>
+                                <td class="py-3 px-3 whitespace-nowrap">≥ <b id="rtMv2" class="text-appleTextMain dark:text-white font-semibold">--</b></td>
+                                <td class="py-3 px-3 whitespace-nowrap">季度截止：3.31 / 9.30</td>
+                                <td class="py-3 px-3 whitespace-nowrap">6月 / 12月第一个周一直接纳入</td>
+                                <td class="py-3 pl-3 whitespace-nowrap">中（等 1–2 季）</td>
+                            </tr>
+                            <tr class="border-b border-appleLine/60 dark:border-gray-700/60">
+                                <td class="py-3 pr-3 whitespace-nowrap"><span class="px-2 py-0.5 rounded-appleSmall bg-orange-50 dark:bg-orange-900/25 text-appleOrange text-xs font-medium">大型股极速通道</span></td>
+                                <td class="py-3 px-3">超级大盘新股</td>
+                                <td class="py-3 px-3 whitespace-nowrap">≥ <b id="rtMv3" class="text-appleTextMain dark:text-white font-semibold">--</b></td>
+                                <td class="py-3 px-3 whitespace-nowrap">上市首日即判定</td>
+                                <td class="py-3 px-3 whitespace-nowrap">上市后第 10 个交易日收市后纳入</td>
+                                <td class="py-3 pl-3 whitespace-nowrap">极快（10 天）</td>
+                            </tr>
+                            <tr>
+                                <td class="py-3 pr-3 whitespace-nowrap"><span class="px-2 py-0.5 rounded-appleSmall bg-teal-50 dark:bg-teal-900/25 text-appleGreen text-xs font-medium">AH 股</span></td>
+                                <td class="py-3 px-3">A+H 两地上市公司的 H 股</td>
+                                <td class="py-3 px-3 whitespace-nowrap">无市值门槛</td>
+                                <td class="py-3 px-3 text-appleTextGray">—</td>
+                                <td class="py-3 px-3 whitespace-nowrap">无绿鞋→上市首日入通；有绿鞋→30 天后入通</td>
+                                <td class="py-3 pl-3 whitespace-nowrap">最快（当天 / 30 天）</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-xs text-appleTextGray mt-3">特殊情形：同股不同权（-W）股票需先满足上市满 6 个月、累计交易额 &gt;60 亿、日均流通市值 &gt;200 亿等条件，才可参与常规检讨纳入。门槛为当前周期数值，随市场整体市值变化，最终名单与生效日以交易所公告为准。</p>
+            </div>
+        </details>
+    </section>
+
+    <footer class="border-t border-appleLine dark:border-gray-800 py-8">
+        <div class="container mx-auto px-6 md:px-12 text-xs text-appleTextGray leading-relaxed">
+            <p>免责声明：本页面数据来自第三方公开数据源（智通财经数据中心），仅供资讯参考，不构成任何投资建议。港股通标的调整以交易所正式公告为准；入通、调出名单为预测结果，可能存在偏差。</p>
+            <p class="mt-2">预测规则参考：恒生综合指数调整规则、日均市值覆盖率、港股通标的资格条件等。数据 T+1 更新，行情部分可能有延迟。</p>
+        </div>
+    </footer>
+
+    <script>
+        // ---------- 常量与状态 ----------
+        const API_BASE = 'https://betaapi.zhitongcaijing.com';
+        const STATUS_TABS = [
+            { key: '1', label: '入通', countKey: 'in' },
+            { key: '2', label: '调出', countKey: 'out' },
+            { key: '3', label: '维持', countKey: 'wc' },
+            { key: '0', label: '标的池', countKey: 'bdb' },
+            { key: 'all', label: '全部', countKey: 'all' }
+        ];
+        // 各 Tab 的子筛选（child_status），空数组表示无子筛选
+        const CHILD_FILTERS = {
+            '1': [ { v: '1', label: '预测名单' }, { v: '2', label: '候选名单' } ],
+            '2': [ { v: '1', label: '预测名单' }, { v: '2', label: '候选名单' } ],
+            'all': [ { v: '', label: '全部' }, { v: '1', label: '94%-96%' }, { v: '2', label: '>96%' }, { v: '3', label: '<94%' } ],
+            '3': [],
+            '0': []
+        };
+        const DEFAULT_CHILD = { '1': '1', '2': '1', 'all': '', '3': '', '0': '' };
+
+        const state = {
+            tab: '1',
+            child: '1',
+            page: 1,
+            pageSize: 50,
+            rows: [],
+            total: 0,
+            sortDir: 'desc',
+            sortField: 'MarketValueRatio',
+            loading: false,
+            hasMore: true,
+            search: '',
+            detailTypes: [],
+            detailType: '3',
+            detailCode: null,
+            detailLoading: false,
+            detailMode: '--',
+            cutoffDate: null,
+            cycleText: '',
+            publish: null
+        };
+
+        const $ = id => document.getElementById(id);
+
+        // ---------- 工具函数 ----------
+        function fmtRatio(v) {
+            if (v === '--' || v == null || v === '') return '--';
+            const n = parseFloat(v);
+            return isNaN(n) ? v : n.toFixed(2) + '%';
+        }
+
+        function fmtDash(v) {
+            return (v === '--' || v == null || v === '') ? '—' : v;
+        }
+
+        function isForecastList() {
+            return (state.tab === '1' || state.tab === '2') && state.child === '1';
+        }
+
+        function resetSortForContext() {
+            const forecast = isForecastList();
+            state.sortField = forecast ? 'EffectiveDate' : 'MarketValueRatio';
+            state.sortDir = forecast ? 'asc' : 'desc';
+            updateSortUI();
+        }
+
+        function updateSortUI() {
+            const arrow = $('sortArrow');
+            if (state.sortField === 'MarketValueRatio') {
+                arrow.textContent = state.sortDir === 'desc' ? '↓' : '↑';
+                arrow.className = 'text-appleBlue text-xs';
+            } else {
+                arrow.textContent = '';
+                arrow.className = 'text-xs';
+            }
+        }
+
+        function sortRows() {
+            if (state.sortField !== 'EffectiveDate') return;
+            state.rows.sort((a, b) => {
+                const da = String(a.EffectiveDate || '').slice(0, 10);
+                const db = String(b.EffectiveDate || '').slice(0, 10);
+                if (da === db) return 0;
+                if (da === '--' || da === '') return 1;
+                if (db === '--' || db === '') return -1;
+                return da < db ? -1 : 1;
+            });
+        }
+
+        function esc(s) {
+            return String(s == null ? '' : s).replace(/[&<>"']/g, c => ({
+                '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+            }[c]));
+        }
+
+        function priceColor(price, dbPrice) {
+            const p = parseFloat(price), d = parseFloat(dbPrice);
+            if (isNaN(p) || isNaN(d) || price === '--' || dbPrice === '--') return '';
+            return d > p ? 'text-appleRed' : (d < p ? 'text-appleGreen' : '');
+        }
+
+        function statusBadge(fs) {
+            const map = {
+                '1': ['预测纳入', 'bg-red-50 dark:bg-red-900/25 text-appleRed'],
+                '2': ['预测调出', 'bg-teal-50 dark:bg-teal-900/25 text-appleGreen'],
+                '3': ['维持', 'bg-blue-50 dark:bg-blue-900/25 text-appleBlue'],
+                '0': ['候选', 'bg-orange-50 dark:bg-orange-900/25 text-appleOrange']
+            };
+            const hit = map[fs];
+            if (!hit) return '<span class="px-2 py-0.5 rounded-appleSmall bg-gray-100 dark:bg-gray-700 text-appleGrayTag text-xs whitespace-nowrap">' + esc(fs) + '</span>';
+            return '<span class="px-2 py-0.5 rounded-appleSmall ' + hit[1] + ' text-xs font-medium whitespace-nowrap">' + hit[0] + '</span>';
+        }
+
+        function ggtBadge(v) {
+            if (v === '1') {
+                return '<span class="px-2 py-0.5 rounded-appleSmall bg-appleBlueLight dark:bg-appleBlueDarkBg text-appleBlue text-xs font-medium whitespace-nowrap">已入通</span>';
+            }
+            return '<span class="px-2 py-0.5 rounded-appleSmall bg-gray-100 dark:bg-gray-700 text-appleGrayTag text-xs whitespace-nowrap">未入通</span>';
+        }
+
+        function adjustTag(mode) {
+            if (!mode || mode === '--') return '<span class="text-appleGrayTag">—</span>';
+            if (mode.indexOf('快速') >= 0) {
+                return '<span class="px-2 py-0.5 rounded-appleSmall bg-purple-50 dark:bg-purple-900/25 text-applePurple text-xs font-medium whitespace-nowrap">' + esc(mode) + '</span>';
+            }
+            const cls = mode.indexOf('调出') >= 0 ? 'text-appleGreen' : (mode.indexOf('纳入') >= 0 ? 'text-appleRed' : '');
+            return '<span class="' + cls + ' whitespace-nowrap">' + esc(mode) + '</span>';
+        }
+
+        // ---------- 数据加载 ----------
+        async function fetchJson(url, options) {
+            const res = await fetch(url, options);
+            if (!res.ok) throw new Error('HTTP ' + res.status);
+            return res.json();
+        }
+
+        async function loadOverview() {
+            const j = await fetchJson(API_BASE + '/hkmarket/v2/ggt-ctb/index.html');
+            if (j.status !== 'success') throw new Error(j.msg || '概览接口异常');
+            const d = j.data;
+            state.overview = {
+                in: d.in,
+                out: d.out,
+                wc: d.wc,
+                bdb: d.bdb,
+                all: d.all
+            };
+            $('dataDate').textContent = (d.date || '--').slice(0, 10);
+            $('endDate').textContent = (d.endDate || '--').slice(0, 10);
+            $('effDate').textContent = (d.effectiveDate || '--').slice(0, 10);
+            $('headerDate').textContent = (d.date || '').slice(0, 10) + ' 港股通预测';
+        }
+
+        async function loadCycle() {
+            try {
+                const j = await fetchJson(API_BASE + '/hkmarket/v3/ggt-ctb/index.html?type=1');
+                if (j.status === 'success' && j.data && j.data.cycle) {
+                    state.cycleText = j.data.cycle;
+                    $('cycle').textContent = j.data.cycle;
+                    $('tlCycle').textContent = '当前周期 ' + j.data.cycle;
+                    if (!state.cutoffDate) {
+                        const m = String(j.data.cycle).match(/(\d{4}-\d{2}-\d{2})/);
+                        if (m) state.cutoffDate = m[1];
+                    }
+                }
+            } catch (e) {
+                $('cycle').textContent = '--';
+            }
+        }
+
+        async function loadDetailTypes() {
+            try {
+                const j = await fetchJson(API_BASE + '/hkmarket/v2/ggt-ctb/get-date.html');
+                if (j.status === 'success' && Array.isArray(j.data) && j.data.length) {
+                    state.detailTypes = j.data;
+                    const def = j.data.find(d => String(d.default) === '1') || j.data[j.data.length - 1];
+                    state.detailType = String(def.type);
+                    const m = String(def.name || '').match(/(\d{4}-\d{2}-\d{2})/);
+                    if (m) state.cutoffDate = m[1];
+                }
+            } catch (e) {
+                // 期次切换不可用时不阻塞主流程
+            }
+        }
+
+        async function loadThresholds() {
+            const types = [1, 2, 3, 4, 5];
+            await Promise.all(types.map(async (t, i) => {
+                try {
+                    const j = await fetchJson(API_BASE + '/hkmarket/v3/ggt-ctb/index.html?type=' + t);
+                    if (j.status === 'success' && j.data) {
+                        const d = j.data;
+                        const el = $('thVal' + (i + 1));
+                        el.textContent = d.inMarketValue || '--';
+                        if (t >= 1 && t <= 3) {
+                            const rt = $('rtMv' + t);
+                            if (rt) rt.textContent = d.inMarketValue || '--';
+                        }
+                        if (t === 1) {
+                            if (d.outMarketValue) $('thOut').textContent = d.outMarketValue;
+                            if (d.cycle) $('thDate').textContent = '门槛随市场市值变化 · 当前周期 ' + d.cycle;
+                        }
+                    }
+                } catch (e) {
+                    // 单项失败保留占位符，不阻塞其他项
+                }
+            }));
+        }
+
+        async function loadPublish() {
+            try {
+                const j = await fetchJson(API_BASE + '/hkmarket/v3/ggt-ctb/publish-list.html');
+                if (j.status === 'success' && j.data) {
+                    state.publish = {
+                        list: j.data.list || [],
+                        updateTime: j.data.update_time || '--'
+                    };
+                }
+            } catch (e) {
+                // 公布数据加载失败不阻塞主流程，弹窗内提示重试
+            }
+        }
+
+        async function loadList(reset) {
+            if (state.loading) return;
+            if (reset) {
+                state.page = 1;
+                state.rows = [];
+                state.hasMore = true;
+            }
+            state.loading = true;
+            renderLoading();
+            try {
+                const body = {
+                    status: state.tab,
+                    child_status: state.child,
+                    page: state.page,
+                    page_size: state.pageSize,
+                    order: state.sortField === 'MarketValueRatio' ? 'MarketValueRatio ' + state.sortDir : 'MarketValueRatio desc'
+                };
+                const j = await fetchJson(API_BASE + '/hkmarket/v3/ggt-ctb/list.html', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(body)
+                });
+                if (j.status !== 'success') throw new Error(j.msg || '列表接口异常');
+                const list = (j.data && j.data.list) || [];
+                state.total = parseInt(j.data.count, 10) || 0;
+                state.rows = reset ? list : state.rows.concat(list);
+                sortRows();
+                state.hasMore = state.rows.length < state.total;
+                hideError();
+            } catch (e) {
+                showError(e.message || '网络异常，请检查网络后重试');
+                if (reset) state.rows = [];
+            } finally {
+                state.loading = false;
+                renderRows();
+                renderLoadMore();
+            }
+        }
+
+        // ---------- 渲染 ----------
+        function renderTabs() {
+            const bar = $('tabBar');
+            bar.innerHTML = '';
+            STATUS_TABS.forEach(t => {
+                const btn = document.createElement('button');
+                btn.dataset.tab = t.key;
+                const active = state.tab === t.key;
+                btn.className = 'px-4 py-2.5 rounded-t-appleMid text-sm whitespace-nowrap transition-colors border-b-2 ' +
+                    (active
+                        ? 'border-appleBlue text-appleBlue font-semibold bg-appleBlueLight dark:bg-appleBlueDarkBg'
+                        : 'border-transparent text-appleTextGray hover:text-appleTextMain dark:hover:text-white');
+                btn.innerHTML = t.label + ' <span class="text-xs opacity-70">' + (state.overview && state.overview[t.countKey] != null ? state.overview[t.countKey] : '--') + '</span>';
+                btn.addEventListener('click', () => {
+                    if (state.tab === t.key) return;
+                    state.tab = t.key;
+                    state.child = DEFAULT_CHILD[t.key];
+                    resetSortForContext();
+                    renderTabs();
+                    renderFilters();
+                    loadList(true);
+                });
+                bar.appendChild(btn);
+            });
+        }
+
+        function renderFilters() {
+            const bar = $('filterBar');
+            bar.innerHTML = '';
+            const opts = CHILD_FILTERS[state.tab] || [];
+            if (opts.length > 0) {
+                const label = state.tab === 'all' ? '覆盖率区间' : (state.tab === '1' ? '入通子类' : '调出子类');
+                const tag = document.createElement('span');
+                tag.className = 'text-xs text-appleTextGray self-center mr-1 whitespace-nowrap';
+                tag.textContent = label;
+                bar.appendChild(tag);
+                opts.forEach(o => {
+                    const btn = document.createElement('button');
+                    btn.dataset.child = o.v;
+                    const active = state.child === o.v;
+                    btn.className = 'px-3 py-1.5 rounded-appleSmall text-xs whitespace-nowrap transition-colors border ' +
+                        (active
+                            ? 'bg-appleBlue text-white border-appleBlue font-medium'
+                            : 'border-appleLine dark:border-gray-600 text-appleTextGray hover:border-appleBlue hover:text-appleBlue');
+                    btn.textContent = o.label;
+                    btn.addEventListener('click', () => {
+                        if (state.child === o.v) return;
+                        state.child = o.v;
+                        resetSortForContext();
+                        renderFilters();
+                        loadList(true);
+                    });
+                    bar.appendChild(btn);
+                });
+            }
+            // 候选名单右侧：最新调整公布入口
+            const pubBtn = document.createElement('button');
+            pubBtn.className = 'ml-auto px-3 py-1.5 rounded-appleSmall text-xs whitespace-nowrap transition-colors border border-appleLine dark:border-gray-600 text-appleBlue hover:border-appleBlue hover:bg-appleBlueLight dark:hover:bg-appleBlueDarkBg';
+            pubBtn.textContent = '最新调整公布';
+            pubBtn.addEventListener('click', openPublish);
+            bar.appendChild(pubBtn);
+        }
+
+        function renderRows() {
+            const tbody = $('tableBody');
+            const q = state.search.trim().toLowerCase();
+            const visible = q ? state.rows.filter(r =>
+                (r.SecuCode || '').toLowerCase().indexOf(q) >= 0 ||
+                (r.SecuAbbr || '').toLowerCase().indexOf(q) >= 0
+            ) : state.rows;
+
+            if (state.loading && visible.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="9" class="py-14 text-center"><div class="inline-flex items-center gap-3 text-appleTextGray"><span class="spinner"></span>正在加载数据…</div></td></tr>';
+                return;
+            }
+            if (visible.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="9" class="py-14 text-center text-appleTextGray">' +
+                    (q ? '没有找到匹配的股票，请换个关键词试试' : '暂无数据') + '</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = visible.map(r => {
+                const pc = priceColor(r.price, r.DbPrice);
+                const priceCell = r.price === '--' || r.price == null
+                    ? '<span class="text-appleGrayTag">—</span>'
+                    : '<span class="font-semibold ' + pc + '">' + esc(r.price) + '</span>' +
+                      '<span class="text-xs text-appleTextGray block mt-0.5">参考 ' + esc(fmtDash(r.DbPrice)) + '</span>';
+                return '<tr class="row-item cursor-pointer border-b border-appleLine/60 dark:border-gray-700/60" data-code="' + esc(r.SecuCode || '') + '">' +
+                    '<td class="py-3 pl-6 pr-3"><div class="font-semibold whitespace-nowrap">' + esc(r.SecuAbbr || '--') + '</div><div class="text-xs text-appleGrayTag mt-0.5">' + esc(r.SecuCode || '--') + '</div></td>' +
+                    '<td class="py-3 px-3 whitespace-nowrap">' + esc(fmtDash(r.AvgMarketValue)) + '</td>' +
+                    '<td class="py-3 px-3 whitespace-nowrap font-medium">' + fmtRatio(r.MarketValueRatio) + '</td>' +
+                    '<td class="py-3 px-3 whitespace-nowrap">' + priceCell + '</td>' +
+                    '<td class="py-3 px-3">' + statusBadge(r.ForecastStatus) + '</td>' +
+                    '<td class="py-3 px-3 whitespace-nowrap text-appleTextGray">' + esc(fmtDash(r.IndexComponentType)) + '</td>' +
+                    '<td class="py-3 px-3">' + ggtBadge(r.is_ggt) + '</td>' +
+                    '<td class="py-3 px-3">' + adjustTag(r.AdjustMode) + '</td>' +
+                    '<td class="py-3 pr-6 pl-3 whitespace-nowrap">' + esc(fmtDash(r.EffectiveDate)) + '</td>' +
+                    '</tr>';
+            }).join('');
+        }
+
+        function renderLoading() {
+            const tbody = $('tableBody');
+            if (state.rows.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="9" class="py-14 text-center"><div class="inline-flex items-center gap-3 text-appleTextGray"><span class="spinner"></span>正在加载数据…</div></td></tr>';
+            }
+            renderLoadMore();
+        }
+
+        function renderLoadMore() {
+            const btn = $('loadMoreBtn');
+            const sum = $('listSummary');
+            const q = state.search.trim();
+            const shown = q ? state.rows.filter(r =>
+                (r.SecuCode || '').toLowerCase().indexOf(q.toLowerCase()) >= 0 ||
+                (r.SecuAbbr || '').toLowerCase().indexOf(q.toLowerCase()) >= 0
+            ).length : state.rows.length;
+            sum.textContent = '已加载 ' + shown + ' / 共 ' + state.total + ' 只' + (q ? '（搜索过滤中）' : '');
+            sum.textContent += state.sortField === 'EffectiveDate'
+                ? ' · 按生效日期由近到远'
+                : ' · 按市值覆盖率' + (state.sortDir === 'desc' ? '降序' : '升序');
+            if (state.loading) {
+                btn.className = 'hidden';
+                return;
+            }
+            if (state.hasMore) {
+                btn.disabled = false;
+                btn.className = 'px-6 py-2.5 rounded-appleSmall bg-appleBlue text-white text-sm font-medium hover:opacity-90 transition-opacity';
+                btn.textContent = '加载更多';
+            } else {
+                btn.className = 'px-6 py-2.5 rounded-appleSmall bg-gray-100 dark:bg-gray-700 text-appleGrayTag text-sm cursor-default';
+                btn.textContent = '已加载全部';
+                btn.disabled = true;
+            }
+        }
+
+        // ---------- 生效倒计时与时间轴 ----------
+        function parseDate(s) {
+            if (!s || s === '--') return null;
+            const t = new Date(String(s).slice(0, 10) + 'T00:00:00');
+            return isNaN(t.getTime()) ? null : t;
+        }
+
+        function updateTimeline() {
+            const cut = parseDate(state.cutoffDate);
+            const end = parseDate($('endDate').textContent);
+            const eff = parseDate($('effDate').textContent);
+            const dat = parseDate($('dataDate').textContent);
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+
+            $('tlCut').textContent = cut ? cut.toLocaleDateString('zh-CN') : '--';
+            $('tlEnd').textContent = end ? end.toLocaleDateString('zh-CN') : '--';
+            $('tlEff').textContent = eff ? eff.toLocaleDateString('zh-CN') : '--';
+            $('tlDate').textContent = dat ? dat.toLocaleDateString('zh-CN') : '--';
+
+            if (!eff) {
+                $('countdown').textContent = '--';
+                $('countdownSub').textContent = '暂无生效日期';
+                $('tlBar').style.width = '0%';
+                $('tlDot').style.left = '0%';
+                return;
+            }
+
+            const diff = Math.ceil((eff - today) / 86400000);
+            if (diff > 0) {
+                $('countdown').textContent = diff + ' 天';
+                $('countdownSub').textContent = '预计 ' + eff.toLocaleDateString('zh-CN') + ' 生效';
+            } else if (diff === 0) {
+                $('countdown').textContent = '今天';
+                $('countdownSub').textContent = '预计今日生效';
+            } else {
+                $('countdown').textContent = '已生效';
+                $('countdownSub').textContent = eff.toLocaleDateString('zh-CN') + ' 已生效';
+            }
+
+            // 时间轴：今天位置（数据截止 → 生效 区间内插值）
+            let pct = 0;
+            if (cut && today <= cut) {
+                pct = 3;
+            } else if (end && today >= eff) {
+                pct = 97;
+            } else if (cut && eff > cut) {
+                pct = ((today - cut) / (eff - cut)) * 94 + 3;
+            }
+            pct = Math.max(0, Math.min(100, pct));
+            $('tlBar').style.width = pct + '%';
+            $('tlDot').style.left = pct + '%';
+            $('todayTag').style.left = pct + '%';
+        }
+
+        // ---------- 个股入通详情 ----------
+        function cleanHtml(s) {
+            const t = document.createElement('div');
+            t.innerHTML = s || '';
+            return t.textContent || '';
+        }
+
+        function renderPeriodBar() {
+            const bar = $('dtPeriodBar');
+            bar.innerHTML = '';
+            state.detailTypes.forEach(d => {
+                const btn = document.createElement('button');
+                btn.dataset.type = String(d.type);
+                const active = state.detailType === String(d.type);
+                btn.className = 'px-3 py-1.5 rounded-appleSmall text-xs whitespace-nowrap transition-colors border ' +
+                    (active
+                        ? 'bg-appleBlue text-white border-appleBlue font-medium'
+                        : 'border-appleLine dark:border-gray-600 text-appleTextGray hover:border-appleBlue hover:text-appleBlue');
+                btn.textContent = d.name || ('期次 ' + d.type);
+                btn.addEventListener('click', () => {
+                    if (state.detailType === String(d.type)) return;
+                    state.detailType = String(d.type);
+                    renderPeriodBar();
+                    if (state.detailCode) loadDetection(state.detailCode);
+                });
+                bar.appendChild(btn);
+            });
+        }
+
+        function renderDetail(d) {
+            const body = $('dtBody');
+            if (!d || !d.info) {
+                body.innerHTML = '<p class="text-appleTextGray text-sm py-6 text-center">暂无检测数据</p>';
+                return;
+            }
+            const info = d.info;
+            const cons = (d.conclusion || []);
+            const last = cons[cons.length - 1];
+            const inFlag = last && String(last.flag) === '1';
+            const verdict = last ? (inFlag ? '预计将纳入港股通' : '预计不会纳入') : '--';
+            $('dtVerdict').textContent = verdict;
+            $('dtVerdict').className = 'px-2.5 py-1 rounded-appleSmall text-xs font-medium ' +
+                (inFlag ? 'bg-red-50 dark:bg-red-900/25 text-appleRed' : 'bg-gray-100 dark:bg-gray-700 text-appleTextGray');
+            $('dtCycle').textContent = '检讨期：' + (info.cycle || '--') +
+                (state.detailMode && state.detailMode !== '--' ? '　·　调整方式：' + state.detailMode : '');
+
+            const flagRow = f => f === '1'
+                ? '<span class="inline-flex items-center gap-1 text-appleGreen text-xs font-medium"><span class="w-4 h-4 rounded-full bg-teal-50 dark:bg-teal-900/25 inline-flex items-center justify-center">✓</span>达标</span>'
+                : '<span class="inline-flex items-center gap-1 text-appleGrayTag text-xs font-medium"><span class="w-4 h-4 rounded-full bg-gray-100 dark:bg-gray-700 inline-flex items-center justify-center">✗</span>未达标</span>';
+
+            const rateRows = (d.turnoverRateList || []).map(r =>
+                '<tr class="border-b border-appleLine/50 dark:border-gray-700/50">' +
+                '<td class="py-2 pr-3 whitespace-nowrap">' + esc(r.date || '--') + '</td>' +
+                '<td class="py-2 px-3 whitespace-nowrap font-medium">' + esc(r.value || '--') + '</td>' +
+                '<td class="py-2 px-3 whitespace-nowrap text-appleTextGray">' + esc(r.referenceValue || '--') + '</td>' +
+                '<td class="py-2 pl-3 whitespace-nowrap">' + flagRow(r.flag) + '</td>' +
+                '</tr>'
+            ).join('');
+
+            body.innerHTML =
+                '<div class="text-sm leading-relaxed">' +
+                    '<p class="text-xs text-appleTextGray mb-4">检讨期：' + esc(info.cycle || '--') + '　·　基准日：' + esc((info.tradingDay || '--').slice(0, 10)) + '</p>' +
+                    // 条件结论
+                    '<div class="rounded-appleMid bg-appleBg/70 dark:bg-gray-900/40 border border-appleLine dark:border-gray-700 p-4 mb-5">' +
+                        cons.map(c => {
+                            const ok = String(c.flag) === '1';
+                            return '<div class="flex items-start gap-3 py-1.5">' +
+                                '<span class="mt-0.5 w-5 h-5 rounded-full shrink-0 inline-flex items-center justify-center text-xs ' +
+                                    (ok ? 'bg-teal-50 dark:bg-teal-900/25 text-appleGreen' : 'bg-red-50 dark:bg-red-900/25 text-appleRed') + '">' + (ok ? '✓' : '✗') + '</span>' +
+                                '<div><p class="font-medium ' + (ok ? '' : '') + '">' + esc(c.title || '') + '</p>' +
+                                '<p class="text-appleTextGray text-xs mt-0.5">' + esc(cleanHtml(c.content)) + '</p></div>' +
+                                '</div>';
+                        }).join('') +
+                    '</div>' +
+                    // 参考指标
+                    '<p class="text-xs text-appleTextGray font-semibold mb-2">参考指标</p>' +
+                    '<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-3 mb-5">' +
+                        '<div class="rounded-appleSmall bg-appleBg/70 dark:bg-gray-900/40 p-3"><p class="text-xs text-appleTextGray">上市日期</p><p class="font-semibold mt-1">' + esc((info.listedDate || '--').slice(0, 10)) + '</p></div>' +
+                        '<div class="rounded-appleSmall bg-appleBg/70 dark:bg-gray-900/40 p-3"><p class="text-xs text-appleTextGray">上市时长</p><p class="font-semibold mt-1">' + esc(info.listedAge || '--') + '</p></div>' +
+                        '<div class="rounded-appleSmall bg-appleBg/70 dark:bg-gray-900/40 p-3"><p class="text-xs text-appleTextGray">日均市值</p><p class="font-semibold mt-1">' + esc(info.avgMarketValue || '--') + '</p></div>' +
+                        '<div class="rounded-appleSmall bg-appleBg/70 dark:bg-gray-900/40 p-3"><p class="text-xs text-appleTextGray">检讨期成交额</p><p class="font-semibold mt-1">' + esc(info.totalTurnoverValue || '--') + '</p></div>' +
+                        '<div class="rounded-appleSmall bg-appleBg/70 dark:bg-gray-900/40 p-3"><p class="text-xs text-appleTextGray">纳入门槛</p><p class="font-semibold mt-1">' + esc(info.goalMarketValue || '--') + '</p></div>' +
+                    '</div>' +
+                    // 月度换手率
+                    (d.turnoverRateList && d.turnoverRateList.length
+                        ? '<p class="text-xs text-appleTextGray font-semibold mb-2">月度换手率（对照参考值）</p>' +
+                          '<div class="overflow-x-auto nice-scroll"><table class="w-full text-sm min-w-[420px]"><thead><tr class="text-left text-appleTextGray text-xs border-b border-appleLine dark:border-gray-700">' +
+                          '<th class="py-2 pr-3 font-medium">月份</th><th class="py-2 px-3 font-medium">换手率</th><th class="py-2 px-3 font-medium">参考值</th><th class="py-2 pl-3 font-medium">状态</th></tr></thead>' +
+                          '<tbody>' + rateRows + '</tbody></table></div>'
+                        : '') +
+                '</div>';
+        }
+
+        async function loadDetection(code) {
+            if (state.detailLoading) return;
+            state.detailLoading = true;
+            $('dtBody').innerHTML = '<div class="py-10 text-center text-appleTextGray"><div class="inline-flex items-center gap-3"><span class="spinner"></span>正在生成检测报告…</div></div>';
+            try {
+                const j = await fetchJson(API_BASE + '/hkmarket/v3/ggt-ctb/detection.html?type=' +
+                    encodeURIComponent(state.detailType) + '&secuCode=' + encodeURIComponent(code));
+                if (j.status !== 'success') throw new Error(j.msg || '检测接口异常');
+                renderDetail(j.data);
+            } catch (e) {
+                $('dtBody').innerHTML = '<div class="py-10 text-center"><p class="text-appleRed text-sm">检测报告加载失败：' + esc(e.message) + '</p>' +
+                    '<button id="dtRetry" class="mt-4 px-4 py-2 rounded-appleSmall bg-appleBlue text-white text-sm font-medium hover:opacity-90 transition-opacity">重试</button></div>';
+                $('dtRetry').addEventListener('click', () => loadDetection(code));
+            } finally {
+                state.detailLoading = false;
+            }
+        }
+
+        function openDetail(row) {
+            state.detailCode = row.SecuCode;
+            state.detailMode = row.AdjustMode || '--';
+            $('dtName').textContent = row.SecuAbbr || '--';
+            $('dtCode').textContent = row.SecuCode || '--';
+            $('dtVerdict').textContent = '检测中…';
+            $('dtVerdict').className = 'px-2.5 py-1 rounded-appleSmall text-xs font-medium bg-gray-100 dark:bg-gray-700 text-appleTextGray';
+            $('dtCycle').textContent = '个股入通资格检测 · 调整方式：' + (state.detailMode === '--' ? '待定' : state.detailMode);
+            renderPeriodBar();
+            $('detailModal').style.display = 'flex';
+            $('detailModal').classList.remove('hidden');
+            loadDetection(row.SecuCode);
+        }
+
+        function closeDetail() {
+            $('detailModal').style.display = 'none';
+            $('detailModal').classList.add('hidden');
+        }
+
+        // ---------- 最新调整公布 ----------
+        function renderPublish() {
+            const d = state.publish;
+            $('pubMeta').textContent = d
+                ? '数据来源：智通财经数据中心 · 更新于 ' + d.updateTime
+                : '数据来源：智通财经数据中心 · 加载中…';
+            if (!d || !d.list || d.list.length === 0) {
+                $('pubBody').innerHTML = '<div class="py-8 text-center"><p class="text-appleTextGray text-sm">暂无调整公布数据</p>' +
+                    '<button id="pubRetry" class="mt-4 px-4 py-2 rounded-appleSmall bg-appleBlue text-white text-sm font-medium hover:opacity-90 transition-opacity">重试</button></div>';
+                const retry = $('pubRetry');
+                if (retry) retry.addEventListener('click', async () => {
+                    state.publish = null;
+                    $('pubMeta').textContent = '数据来源：智通财经数据中心 · 加载中…';
+                    $('pubBody').innerHTML = '<div class="py-8 text-center text-appleTextGray"><span class="spinner inline-block"></span></div>';
+                    await loadPublish();
+                    renderPublish();
+                });
+                return;
+            }
+            const rows = d.list.map(r => {
+                const isIn = r.in_out === '纳入';
+                const name = esc(r.SecuAbbr || '--');
+                const code = esc(r.SecuCode || '--');
+                const dir = esc(r.in_out || '--');
+                return '<tr class="border-b border-appleLine/50 dark:border-gray-700/50">' +
+                    '<td class="py-3 pr-3 font-medium">' + name + ' <span class="text-xs text-appleGrayTag font-normal">' + code + '</span></td>' +
+                    '<td class="py-3 px-3 whitespace-nowrap text-appleTextGray">' + esc(String(r.sxrq || '--').slice(0, 10)) + '</td>' +
+                    '<td class="py-3 pl-3"><span class="px-2 py-0.5 rounded-appleSmall text-xs font-medium whitespace-nowrap ' +
+                        (isIn ? 'bg-red-50 dark:bg-red-900/25 text-appleRed' : 'bg-teal-50 dark:bg-teal-900/25 text-appleGreen') + '">' + dir + '</span></td>' +
+                    '</tr>';
+            }).join('');
+            $('pubBody').innerHTML =
+                '<div class="overflow-x-auto nice-scroll">' +
+                    '<table class="w-full min-w-[380px] text-sm">' +
+                        '<thead><tr class="text-left text-appleTextGray text-xs border-b border-appleLine dark:border-gray-700">' +
+                            '<th class="py-2 px-3 font-medium whitespace-nowrap">股票名称</th>' +
+                            '<th class="py-2 px-3 font-medium whitespace-nowrap">生效日期</th>' +
+                            '<th class="py-2 pl-3 font-medium whitespace-nowrap">调整方向</th>' +
+                        '</tr></thead>' +
+                        '<tbody>' + rows + '</tbody>' +
+                    '</table>' +
+                '</div>' +
+                '<p class="text-xs text-appleTextGray mt-3">共 ' + d.list.length + ' 条，按公布时间倒序。</p>';
+        }
+
+        async function openPublish() {
+            $('publishModal').style.display = 'flex';
+            $('publishModal').classList.remove('hidden');
+            if (!state.publish) {
+                $('pubMeta').textContent = '数据来源：智通财经数据中心 · 加载中…';
+                $('pubBody').innerHTML = '<div class="py-8 text-center text-appleTextGray"><span class="spinner inline-block"></span></div>';
+                await loadPublish();
+            }
+            renderPublish();
+        }
+
+        function closePublish() {
+            $('publishModal').style.display = 'none';
+            $('publishModal').classList.add('hidden');
+        }
+
+        // ---------- 错误提示 ----------
+        function showError(msg) {
+            $('errorText').textContent = '数据加载失败：' + msg;
+            $('errorBanner').classList.remove('hidden');
+        }
+
+        function hideError() {
+            $('errorBanner').classList.add('hidden');
+        }
+
+        // ---------- 初始化 ----------
+        function init() {
+            $('updatedAt').textContent = new Date().toLocaleTimeString('zh-CN', { hour12: false });
+            $('themeToggle').addEventListener('click', () => {
+                document.documentElement.classList.toggle('dark');
+            });
+            $('sortRatio').addEventListener('click', () => {
+                state.sortField = 'MarketValueRatio';
+                state.sortDir = state.sortDir === 'desc' ? 'asc' : 'desc';
+                updateSortUI();
+                loadList(true);
+            });
+            $('loadMoreBtn').addEventListener('click', () => {
+                if (state.loading || !state.hasMore) return;
+                state.page += 1;
+                loadList(false);
+            });
+            $('retryBtn').addEventListener('click', () => {
+                hideError();
+                initLoad();
+            });
+            $('searchInput').addEventListener('input', e => {
+                state.search = e.target.value;
+                renderRows();
+                renderLoadMore();
+            });
+            // 表格行点击 → 个股详情
+            $('tableBody').addEventListener('click', e => {
+                const tr = e.target.closest('tr.row-item');
+                if (!tr) return;
+                const code = tr.dataset.code;
+                const row = state.rows.find(r => r.SecuCode === code);
+                if (row) openDetail(row);
+            });
+            // 弹窗关闭
+            $('dtClose').addEventListener('click', closeDetail);
+            $('detailModal').addEventListener('click', e => {
+                if (e.target === $('detailModal')) closeDetail();
+            });
+            $('pubClose').addEventListener('click', closePublish);
+            $('publishModal').addEventListener('click', e => {
+                if (e.target === $('publishModal')) closePublish();
+            });
+            document.addEventListener('keydown', e => {
+                if (e.key === 'Escape') {
+                    closeDetail();
+                    closePublish();
+                }
+            });
+            initLoad();
+        }
+
+        async function initLoad() {
+            hideError();
+            state.rows = [];
+            state.page = 1;
+            state.hasMore = true;
+            resetSortForContext();
+            renderTabs();
+            renderFilters();
+            renderLoading();
+            const listPromise = loadList(true);
+            try {
+                await Promise.all([
+                    loadOverview(),
+                    loadCycle(),
+                    loadDetailTypes(),
+                    loadThresholds(),
+                    loadPublish()
+                ]);
+                renderTabs();
+                updateTimeline();
+            } catch (e) {
+                showError(e.message || '概览加载失败');
+            }
+            await listPromise;
+        }
+
+        init();
+    </script>
+    <!-- 手机端底部导航 -->
+    <nav class="fixed bottom-0 left-0 right-0 lg:hidden z-50 border-t border-appleLine dark:border-gray-700 glass dark:glass-dark" style="padding-bottom: env(safe-area-inset-bottom);">
+        <div class="grid grid-cols-3 h-14">
+            <a href="hk_unlock_overview.html" class="flex flex-col items-center justify-center gap-0.5 text-[11px] text-appleTextGray active:bg-appleBlueLight/40">
+                <span class="text-lg leading-none">📊</span>解禁概览
+            </a>
+            <a href="hk_ggt_ru_tong.html" class="flex flex-col items-center justify-center gap-0.5 text-[11px] text-appleBlue font-semibold">
+                <span class="text-lg leading-none">📈</span>入通看板
+            </a>
+            <a href="hk_greenshoe.html" class="flex flex-col items-center justify-center gap-0.5 text-[11px] text-appleTextGray active:bg-appleBlueLight/40">
+                <span class="text-lg leading-none">👟</span>绿鞋跟踪
+            </a>
+        </div>
+    </nav>
+</body>
+</html>

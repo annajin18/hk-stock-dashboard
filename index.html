@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>港股解禁概览 | 港股数据助手</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PingFang+SC:wght@300;400;500;600;700&family=SF+Pro+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        appleBg: '#F5F5F7',
+                        appleCard: '#ffffff',
+                        appleBlue: '#007AFF',
+                        appleBlueLight: '#E6F0FF',
+                        appleBlueDarkBg: 'rgba(0,122,255,0.15)',
+                        appleRed: '#FF3B30',
+                        appleGreen: '#46A7B9',
+                        appleOrange: '#C9A66B',
+                        applePurple: '#AF52DE',
+                        appleGrayTag: '#86868B',
+                        appleTextMain: '#1D1D1F',
+                        appleTextGray: '#86868B',
+                        appleLine: '#E5E5EA'
+                    },
+                    fontFamily: {
+                        pingfang: ['PingFang SC', 'system-ui', 'sans-serif'],
+                        sfpro: ['SF Pro Display', 'sans-serif']
+                    },
+                    borderRadius: {
+                        'appleBig': '20px',
+                        'appleMid': '16px',
+                        'appleSmall': '8px'
+                    },
+                    boxShadow: {
+                        appleCard: '0 4px 14px rgba(0,0,0,0.06)',
+                        appleHover: '0 6px 20px rgba(0,0,0,0.08)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .glass {
+                backdrop-filter: blur(20px);
+                background: rgba(255,255,255,0.75);
+            }
+            .glass-dark {
+                backdrop-filter: blur(20px);
+                background: rgba(30,30,30,0.75);
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+            .day-today {
+                border-color: #007AFF !important;
+                border-width: 2px !important;
+                background-color: #E6F0FF;
+            }
+            .dark .day-today {
+                background-color: rgba(0,122,255,0.15);
+            }
+            details summary::-webkit-details-marker {
+                display: none;
+            }
+            .arrow-wrap {
+                position: relative;
+            }
+            .arrow-wrap summary::after {
+                content: "▾";
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                color: #007AFF;
+                font-size: 14px;
+                transition: transform 0.2s ease;
+                pointer-events: none;
+            }
+            .arrow-wrap[open] summary::after {
+                transform: rotate(180deg);
+            }
+            .stock-row {
+                cursor: pointer;
+                border-radius: 6px;
+                transition: background 0.2s;
+            }
+            .stock-row:hover {
+                background: rgba(0, 122, 255, 0.08);
+            }
+        }
+        body {
+            background-color: #F5F5F7;
+            transition: background-color 0.3s ease;
+        }
+        .dark body {
+            background-color: #1C1C1E;
+        }
+        .card-hover {
+            transition: all 0.25s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+        }
+        .day-item {
+            max-height: 240px;
+            overflow-y: auto;
+        }
+        .day-item::-webkit-scrollbar {
+            width: 4px;
+        }
+        .day-item::-webkit-scrollbar-thumb {
+            background: #d1d1d6;
+            border-radius: 4px;
+        }
+        .dark .day-item::-webkit-scrollbar-thumb {
+            background: #48484a;
+        }
+        .text-appleOrange {
+            color: #B8955A !important;
+        }
+        .bg-appleOrange\/10 {
+            background-color: rgba(201, 166, 107, 0.12) !important;
+        }
+        .text-appleGreen {
+            color: #46A7B9 !important;
+        }
+        .bg-appleGreen\/10 {
+            background-color: rgba(70, 167, 185, 0.12) !important;
+        }
+        .bg-orange-50 {
+            background-color: #F7F3EA !important;
+        }
+        .dark .bg-orange-900\/20 {
+            background-color: rgba(201, 166, 107, 0.18) !important;
+        }
+    </style>
+</head>
+<body class="font-pingfang text-appleTextMain dark:text-white dark:bg-[#1C1C1E] transition-colors duration-300">
+    <!-- 顶部悬浮导航 -->
+    <header class="fixed top-0 left-0 right-0 h-[64px] glass dark:glass-dark z-50 border-b border-appleLine dark:border-gray-700">
+        <div class="container mx-auto h-full px-6 md:px-12 flex items-center justify-between">
+            <div class="flex items-center">
+                <h1 class="text-[20px] font-semibold">港股数据助手</h1>
+            </div>
+            <nav class="hidden lg:flex gap-1 shrink-0">
+                <a href="hk_unlock_overview.html" class="px-3 py-2 rounded-appleSmall bg-appleBlue text-white font-medium whitespace-nowrap">港股解禁概览</a>
+                <a href="hk_ggt_ru_tong.html" class="px-3 py-2 rounded-appleSmall hover:bg-black/5 dark:hover:bg-white/10 transition-colors whitespace-nowrap">港股通入通看板</a>
+                <a href="hk_greenshoe.html" class="px-3 py-2 rounded-appleSmall hover:bg-black/5 dark:hover:bg-white/10 transition-colors whitespace-nowrap">绿鞋使用跟踪</a>
+                <a href="hk_ipo_reminder.html" class="px-3 py-2 rounded-appleSmall hover:bg-black/5 dark:hover:bg-white/10 transition-colors whitespace-nowrap">港股打新提醒</a>
+                <a href="crs_calculator.html" class="px-3 py-2 rounded-appleSmall hover:bg-black/5 dark:hover:bg-white/10 transition-colors whitespace-nowrap">CRS计算器</a>
+            </nav>
+            <div class="flex items-center gap-4">
+                <span class="text-sm text-appleTextGray hidden lg:block">2026-08-10 周一｜港股交易日</span>
+                <input type="text" placeholder="搜股票代码/名称" class="h-9 px-3 rounded-appleSmall bg-white/80 dark:bg-gray-800 border border-appleLine dark:border-gray-600 outline-none text-sm w-[160px]">
+                <button class="bg-appleBlue text-white px-4 py-2 rounded-appleSmall text-sm">订阅提醒</button>
+                <button id="themeToggle" class="w-11 h-6 rounded-full bg-gray-300 dark:bg-appleBlue relative transition-colors">
+                    <span class="absolute top-[2px] left-[2px] w-5 h-5 bg-white rounded-full transition-all dark:left-[22px]"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 md:px-12 pt-[88px] pb-28 lg:pb-16">
+        <!-- 页面主标题 -->
+        <div class="my-10">
+            <h2 class="text-[32px] font-bold">港股解禁概览</h2>
+            <p class="text-appleTextGray mt-2 text-[16px]">实时同步港交所解禁公告，测算抛压规模，提前锁定解禁风险时点</p>
+        </div>
+
+        <!-- 大盘指标卡片 -->
+        <div class="bg-appleCard dark:bg-gray-800 rounded-appleBig p-8 shadow-appleCard mb-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <p class="text-appleTextGray text-sm">本周解禁总市值</p>
+                    <p class="text-[28px] font-bold mt-2">128.6 亿 HKD</p>
+                    <p class="text-xs text-appleTextGray mt-1">环比上周 ↓12.3%</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-appleTextGray text-sm">本月解禁个股总数</p>
+                    <p class="text-[28px] font-bold mt-2">37 只</p>
+                    <p class="text-xs text-appleTextGray mt-1">大额解禁标的11只</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-appleTextGray text-sm">5亿港元以上大额解禁</p>
+                    <p class="text-[28px] font-bold mt-2">11 只</p>
+                    <p class="text-xs text-appleTextGray mt-1">集中板块：主板</p>
+                </div>
+                <div class="text-center">
+                    <p class="text-appleTextGray text-sm">本月大额解禁</p>
+                    <p class="text-[28px] font-bold mt-2">11 只</p>
+                    <p class="text-xs text-appleOrange mt-1">下方专区查看明细</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- 解禁日历 -->
+        <div class="bg-appleCard dark:bg-gray-800 rounded-appleBig p-8 shadow-appleCard mb-8">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-xl font-bold">解禁日历</h3>
+                <div class="flex gap-3 text-xs">
+                    <span class="px-2 py-0.5 rounded-appleSmall bg-appleBlue/10 text-appleBlue">基石解禁</span>
+                    <span class="px-2 py-0.5 rounded-appleSmall bg-applePurple/10 text-applePurple">国际配售</span>
+                    <span class="px-2 py-0.5 rounded-appleSmall bg-gray-100 dark:bg-gray-700 text-appleGrayTag">股东配售</span>
+                </div>
+            </div>
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-10 gap-3">
+                <div class="border border-appleLine dark:border-gray-700 rounded-appleSmall p-3 day-item day-today">
+                    <div class="font-medium mb-2 text-sm sticky top-0 bg-inherit pb-1">8.10 周一（今日）</div>
+                    <div class="space-y-2 text-xs">
+                        <div class="border-b border-appleLine dark:border-gray-700 pb-2 stock-row" data-code="09988.HK" data-name="阿里巴巴-SW">
+                            <div>09988.HK 阿里巴巴-SW</div>
+                            <div class="text-appleTextGray">24.32亿｜1.2亿股</div>
+                            <span class="px-1 py-0 rounded-[4px] bg-appleBlue/10 text-appleBlue">基石解禁</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-appleLine dark:border-gray-700 rounded-appleSmall p-3 day-item">
+                    <div class="font-medium mb-2 text-sm sticky top-0 bg-appleCard dark:bg-gray-800 pb-1">8.11 周二</div>
+                    <div class="space-y-2 text-xs">
+                        <div class="border-b border-appleLine dark:border-gray-700 pb-2 stock-row" data-code="01810.HK" data-name="小米集团">
+                            <div>01810.HK 小米集团</div>
+                            <div class="text-appleTextGray">12.1亿｜0.72亿股</div>
+                            <span class="px-1 py-0 rounded-[4px] bg-applePurple/10 text-applePurple">国际配售</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-appleLine dark:border-gray-700 rounded-appleSmall p-3 day-item">
+                    <div class="font-medium mb-2 text-sm sticky top-0 bg-appleCard dark:bg-gray-800 pb-1">8.12 周三</div>
+                    <details class="arrow-wrap text-xs">
+                        <summary class="pr-6">
+                            <div class="border-b border-appleLine dark:border-gray-700 pb-2 stock-row" data-code="02269.HK" data-name="药明生物">
+                                <div>02269.HK 药明生物</div>
+                                <div class="text-appleTextGray">18.75亿｜0.56亿股</div>
+                                <span class="px-1 py-0 rounded-[4px] bg-appleBlue/10 text-appleBlue">基石解禁</span>
+                            </div>
+                        </summary>
+                        <div class="pt-2">
+                            <div class="stock-row" data-code="09698.HK" data-name="理想汽车">
+                                <div>09698.HK 理想汽车</div>
+                                <div class="text-appleTextGray">5.2亿｜0.31亿股</div>
+                                <span class="px-1 py-0 rounded-[4px] bg-gray-100 dark:bg-gray-700 text-appleGrayTag">股东配售</span>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+                <div class="border border-appleLine dark:border-gray-700 rounded-appleSmall p-3 day-item">
+                    <div class="font-medium mb-2 text-sm sticky top-0 bg-appleCard dark:bg-gray-800 pb-1">8.13 周四</div>
+                    <div class="space-y-2 text-xs">
+                        <div class="border-b border-appleLine dark:border-gray-700 pb-2 stock-row" data-code="08616.HK" data-name="某GEM生物企业">
+                            <div>08616.HK 某GEM生物企业</div>
+                            <div class="text-appleTextGray">6.88亿｜1.12亿股</div>
+                            <span class="px-1 py-0 rounded-[4px] bg-appleBlue/10 text-appleBlue">基石解禁</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-appleLine dark:border-gray-700 rounded-appleSmall p-3 day-item">
+                    <div class="font-medium mb-2 text-sm sticky top-0 bg-appleCard dark:bg-gray-800 pb-1">8.14 周五</div>
+                    <div class="space-y-2 text-xs">
+                        <div class="border-b border-appleLine dark:border-gray-700 pb-2 stock-row" data-code="00700.HK" data-name="腾讯控股">
+                            <div>00700.HK 腾讯控股</div>
+                            <div class="text-appleTextGray">41.6亿｜0.23亿股</div>
+                            <span class="px-1 py-0 rounded-[4px] bg-applePurple/10 text-applePurple">国际配售</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-appleLine dark:border-gray-700 rounded-appleSmall p-3 day-item">
+                    <div class="font-medium mb-2 text-sm sticky top-0 bg-appleCard dark:bg-gray-800 pb-1">8.17 周一</div>
+                    <div class="space-y-2 text-xs">
+                        <div class="border-b border-appleLine dark:border-gray-700 pb-2 stock-row" data-code="03690.HK" data-name="美团-W">
+                            <div>03690.HK 美团-W</div>
+                            <div class="text-appleTextGray">22.5亿｜0.48亿股</div>
+                            <span class="px-1 py-0 rounded-[4px] bg-appleBlue/10 text-appleBlue">基石解禁</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-appleLine dark:border-gray-700 rounded-appleSmall p-3 day-item">
+                    <div class="font-medium mb-2 text-sm sticky top-0 bg-appleCard dark:bg-gray-800 pb-1">8.18 周二</div>
+                    <div class="space-y-2 text-xs">
+                        <div class="border-b border-appleLine dark:border-gray-700 pb-2 stock-row" data-code="02318.HK" data-name="中国平安">
+                            <div>02318.HK 中国平安</div>
+                            <div class="text-appleTextGray">16.3亿｜1.05亿股</div>
+                            <span class="px-1 py-0 rounded-[4px] bg-gray-100 dark:bg-gray-700 text-appleGrayTag">股东配售</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-appleLine dark:border-gray-700 rounded-appleSmall p-3 day-item">
+                    <div class="font-medium mb-2 text-sm sticky top-0 bg-appleCard dark:bg-gray-800 pb-1">8.19 周三</div>
+                    <div class="space-y-2 text-xs">
+                        <div class="border-b border-appleLine dark:border-gray-700 pb-2 stock-row" data-code="09999.HK" data-name="网易-S">
+                            <div>09999.HK 网易-S</div>
+                            <div class="text-appleTextGray">9.7亿｜0.18亿股</div>
+                            <span class="px-1 py-0 rounded-[4px] bg-applePurple/10 text-applePurple">国际配售</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="border border-appleLine dark:border-gray-700 rounded-appleSmall p-3 day-item">
+                    <div class="font-medium mb-2 text-sm sticky top-0 bg-appleCard dark:bg-gray-800 pb-1">8.20 周四</div>
+                    <details class="arrow-wrap text-xs">
+                        <summary class="pr-6">
+                            <div class="border-b border-appleLine dark:border-gray-700 pb-2 stock-row" data-code="01797.HK" data-name="新东方在线">
+                                <div>01797.HK 新东方在线</div>
+                                <div class="text-appleTextGray">7.4亿｜0.93亿股</div>
+                                <span class="px-1 py-0 rounded-[4px] bg-appleBlue/10 text-appleBlue">基石解禁</span>
+                            </div>
+                        </summary>
+                        <div class="pt-2">
+                            <div class="stock-row" data-code="01398.HK" data-name="工商银行">
+                                <div>01398.HK 工商银行</div>
+                                <div>text-appleTextGray">11.2亿｜2.16亿股</div>
+                                <span class="px-1 py-0 rounded-[4px] bg-appleBlue/10 text-appleBlue">基石解禁</span>
+                            </div>
+                        </div>
+                    </details>
+                </div>
+                <div class="border border-appleLine dark:border-gray-700 rounded-appleSmall p-3 day-item">
+                    <div class="font-medium mb-2 text-sm sticky top-0 bg-appleCard dark:bg-gray-800 pb-1">8.21 周五</div>
+                    <div class="space-y-2 text-xs">
+                        <div class="border-b border-appleLine dark:border-gray-700 pb-2 stock-row" data-code="02018.HK" data-name="瑞声科技">
+                            <div>02018.HK 瑞声科技</div>
+                            <div class="text-appleTextGray">5.6亿｜0.67亿股</div>
+                            <span class="px-1 py-0 rounded-[4px] bg-gray-100 dark:bg-gray-700 text-appleGrayTag">股东配售</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 本月大额解禁股票 -->
+        <div class="bg-appleCard dark:bg-gray-800 rounded-appleBig p-8 shadow-appleCard mb-8">
+            <div class="flex justify-between items-center mb-6">
+                <h3 class="text-xl font-bold">本月大额解禁股票</h3>
+                <span class="text-sm text-appleOrange">共11只标的，点击个股查看完整解禁详情</span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <div class="border border-appleLine dark:border-gray-700 rounded-appleMid p-4 stock-row" data-code="00700.HK" data-name="腾讯控股">
+                    <div class="font-semibold">00700.HK 腾讯控股</div>
+                    <div class="mt-2 text-sm space-y-1">
+                        <div>解禁市值：41.6 亿 HKD</div>
+                        <div>解禁日期：08.14</div>
+                        <span class="px-1 py-0 rounded-[4px] bg-applePurple/10 text-applePurple text-xs">国际配售</span>
+                    </div>
+                </div>
+                <div class="border border-appleLine dark:border-gray-700 rounded-appleMid p-4 stock-row" data-code="09988.HK" data-name="阿里巴巴-SW">
+                    <div class="font-semibold">09988.HK 阿里巴巴-SW</div>
+                    <div class="mt-2 text-sm space-y-1">
+                        <div>解禁市值：24.32 亿 HKD</div>
+                        <div>解禁日期：08.10</div>
+                        <span class="px-1 py-0 rounded-[4px] bg-appleBlue/10 text-appleBlue text-xs">基石解禁</span>
+                    </div>
+                </div>
+                <div class="border border-appleLine dark:border-gray-700 rounded-appleMid p-4 stock-row" data-code="03690.HK" data-name="美团-W">
+                    <div class="font-semibold">03690.HK 美团-W</div>
+                    <div class="mt-2 text-sm space-y-1">
+                        <div>解禁市值：22.5 亿 HKD</div>
+                        <div>解禁日期：08.17</div>
+                        <span class="px-1 py-0 rounded-[4px] bg-appleBlue/10 text-appleBlue text-xs">基石解禁</span>
+                    </div>
+                </div>
+                <div class="border border-appleLine dark:border-gray-700 rounded-appleMid p-4 stock-row" data-code="02269.HK" data-name="药明生物">
+                    <div class="font-semibold">02269.HK 药明生物</div>
+                    <div class="mt-2 text-sm space-y-1">
+                        <div>解禁市值：18.75 亿 HKD</div>
+                        <div>解禁日期：08.12</div>
+                        <span class="px-1 py-0 rounded-[4px] bg-appleBlue/10 text-appleBlue text-xs">基石解禁</span>
+                    </div>
+                </div>
+                <div class="border border-appleLine dark:border-gray-700 rounded-appleMid p-4 stock-row" data-code="02318.HK" data-name="中国平安">
+                    <div class="font-semibold">02318.HK 中国平安</div>
+                    <div class="mt-2 text-sm space-y-1">
+                        <div>解禁市值：16.3 亿 HKD</div>
+                        <div>解禁日期：08.18</div>
+                        <span class="px-1 py-0 rounded-[4px] bg-gray-100 dark:bg-gray-700 text-appleGrayTag text-xs">股东配售</span>
+                    </div>
+                </div>
+                <div class="border border-appleLine dark:border-gray-700 rounded-appleMid p-4 stock-row" data-code="01398.HK" data-name="工商银行">
+                    <div class="font-semibold">01398.HK 工商银行</div>
+                    <div class="mt-2 text-sm space-y-1">
+                        <div>解禁市值：11.2 亿 HKD</div>
+                        <div>解禁日期：08.20</div>
+                        <span class="px-1 py-0 rounded-[4px] bg-appleBlue/10 text-appleBlue text-xs">基石解禁</span>
+                    </div>
+                </div>
+                <div class="border border-appleLine dark:border-gray-700 rounded-appleMid p-4 stock-row" data-code="01810.HK" data-name="小米集团">
+                    <div class="font-semibold">01810.HK 小米集团</div>
+                    <div class="mt-2 text-sm space-y-1">
+                        <div>解禁市值：12.1 亿 HKD</div>
+                        <div>解禁日期：08.11</div>
+                        <span class="px-1 py-0 rounded-[4px] bg-applePurple/10 text-applePurple text-xs">国际配售</span>
+                    </div>
+                </div>
+                <div class="border border-appleLine dark:border-gray-700 rounded-appleMid p-4 stock-row" data-code="09999.HK" data-name="网易-S">
+                    <div class="font-semibold">09999.HK 网易-S</div>
+                    <div class="mt-2 text-sm space-y-1">
+                        <div>解禁市值：9.7 亿 HKD</div>
+                        <div>解禁日期：08.19</div>
+                        <span class="px-1 py-0 rounded-[4px] bg-applePurple/10 text-applePurple text-xs">国际配售</span>
+                    </div>
+                </div>
+                <div class="border border-appleLine dark:border-gray-700 rounded-appleMid p-4 stock-row" data-code="01797.HK" data-name="新东方在线">
+                    <div class="font-semibold">01797.HK 新东方在线</div>
+                    <div class="mt-2 text-sm space-y-1">
+                        <div>解禁市值：7.4 亿 HKD</div>
+                        <div>解禁日期：08.20</div>
+                        <span class="px-1 py-0 rounded-[4px] bg-appleBlue/10 text-appleBlue text-xs">基石解禁</span>
+                    </div>
+                </div>
+                <div class="border border-appleLine dark:border-gray-700 rounded-appleMid p-4 stock-row" data-code="08616.HK" data-name="某GEM生物企业">
+                    <div class="font-semibold">08616.HK 某GEM生物企业</div>
+                    <div class="mt-2 text-sm space-y-1">
+                        <div>解禁市值：6.88 亿 HKD</div>
+                        <div>解禁日期：08.13</div>
+                        <span class="px-1 py-0 rounded-[4px] bg-appleBlue/10 text-appleBlue text-xs">基石解禁</span>
+                    </div>
+                </div>
+                <div class="border border-appleLine dark:border-gray-700 rounded-appleMid p-4 stock-row" data-code="02018.HK" data-name="瑞声科技">
+                    <div class="font-semibold">02018.HK 瑞声科技</div>
+                    <div class="mt-2 text-sm space-y-1">
+                        <div>解禁市值：5.6 亿 HKD</div>
+                        <div>解禁日期：08.21</div>
+                        <span class="px-1 py-0 rounded-[4px] bg-gray-100 dark:bg-gray-700 text-appleGrayTag text-xs">股东配售</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 保留：我的关注 · 解禁预警标的 -->
+        <div class="bg-appleCard dark:bg-gray-800 rounded-appleMid p-6 shadow-appleCard mb-10">
+            <div class="flex justify-between items-center mb-4">
+                <h3 class="text-lg font-semibold">我的关注 · 解禁预警标的</h3>
+                <button class="text-sm text-appleBlue">一键开启全部推送</button>
+            </div>
+            <div class="flex gap-4 overflow-x-auto pb-2">
+                <div class="shrink-0 border border-appleLine dark:border-gray-600 rounded-appleSmall px-4 py-3">
+                    <div class="font-medium">09988.HK</div>
+                    <div class="text-xs text-appleRed">剩余2天解禁</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 页脚 -->
+        <footer class="border-t border-appleLine dark:border-gray-700 pt-8 text-sm text-appleTextGray flex flex-col md:flex-row justify-between gap-4">
+            <div>数据来源：港交所披露易、招股说明书、上市公司公告</div>
+            <div>免责声明：页面数据仅资讯参考，不构成任何投资建议</div>
+            <div>推送设置 | 关于本站</div>
+        </footer>
+    </main>
+
+    <!-- 手机端底部导航 -->
+    <nav class="fixed bottom-0 left-0 right-0 lg:hidden z-50 border-t border-appleLine dark:border-gray-700 glass dark:glass-dark" style="padding-bottom: env(safe-area-inset-bottom);">
+        <div class="grid grid-cols-3 h-14">
+            <a href="hk_unlock_overview.html" class="flex flex-col items-center justify-center gap-0.5 text-[11px] text-appleBlue font-semibold">
+                <span class="text-lg leading-none">📊</span>解禁概览
+            </a>
+            <a href="hk_ggt_ru_tong.html" class="flex flex-col items-center justify-center gap-0.5 text-[11px] text-appleTextGray active:bg-appleBlueLight/40">
+                <span class="text-lg leading-none">📈</span>入通看板
+            </a>
+            <a href="hk_greenshoe.html" class="flex flex-col items-center justify-center gap-0.5 text-[11px] text-appleTextGray active:bg-appleBlueLight/40">
+                <span class="text-lg leading-none">👟</span>绿鞋跟踪
+            </a>
+        </div>
+    </nav>
+
+    <!-- 详情弹窗遮罩 -->
+    <div id="detailModal" class="fixed inset-0 bg-black/50 z-[100] items-center justify-center hidden">
+        <div class="bg-appleCard dark:bg-gray-800 w-full max-w-[800px] rounded-appleBig p-6 mx-4 scale-95 opacity-0 transition-all duration-300" id="modalBox">
+            <div class="flex justify-between items-center mb-5">
+                <h3 id="modalTitle" class="text-xl font-bold">09988.HK 阿里巴巴-SW 解禁详情</h3>
+                <button id="closeModal" class="w-8 h-8 rounded-full bg-gray-100 dark:bg-gray-700 flex items-center justify-center">✕</button>
+            </div>
+            <div class="space-y-5">
+                <div class="grid grid-cols-3 gap-4">
+                    <div class="bg-gray-50 dark:bg-gray-700 p-3 rounded-appleSmall text-center">
+                        <div class="text-xs text-appleTextGray">现价</div>
+                        <div class="font-semibold">89.6 HKD</div>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-700 p-3 rounded-appleSmall text-center">
+                        <div class="text-xs text-appleTextGray">发行价</div>
+                        <div class="font-semibold">80.0 HKD</div>
+                    </div>
+                    <div class="bg-gray-50 dark:bg-gray-700 p-3 rounded-appleSmall text-center">
+                        <div class="text-xs text-appleTextGray">上市日</div>
+                        <div class="font-semibold">2026-02-12</div>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-2">基石投资人明细</h4>
+                    <div class="overflow-x-auto text-sm">
+                        <table class="w-full">
+                            <thead class="border-b border-appleLine dark:border-gray-600">
+                                <tr class="text-left text-appleTextGray">
+                                    <th class="pb-2 pr-3">机构名称</th>
+                                    <th class="pb-2 pr-3">获配股数</th>
+                                    <th class="pb-2 pr-3">持仓成本</th>
+                                    <th class="pb-2">解禁股份</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-appleLine dark:border-gray-700">
+                                    <td class="py-2 pr-3">贝莱德</td>
+                                    <td class="py-2 pr-3">1.2亿股</td>
+                                    <td class="py-2 pr-3">80.0 HKD</td>
+                                    <td class="py-2">1.2亿股</td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 pr-3">淡马锡</td>
+                                    <td class="py-2 pr-3">0.85亿股</td>
+                                    <td class="py-2 pr-3">80.0 HKD</td>
+                                    <td class="py-2">0.85亿股</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-medium mb-2">解禁时间线</h4>
+                    <div class="flex items-center text-sm">
+                        <div class="text-center">2026-02-12<br /><span class="text-appleTextGray text-xs">上市日</span></div>
+                        <div class="flex-1 h-[2px] mx-3 bg-appleBlue"></div>
+                        <div class="text-center">2026-02-12<br /><span class="text-appleTextGray text-xs">锁仓起始</span></div>
+                        <div class="flex-1 h-[2px] mx-3 bg-appleBlue"></div>
+                        <div class="text-center text-appleRed font-medium">2026-08-12<br /><span class="text-xs">解禁到期</span></div>
+                    </div>
+                </div>
+                <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-appleSmall text-sm">
+                    <div class="font-medium text-appleOrange mb-1">风险提示</div>
+                    <p class="text-appleTextGray">本次解禁股份占流通盘8.72%，基石机构持仓成本较低，短期存在集中减持抛压可能性，注意股价波动风险。解禁到期≠必然减持，需持续跟踪交易所CCASS持仓变动。</p>
+                </div>
+            </div>
+            <div class="flex justify-end gap-3 mt-6">
+                <button class="px-4 py-2 rounded-appleSmall border border-appleLine dark:border-gray-600">设置解禁提醒</button>
+                <button class="px-4 py-2 rounded-appleSmall bg-appleBlue text-white">加入自选收藏</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 暗黑模式切换
+        const toggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        toggle.addEventListener('click', ()=>{
+            html.classList.toggle('dark');
+        })
+
+        // 弹窗元素
+        const modal = document.getElementById('detailModal');
+        const modalBox = document.getElementById('modalBox');
+        const modalTitle = document.getElementById('modalTitle');
+        const closeBtn = document.getElementById('closeModal');
+
+        // 统一打开弹窗函数
+        function openModal(code, name) {
+            modalTitle.textContent = `${code} ${name} 解禁详情`;
+            modal.style.display = 'flex';
+            setTimeout(()=>{
+                modalBox.classList.remove('scale-95','opacity-0');
+                modalBox.classList.add('scale-100','opacity-100');
+            },10)
+        }
+
+        // 日历+大额专区个股整行点击
+        document.querySelectorAll('.stock-row').forEach(row=>{
+            row.addEventListener('click', (e)=>{
+                e.stopPropagation();
+                const code = row.dataset.code;
+                const name = row.dataset.name;
+                openModal(code, name);
+            })
+        })
+
+        // 关闭弹窗
+        closeBtn.addEventListener('click',()=>{
+            modalBox.classList.remove('scale-100','opacity-100');
+            modalBox.classList.add('scale-95','opacity-0');
+            setTimeout(()=>modal.style.display='none',300)
+        })
+        modal.addEventListener('click',(e)=>{
+            if(e.target === modal) closeBtn.click();
+        })
+    </script>
+</body>
+</html>

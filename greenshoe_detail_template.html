@@ -1,0 +1,931 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绿鞋详情 | 港股数据助手</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PingFang+SC:wght@300;400;500;600;700&family=SF+Pro+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        appleBg: '#F5F5F7',
+                        appleCard: '#ffffff',
+                        appleBlue: '#007AFF',
+                        appleBlueLight: '#E6F0FF',
+                        appleBlueDarkBg: 'rgba(0,122,255,0.15)',
+                        appleRed: '#FF3B30',
+                        appleGreen: '#34C759',
+                        appleOrange: '#FF9500',
+                        applePurple: '#AF52DE',
+                        appleGrayTag: '#86868B',
+                        appleTextMain: '#1D1D1F',
+                        appleTextGray: '#86868B',
+                        appleLine: '#E5E5EA'
+                    },
+                    fontFamily: {
+                        pingfang: ['PingFang SC', 'system-ui', 'sans-serif'],
+                        sfpro: ['SF Pro Display', 'sans-serif']
+                    },
+                    borderRadius: {
+                        'appleBig': '20px',
+                        'appleMid': '16px',
+                        'appleSmall': '8px'
+                    },
+                    boxShadow: {
+                        appleCard: '0 4px 14px rgba(0,0,0,0.06)',
+                        appleHover: '0 6px 20px rgba(0,0,0,0.08)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .glass {
+                backdrop-filter: blur(20px);
+                background: rgba(255,255,255,0.75);
+            }
+            .glass-dark {
+                backdrop-filter: blur(20px);
+                background: rgba(30,30,30,0.75);
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+            .row-hover{
+                transition: background 0.22s ease;
+            }
+            .row-hover:hover{
+                background:rgba(0,122,255,0.06);
+            }
+            .scroll-table::-webkit-scrollbar {
+                width: 4px;
+                height:6px;
+            }
+            .scroll-table::-webkit-scrollbar-thumb {
+                background: #d1d1d6;
+                border-radius: 4px;
+            }
+            .dark .scroll-table::-webkit-scrollbar-thumb {
+                background: #48484a;
+            }
+            .scroll-table{
+                -webkit-overflow-scrolling: touch;
+            }
+            .progress-bar{
+                height:10px;
+                width:100%;
+                background:#e2e2e7;
+                border-radius:5px;
+                overflow:hidden;
+            }
+            .dark .progress-bar{
+                background:#444448;
+            }
+            .cal-grid{
+                display:grid;
+                grid-template-columns:repeat(7,minmax(0,1fr));
+                gap:6px;
+            }
+            .cal-cell{
+                min-height:64px;
+                border-radius:8px;
+                border:1px solid #e5e5ea;
+                padding:5px 6px;
+                display:flex;
+                flex-direction:column;
+                gap:2px;
+                font-size:12px;
+            }
+            .dark .cal-cell{
+                border-color:#3a3a3c;
+            }
+            @media (max-width: 640px){
+                .cal-cell{
+                    min-height:50px;
+                    padding:4px 4px;
+                    font-size:11px;
+                }
+            }
+        }
+        body {
+            background-color: #F5F5F7;
+            transition: background-color 0.3s ease;
+        }
+        .dark body {
+            background-color: #1C1C1E;
+        }
+        .tag-green{
+            color:#34C759;
+            background:rgba(52,199,89,0.12);
+        }
+        .tag-orange{
+            color:#FF9500;
+            background:rgba(255,149,0,0.12);
+        }
+        .tag-red{
+            color:#FF3B30;
+            background:rgba(255,59,48,0.12);
+        }
+        .tag-gray{
+            color:#86868B;
+            background:rgba(134,134,139,0.12);
+        }
+    </style>
+</head>
+<body class="font-pingfang text-appleTextMain dark:text-white dark:bg-[#1C1C1E] transition-colors duration-300">
+    <header class="fixed top-0 left-0 right-0 h-[64px] glass dark:glass-dark z-50 border-b border-appleLine dark:border-gray-700">
+        <div class="container mx-auto h-full px-6 md:px-12 flex items-center justify-between">
+            <div class="flex items-center">
+                <h1 class="text-[17px] md:text-[20px] font-semibold">港股数据助手</h1>
+            </div>
+            <nav class="hidden lg:flex gap-1 shrink-0">
+                <a href="hk_unlock_overview.html" class="px-3 py-2 rounded-appleSmall hover:bg-black/5 dark:hover:bg-white/10 transition-colors whitespace-nowrap">港股解禁概览</a>
+                <a href="hk_ggt_ru_tong.html" class="px-3 py-2 rounded-appleSmall hover:bg-black/5 dark:hover:bg-white/10 transition-colors whitespace-nowrap">港股通入通看板</a>
+                <a href="hk_greenshoe.html" class="px-3 py-2 rounded-appleSmall bg-appleBlue text-white font-medium whitespace-nowrap">绿鞋使用跟踪</a>
+                <a href="hk_ipo_reminder.html" class="px-3 py-2 rounded-appleSmall hover:bg-black/5 dark:hover:bg-white/10 transition-colors whitespace-nowrap">港股打新提醒</a>
+                <a href="crs_calculator.html" class="px-3 py-2 rounded-appleSmall hover:bg-black/5 dark:hover:bg-white/10 transition-colors whitespace-nowrap">CRS计算器</a>
+            </nav>
+            <div class="flex items-center gap-3 md:gap-4">
+                <input id="stockSearch" type="text" placeholder="输入股票代码/名称" class="h-9 px-3 rounded-appleSmall bg-white/80 dark:bg-gray-800 border border-appleLine dark:border-gray-600 outline-none text-sm w-[120px] lg:w-[180px]">
+                <button id="searchBtn" class="hidden sm:block bg-appleBlue text-white px-3 md:px-4 py-2 rounded-appleSmall text-sm">查询</button>
+                <button id="themeToggle" class="w-11 h-6 rounded-full bg-gray-300 dark:bg-appleBlue relative transition-colors">
+                    <span class="absolute top-[2px] left-[2px] w-5 h-5 bg-white rounded-full transition-all dark:left-[22px]"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 md:px-12 pt-[88px] pb-28 lg:pb-16">
+        <div class="flex justify-end pt-2">
+            <span class="text-xs text-appleTextGray">{{render_date}}｜数据生成 {{generated_at}}</span>
+        </div>
+        <div class="mb-6 flex items-center justify-between">
+            <a href="hk_greenshoe.html" class="inline-flex items-center text-appleBlue">← 返回绿鞋跟踪首页</a>
+            <span id="dataDateTip" class="text-xs text-appleTextGray"></span>
+        </div>
+
+        <div id="notFound" class="hidden bg-appleCard dark:bg-gray-800 rounded-appleBig p-12 shadow-appleCard text-center text-appleTextGray">
+            未找到该股票的绿鞋数据，请返回首页重试。
+        </div>
+
+        <div id="stockBox" class="hidden">
+            <div class="bg-appleCard dark:bg-gray-800 rounded-appleBig p-8 shadow-appleCard mb-8">
+                <div class="flex flex-col md:flex-row md:justify-between md:items-start">
+                    <div>
+                        <h2 id="stockTitle" class="text-[26px] font-bold"></h2>
+                        <p id="stockMeta" class="text-appleTextGray mt-1"></p>
+                    </div>
+                    <div class="mt-4 md:mt-0 flex gap-3">
+                        <button id="refreshBtn" class="px-4 py-2 rounded-appleSmall border border-appleLine dark:border-gray-600 text-sm">刷新数据</button>
+                        <button id="watchBtn" class="px-4 py-2 rounded-appleSmall bg-appleBlue text-white text-sm">加入关注</button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-8">
+                    <div>
+                        <p class="text-appleTextGray text-sm">发行价(HKD)</p>
+                        <p id="kvIssue" class="text-[22px] font-bold mt-1">--</p>
+                    </div>
+                    <div>
+                        <p class="text-appleTextGray text-sm">最新价(HKD) <span id="kvChg" class="text-xs"></span></p>
+                        <p id="kvLast" class="text-[22px] font-bold mt-1">--</p>
+                    </div>
+                    <div>
+                        <p class="text-appleTextGray text-sm">较发行价</p>
+                        <p id="kvVsIssue" class="text-[22px] font-bold mt-1">--</p>
+                    </div>
+                    <div>
+                        <p class="text-appleTextGray text-sm">绿鞋总额度(万股)</p>
+                        <p id="kvQuota" class="text-[22px] font-bold mt-1">--</p>
+                    </div>
+                </div>
+
+                <div class="mt-8 space-y-6">
+                    <div>
+                        <div class="flex justify-between text-sm mb-2">
+                            <span>绿鞋已行使占比</span>
+                            <span id="usedPctText">--</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div id="usedPctBar" class="bg-appleBlue h-full rounded-full" style="width:0%"></div>
+                        </div>
+                        <div class="flex justify-between text-xs text-appleTextGray mt-1">
+                            <span id="usedShareText">--</span>
+                            <span id="leftShareText">--</span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="flex justify-between text-sm mb-2">
+                            <span>绿鞋有效期消耗</span>
+                            <span id="protectPctText">--</span>
+                        </div>
+                        <div class="progress-bar">
+                            <div id="protectPctBar" class="bg-appleOrange h-full rounded-full" style="width:0%"></div>
+                        </div>
+                        <div class="flex justify-between text-xs text-appleTextGray mt-1">
+                            <span id="protectInText">--</span>
+                            <span id="protectLeftText">--</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <div class="bg-appleCard dark:bg-gray-800 rounded-appleBig p-6 shadow-appleCard">
+                    <p class="text-appleTextGray text-sm">初始额度</p>
+                    <p id="qInitial" class="text-[20px] font-bold mt-1"></p>
+                    <p id="qInitialShare" class="text-xs text-appleTextGray mt-1"></p>
+                </div>
+                <div class="bg-appleCard dark:bg-gray-800 rounded-appleBig p-6 shadow-appleCard">
+                    <p class="text-appleTextGray text-sm">累计已用</p>
+                    <p id="qUsedSum" class="text-[20px] font-bold mt-1 text-appleBlue"></p>
+                    <p id="qUsedSumShare" class="text-xs text-appleTextGray mt-1"></p>
+                </div>
+                <div class="bg-appleCard dark:bg-gray-800 rounded-appleBig p-6 shadow-appleCard">
+                    <p class="text-appleTextGray text-sm">剩余可用</p>
+                    <p id="qLeft" class="text-[20px] font-bold mt-1"></p>
+                    <p id="qLeftShare" class="text-xs text-appleTextGray mt-1"></p>
+                </div>
+                <div class="bg-appleCard dark:bg-gray-800 rounded-appleBig p-6 shadow-appleCard">
+                    <p class="text-appleTextGray text-sm">今日使用</p>
+                    <p id="qToday" class="text-[20px] font-bold mt-1"></p>
+                    <p id="qTodayShare" class="text-xs text-appleTextGray mt-1"></p>
+                </div>
+            </div>
+
+            <div id="darkBox" class="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8"></div>
+
+            <div class="bg-appleCard dark:bg-gray-800 rounded-appleBig p-8 shadow-appleCard mb-8">
+                <h3 class="text-xl font-bold mb-4">绿鞋日历</h3>
+                <div class="flex flex-wrap gap-4 mb-4 text-xs text-appleTextGray">
+                    <span><span class="inline-block w-3 h-3 rounded bg-[#15ABFF] align-middle"></span> 使用较少</span>
+                    <span><span class="inline-block w-3 h-3 rounded bg-[#308FFF] align-middle"></span> 使用中等</span>
+                    <span><span class="inline-block w-3 h-3 rounded bg-[#28569B] align-middle"></span> 使用较多</span>
+                    <span><span class="inline-block w-3 h-3 rounded bg-white border border-appleLine align-middle"></span> 已用完/休市</span>
+                    <span>预=预测｜修=修正｜实=实际</span>
+                </div>
+                <div id="calendarBox" class="space-y-6"></div>
+                <p class="text-xs text-appleTextGray mt-4">日历中每日数字为当日绿鞋使用股数（万股），色块越深代表当日使用金额占比越高；空白代表当日无绿鞋买入或休市。</p>
+            </div>
+
+            <div class="bg-appleCard dark:bg-gray-800 rounded-appleBig p-8 shadow-appleCard mb-8">
+                <h3 class="text-xl font-bold mb-4">价格走势（近90个交易日）与绿鞋买入</h3>
+                <div id="priceChart" class="h-[320px] w-full"></div>
+                <p class="text-xs text-appleTextGray mt-3">蓝色线为日收盘价（腾讯财经，前复权），橙色柱为当日绿鞋使用股数（万股，来自绿鞋日历）。</p>
+            </div>
+
+            <div class="bg-appleCard dark:bg-gray-800 rounded-appleBig p-8 shadow-appleCard mb-8">
+                <h3 class="text-xl font-bold mb-5">绿鞋每日使用明细</h3>
+                <div class="hidden md:block overflow-x-auto scroll-table">
+                    <table class="w-full text-sm min-w-[760px]">
+                        <thead>
+                            <tr class="border-b border-appleLine dark:border-gray-700 text-left text-appleTextGray">
+                                <th class="py-3 pr-4">日期</th>
+                                <th class="py-3 pr-4">当日使用(万股)</th>
+                                <th class="py-3 pr-4">累计已行使(万股)</th>
+                                <th class="py-3 pr-4">当日金额(万港元)</th>
+                                <th class="py-3">类型 / 备注</th>
+                            </tr>
+                        </thead>
+                        <tbody id="dailyTableBody"></tbody>
+                    </table>
+                </div>
+                <!-- 手机端每日明细卡片（上下滑动） -->
+                <div id="dailyMobile" class="md:hidden space-y-3"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                <div class="bg-appleCard dark:bg-gray-800 rounded-appleBig p-8 shadow-appleCard">
+                    <h3 class="text-xl font-bold mb-4">券商净买入 Top10</h3>
+                    <div class="hidden md:block overflow-x-auto scroll-table">
+                        <table class="w-full text-sm min-w-[360px]">
+                            <thead>
+                                <tr class="border-b border-appleLine dark:border-gray-700 text-left text-appleTextGray">
+                                    <th class="py-3 pr-3">券商</th>
+                                    <th class="py-3 pr-3">净买入(万股)</th>
+                                    <th class="py-3">占比</th>
+                                </tr>
+                            </thead>
+                            <tbody id="buyTableBody"></tbody>
+                        </table>
+                    </div>
+                    <div id="buyMobile" class="md:hidden space-y-2"></div>
+                </div>
+                <div class="bg-appleCard dark:bg-gray-800 rounded-appleBig p-8 shadow-appleCard">
+                    <h3 class="text-xl font-bold mb-4">券商净卖出 Top10</h3>
+                    <div class="hidden md:block overflow-x-auto scroll-table">
+                        <table class="w-full text-sm min-w-[360px]">
+                            <thead>
+                                <tr class="border-b border-appleLine dark:border-gray-700 text-left text-appleTextGray">
+                                    <th class="py-3 pr-3">券商</th>
+                                    <th class="py-3 pr-3">净卖出(万股)</th>
+                                    <th class="py-3">占比</th>
+                                </tr>
+                            </thead>
+                            <tbody id="sellTableBody"></tbody>
+                        </table>
+                    </div>
+                    <div id="sellMobile" class="md:hidden space-y-2"></div>
+                </div>
+            </div>
+
+            <div class="bg-appleCard dark:bg-gray-800 rounded-appleBig p-8 shadow-appleCard mb-10">
+                <h3 class="text-xl font-bold mb-4">追踪统计（绿鞋席位）</h3>
+                <div class="hidden md:block overflow-x-auto scroll-table">
+                    <table class="w-full text-sm min-w-[620px]">
+                        <thead>
+                            <tr class="border-b border-appleLine dark:border-gray-700 text-left text-appleTextGray">
+                                <th class="py-3 pr-4">类型</th>
+                                <th class="py-3 pr-4">均价(HKD)</th>
+                                <th class="py-3 pr-4">笔数</th>
+                                <th class="py-3 pr-4">数量(万股)</th>
+                                <th class="py-3">金额(万港元)</th>
+                            </tr>
+                        </thead>
+                        <tbody id="traceTableBody"></tbody>
+                    </table>
+                </div>
+                <!-- 手机端追踪统计卡片（上下滑动） -->
+                <div id="traceMobile" class="md:hidden space-y-3"></div>
+            </div>
+        </div>
+
+        <footer class="border-t border-appleLine dark:border-gray-700 pt-8 text-sm text-appleTextGray flex flex-col md:flex-row justify-between gap-4">
+            <div>数据来源：TradeGoMart 绿鞋追踪、腾讯财经行情、港交所披露易、招股说明书</div>
+            <div>免责声明：页面数据仅资讯参考，不构成任何投资建议</div>
+            <div>推送设置 | 关于本站</div>
+        </footer>
+    </main>
+
+    <!-- 手机端底部导航 -->
+    <nav class="fixed bottom-0 left-0 right-0 lg:hidden z-50 border-t border-appleLine dark:border-gray-700 glass dark:glass-dark" style="padding-bottom: env(safe-area-inset-bottom);">
+        <div class="grid grid-cols-3 h-14">
+            <a href="hk_unlock_overview.html" class="flex flex-col items-center justify-center gap-0.5 text-[11px] text-appleTextGray active:bg-appleBlueLight/40">
+                <span class="text-lg leading-none">📊</span>解禁概览
+            </a>
+            <a href="hk_ggt_ru_tong.html" class="flex flex-col items-center justify-center gap-0.5 text-[11px] text-appleTextGray active:bg-appleBlueLight/40">
+                <span class="text-lg leading-none">📈</span>入通看板
+            </a>
+            <a href="hk_greenshoe.html" class="flex flex-col items-center justify-center gap-0.5 text-[11px] text-appleBlue font-semibold">
+                <span class="text-lg leading-none">👟</span>绿鞋跟踪
+            </a>
+        </div>
+    </nav>
+
+    <script>
+        // ==================== 数据集（生成时注入） ====================
+        const PAGE_DATA = {{dataset_json}};
+        const GREEN_API = "https://cloudapi.livereport8.com/livereport/GreenShoeTrace";
+        const params = new URLSearchParams(location.search);
+        const curCode = String(params.get("code") || "").replace(/\.HK$/i, "").padStart(5, "0");
+        let rec = PAGE_DATA.stocks.find(s => s.code === curCode) || null;
+
+        // ==================== 暗黑模式 ====================
+        const toggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        toggle.addEventListener('click', () => html.classList.toggle('dark'));
+
+        // ==================== 工具函数 ====================
+        function num(v, d = null) {
+            if (v === null || v === undefined || v === "" || v === "--") return d;
+            const n = Number(v);
+            return isNaN(n) ? d : n;
+        }
+        function fmtWan(v) {
+            const n = num(v, 0);
+            return n ? (n / 1e4).toFixed(2) + "万股" : "--";
+        }
+        function fmtWanYi(v) {
+            const n = num(v, 0);
+            return n ? (n / 1e4).toFixed(0) + "万股" : "--";
+        }
+        function fmtYiWan(v) {
+            const n = num(v, 0);
+            return n ? (n / 1e4).toFixed(1) + "万港元" : "--";
+        }
+        function esc(s) {
+            return String(s == null ? "" : s).replace(/[&<>"']/g, c => ({
+                "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+            }[c]));
+        }
+
+        // ==================== 渲染 ====================
+        function renderHeader() {
+            document.getElementById('stockTitle').textContent = `${rec.code}.HK ${rec.name}`;
+            const meta = [];
+            if (rec.listDate) meta.push(`上市：${rec.listDate}`);
+            if (rec.expireDate) meta.push(`绿鞋到期：${rec.expireDate}`);
+            if (rec.stabilizer) meta.push(`稳价人：${rec.stabilizer}`);
+            document.getElementById('stockMeta').innerHTML =
+                esc(meta.join("｜")) + ` <span class="${rec.statusClass} px-2 py-0.5 rounded text-xs ml-1">${esc(rec.statusText)}</span>`;
+            document.getElementById('dataDateTip').textContent = rec.dataDate ? `绿鞋数据截至：${rec.dataDate}` : "";
+            document.title = `绿鞋详情｜${rec.code}.HK ${rec.name} | 港股数据助手`;
+        }
+
+        function renderStats() {
+            const el = id => document.getElementById(id);
+            el('kvIssue').textContent = rec.issuePrice ? rec.issuePrice.toFixed(2) : "--";
+            el('kvLast').textContent = rec.lastPrice ? rec.lastPrice.toFixed(2) : "--";
+            el('kvLast').className = "text-[22px] font-bold mt-1" + (rec.lastPrice != null ? "" : "");
+            if (rec.changePct != null) {
+                el('kvChg').textContent = (rec.changePct >= 0 ? "+" : "") + rec.changePct.toFixed(2) + "%";
+                el('kvChg').className = "text-xs " + (rec.changePct >= 0 ? "text-appleGreen" : "text-appleRed");
+            }
+            if (rec.vsIssuePct != null) {
+                el('kvVsIssue').textContent = (rec.vsIssuePct >= 0 ? "+" : "") + rec.vsIssuePct.toFixed(2) + "%";
+                el('kvVsIssue').className = "text-[22px] font-bold mt-1 " + (rec.vsIssuePct >= 0 ? "text-appleGreen" : "text-appleRed");
+            }
+            el('kvQuota').textContent = rec.quotaShare ? fmtWanYi(rec.quotaShare) : "--";
+
+            const usedPct = num(rec.usedPct, 0);
+            el('usedPctText').textContent = usedPct.toFixed(2) + "%";
+            el('usedPctBar').style.width = Math.min(100, usedPct) + "%";
+            el('usedPctBar').style.background = usedPct >= 99.99 ? "#FF3B30" : "#007AFF";
+            el('usedShareText').textContent = `已行使：${fmtWan(rec.usedShare)}`;
+            el('leftShareText').textContent = `剩余：${fmtWan(rec.leftShare)}`;
+
+            el('protectPctText').textContent = (rec.protectPct || 0).toFixed(1) + "%";
+            el('protectPctBar').style.width = Math.min(100, rec.protectPct || 0) + "%";
+            if (rec.daysLeft != null) {
+                const isOver = rec.daysLeft < 0;
+                el('protectInText').textContent = isOver ? "已到期" : "进行中";
+                el('protectLeftText').textContent = isOver ? `已过${-rec.daysLeft}天` : `剩余${rec.daysLeft}天到期`;
+            } else {
+                el('protectInText').textContent = "--";
+                el('protectLeftText').textContent = "--";
+            }
+        }
+
+        function renderQuota() {
+            const el = id => document.getElementById(id);
+            el('qInitial').textContent = fmtYi(rec.quotaAmount);
+            el('qInitialShare').textContent = fmtWan(rec.quotaShare);
+            el('qUsedSum').textContent = fmtYi(rec.usedAmount);
+            el('qUsedSumShare').textContent = fmtWan(rec.usedShare);
+            el('qLeft').textContent = fmtYi(rec.leftAmount);
+            el('qLeftShare').textContent = fmtWan(rec.leftShare);
+            el('qToday').textContent = fmtYi(rec.todayUsedAmount);
+            el('qTodayShare').textContent = fmtWan(rec.todayUsedShare);
+        }
+
+        function renderDarkFirst() {
+            const box = document.getElementById('darkBox');
+            let cards = "";
+            if (rec.darkPool) {
+                const d = rec.darkPool;
+                const chg = d.closeChgPct != null ? (d.closeChgPct >= 0 ? "+" : "") + d.closeChgPct.toFixed(2) + "%" : "--";
+                cards += `
+                    <div class="bg-appleCard dark:bg-gray-800 rounded-appleBig p-6 shadow-appleCard">
+                        <p class="text-appleTextGray text-sm mb-3">暗盘行情</p>
+                        <div class="grid grid-cols-2 gap-3 text-sm">
+                            <div><p class="text-appleTextGray text-xs">收盘价</p><p class="font-semibold">${d.close != null ? d.close.toFixed(2) : "--"}</p></div>
+                            <div><p class="text-appleTextGray text-xs">较发行价</p><p class="font-semibold ${d.closeChgPct != null && d.closeChgPct >= 0 ? 'text-appleGreen' : 'text-appleRed'}">${chg}</p></div>
+                            <div><p class="text-appleTextGray text-xs">成交数量(万股)</p><p>${d.volumeWan != null ? d.volumeWan.toFixed(1) : "--"}</p></div>
+                            <div><p class="text-appleTextGray text-xs">成交金额(万元)</p><p>${d.amountWan != null ? d.amountWan.toFixed(0) : "--"}</p></div>
+                        </div>
+                    </div>`;
+            }
+            if (rec.firstDay) {
+                const d = rec.firstDay;
+                const chg = d.closeChgPct != null ? (d.closeChgPct >= 0 ? "+" : "") + d.closeChgPct.toFixed(2) + "%" : "--";
+                cards += `
+                    <div class="bg-appleCard dark:bg-gray-800 rounded-appleBig p-6 shadow-appleCard">
+                        <p class="text-appleTextGray text-sm mb-3">上市首日行情</p>
+                        <div class="grid grid-cols-2 gap-3 text-sm">
+                            <div><p class="text-appleTextGray text-xs">收盘价</p><p class="font-semibold">${d.close != null ? d.close.toFixed(2) : "--"}</p></div>
+                            <div><p class="text-appleTextGray text-xs">较发行价</p><p class="font-semibold ${d.closeChgPct != null && d.closeChgPct >= 0 ? 'text-appleGreen' : 'text-appleRed'}">${chg}</p></div>
+                            <div><p class="text-appleTextGray text-xs">开盘价</p><p>${d.open != null ? d.open.toFixed(2) : "--"}</p></div>
+                            <div><p class="text-appleTextGray text-xs">均价</p><p>${d.avg != null ? d.avg.toFixed(2) : "--"}</p></div>
+                        </div>
+                    </div>`;
+            }
+            box.innerHTML = cards || "";
+        }
+
+        function renderCalendar() {
+            const box = document.getElementById('calendarBox');
+            box.innerHTML = "";
+            if (!rec.listDate || !rec.expireDate) {
+                box.innerHTML = '<p class="text-appleTextGray text-sm">暂无日历数据</p>';
+                return;
+            }
+            const calMap = {};
+            (rec.calendar || []).forEach(r => { calMap[r.tradeDate] = r; });
+            const months = [];
+            const cur = new Date(rec.listDate);
+            const end = new Date(rec.expireDate);
+            while (cur <= end) {
+                const key = cur.getFullYear() + "-" + String(cur.getMonth() + 1).padStart(2, "0");
+                if (!months.length || months[months.length - 1].key !== key) months.push({ key, year: cur.getFullYear(), month: cur.getMonth() });
+                cur.setDate(cur.getDate() + 1);
+            }
+
+            const weekNames = ["日", "一", "二", "三", "四", "五", "六"];
+            months.forEach(m => {
+                const first = new Date(m.year, m.month, 1);
+                const daysInMonth = new Date(m.year, m.month + 1, 0).getDate();
+                const leading = first.getDay();
+                const monthTitle = m.year + "年" + (m.month + 1) + "月";
+
+                let cells = "";
+                for (let i = 0; i < leading; i++) cells += '<div class="cal-cell opacity-30"></div>';
+                for (let d = 1; d <= daysInMonth; d++) {
+                    const ds = `${m.year}-${String(m.month + 1).padStart(2, "0")}-${String(d).padStart(2, "0")}`;
+                    const row = calMap[ds];
+                    const weekday = new Date(m.year, m.month, d).getDay();
+                    const isWeekend = weekday === 0 || weekday === 6;
+                    let bg = "#ffffff";
+                    let content = "";
+                    if (row) {
+                        if (row.valueType === -1) bg = "#ffffff";
+                        else {
+                            const c = num(row.colourProportion, 0);
+                            bg = c < 0.05 ? "#15ABFF" : (c < 0.1 ? "#308FFF" : "#28569B");
+                        }
+                        const used = num(row.valueUsedShare, 0) || num(row.valueActualShare, 0) || 0;
+                        if (row.valueType !== 0 && used > 0) {
+                            const mark = row.valueType === 3 ? "实" : row.valueType === 2 ? "修" : row.valueType === 1 ? "预" : "";
+                            content = `
+                                <span class="text-[10px] leading-none ${row.valueType === -1 ? 'text-appleGrayTag' : 'text-white'}">${mark}</span>
+                                <span class="text-[10px] leading-none ${row.valueType === -1 ? 'text-appleGrayTag' : 'text-white'}">${(used / 1e4).toFixed(1)}</span>`;
+                        } else if (row.valueType === 0 || row.valueType === -1) {
+                            content = `<span class="text-[10px] leading-none text-appleGrayTag">${row.valueType === -1 ? "已用完" : "未使用"}</span>`;
+                        }
+                    }
+                    const dayColor = isWeekend ? "text-appleGrayTag" : "";
+                    cells += `
+                        <div class="cal-cell" style="background:${bg}">
+                            <span class="text-xs font-medium ${row && row.valueType > 0 ? 'text-white' : 'text-appleTextMain dark:text-white'} ${dayColor}">${d}</span>
+                            ${content}
+                        </div>`;
+                }
+
+                box.innerHTML += `
+                    <div>
+                        <p class="font-semibold mb-3">${monthTitle}</p>
+                        <div class="cal-grid">
+                            ${weekNames.map(w => `<div class="text-center text-xs text-appleTextGray py-1">${w}</div>`).join("")}
+                            ${cells}
+                        </div>
+                    </div>`;
+            });
+        }
+
+        function renderDailyTable() {
+            const rows = (rec.calendar || []).slice().reverse().map(row => {
+                const isActual = row.valueType === 3;
+                const isPredict = row.valueType === 1;
+                const isAdjust = row.valueType === 2;
+                const usedShare = num(row.valueUsedShare, 0);
+                const actualShare = num(row.valueActualShare);
+                let amount = null;
+                if (isActual) amount = num(row.valueActual);
+                else if (isAdjust) amount = num(row.valueAjust);
+                else if (isPredict) amount = num(row.valuePredict);
+                const amountTxt = amount != null ? (amount / 1e4).toFixed(1) + "万" : "--";
+                return { row, usedShare, actualShare, amountTxt, isActual, isPredict, isAdjust };
+            });
+            let firstBuy = true;
+            rows.forEach(r => {
+                if (r.isActual && r.usedShare > 0) { r.note = firstBuy ? "首次回购" : "二级市场回购"; firstBuy = false; }
+                else if (r.isPredict) r.note = "预测数据";
+                else if (r.isAdjust) r.note = "修正数据";
+                else r.note = "无买入";
+            });
+
+            const tbody = document.getElementById('dailyTableBody');
+            const mob = document.getElementById('dailyMobile');
+            tbody.innerHTML = "";
+            mob.innerHTML = "";
+            if (!rows.length) {
+                tbody.innerHTML = '<tr><td colspan="5" class="py-6 text-center text-appleTextGray">暂无每日明细</td></tr>';
+                mob.innerHTML = '<div class="text-center text-appleTextGray py-8 text-sm">暂无每日明细</div>';
+                return;
+            }
+            rows.forEach(({ row, usedShare, actualShare, amountTxt, isActual, isAdjust, isPredict, note }) => {
+                const typeTag = isActual
+                    ? '<span class="tag-green px-1.5 py-0.5 rounded text-xs">实际</span>'
+                    : isAdjust
+                        ? '<span class="tag-orange px-1.5 py-0.5 rounded text-xs">修正</span>'
+                        : isPredict
+                            ? '<span class="tag-gray px-1.5 py-0.5 rounded text-xs">预测</span>'
+                            : '<span class="tag-gray px-1.5 py-0.5 rounded text-xs">未使用</span>';
+
+                const tr = document.createElement("tr");
+                tr.className = "border-b border-appleLine dark:border-gray-700";
+                tr.innerHTML = `
+                    <td class="py-3 pr-4">${esc(row.tradeDate || "--")}</td>
+                    <td class="py-3 pr-4">${usedShare > 0 ? (usedShare / 1e4).toFixed(2) : "--"}</td>
+                    <td class="py-3 pr-4">${actualShare != null ? (actualShare / 1e4).toFixed(2) : "--"}</td>
+                    <td class="py-3 pr-4">${amountTxt}</td>
+                    <td class="py-3">${typeTag} <span class="text-xs text-appleTextGray ml-1">${note}</span></td>`;
+                tbody.appendChild(tr);
+
+                const card = document.createElement("div");
+                card.className = "bg-appleCard dark:bg-gray-800 rounded-appleMid p-4 shadow-appleCard border border-appleLine/60 dark:border-gray-700";
+                card.innerHTML = `
+                    <div class="flex justify-between items-center">
+                        <p class="font-semibold text-sm">${esc(row.tradeDate || "--")}</p>
+                        ${typeTag}
+                    </div>
+                    <div class="grid grid-cols-3 gap-2 mt-3 text-center">
+                        <div><p class="text-[11px] text-appleTextGray">当日使用</p><p class="text-sm font-semibold mt-0.5">${usedShare > 0 ? (usedShare / 1e4).toFixed(2) + "万股" : "--"}</p></div>
+                        <div><p class="text-[11px] text-appleTextGray">累计已行使</p><p class="text-sm font-semibold mt-0.5">${actualShare != null ? (actualShare / 1e4).toFixed(2) + "万股" : "--"}</p></div>
+                        <div><p class="text-[11px] text-appleTextGray">当日金额</p><p class="text-sm font-semibold mt-0.5">${amountTxt}</p></div>
+                    </div>
+                    <p class="text-xs text-appleTextGray mt-2">${esc(note)}</p>`;
+                mob.appendChild(card);
+            });
+        }
+
+        function renderBrokers() {
+            const fill = (tb, mob, list) => {
+                tb.innerHTML = "";
+                mob.innerHTML = "";
+                if (!list || !list.length) {
+                    tb.innerHTML = '<tr><td colspan="3" class="py-6 text-center text-appleTextGray">暂无数据</td></tr>';
+                    mob.innerHTML = '<div class="text-center text-appleTextGray py-6 text-sm">暂无数据</div>';
+                    return;
+                }
+                list.forEach(it => {
+                    const vol = num(it.netVolume, 0);
+                    const volTxt = vol ? (vol / 1e4).toFixed(2) : "--";
+                    const pctTxt = it.pct != null ? it.pct.toFixed(1) + "%" : "--";
+                    const tr = document.createElement("tr");
+                    tr.className = "border-b border-appleLine dark:border-gray-700";
+                    tr.innerHTML = `
+                        <td class="py-3 pr-3">${esc(it.name)}</td>
+                        <td class="py-3 pr-3">${volTxt}</td>
+                        <td class="py-3">${pctTxt}</td>`;
+                    tb.appendChild(tr);
+
+                    const card = document.createElement("div");
+                    card.className = "flex justify-between items-center bg-appleCard dark:bg-gray-800 rounded-appleSmall px-3 py-2.5 border border-appleLine/60 dark:border-gray-700";
+                    card.innerHTML = `
+                        <span class="text-sm font-medium">${esc(it.name)}</span>
+                        <span class="text-xs text-appleTextGray">${volTxt}万股 · ${pctTxt}</span>`;
+                    mob.appendChild(card);
+                });
+            };
+            fill(document.getElementById('buyTableBody'), document.getElementById('buyMobile'), rec.brokerBuyTop10);
+            fill(document.getElementById('sellTableBody'), document.getElementById('sellMobile'), rec.brokerSellTop10);
+        }
+
+        function renderTrace() {
+            const tbody = document.getElementById('traceTableBody');
+            const mob = document.getElementById('traceMobile');
+            tbody.innerHTML = "";
+            mob.innerHTML = "";
+            if (!rec.traceCount || !rec.traceCount.length) {
+                tbody.innerHTML = '<tr><td colspan="5" class="py-6 text-center text-appleTextGray">暂无追踪统计</td></tr>';
+                mob.innerHTML = '<div class="text-center text-appleTextGray py-6 text-sm">暂无追踪统计</div>';
+                return;
+            }
+            rec.traceCount.forEach(it => {
+                const priceTxt = it.priceAverage != null ? it.priceAverage.toFixed(2) : "--";
+                const volTxt = it.volumeTotal ? (it.volumeTotal / 1e4).toFixed(1) : "--";
+                const amtTxt = it.amountTotal ? (it.amountTotal / 1e4).toFixed(1) : "--";
+                const tr = document.createElement("tr");
+                tr.className = "border-b border-appleLine dark:border-gray-700";
+                tr.innerHTML = `
+                    <td class="py-3 pr-4">${esc(it.type)}</td>
+                    <td class="py-3 pr-4">${priceTxt}</td>
+                    <td class="py-3 pr-4">${it.orderCount || "--"}</td>
+                    <td class="py-3 pr-4">${volTxt}</td>
+                    <td class="py-3">${amtTxt}</td>`;
+                tbody.appendChild(tr);
+
+                const card = document.createElement("div");
+                card.className = "bg-appleCard dark:bg-gray-800 rounded-appleMid p-4 shadow-appleCard border border-appleLine/60 dark:border-gray-700";
+                card.innerHTML = `
+                    <div class="flex justify-between items-center">
+                        <p class="font-semibold text-sm">${esc(it.type)}</p>
+                        <p class="text-sm font-semibold">${priceTxt} HKD</p>
+                    </div>
+                    <div class="grid grid-cols-3 gap-2 mt-3 text-center">
+                        <div><p class="text-[11px] text-appleTextGray">笔数</p><p class="text-sm font-semibold mt-0.5">${it.orderCount || "--"}</p></div>
+                        <div><p class="text-[11px] text-appleTextGray">数量</p><p class="text-sm font-semibold mt-0.5">${volTxt}万股</p></div>
+                        <div><p class="text-[11px] text-appleTextGray">金额</p><p class="text-sm font-semibold mt-0.5">${amtTxt}万港元</p></div>
+                    </div>`;
+                mob.appendChild(card);
+            });
+        }
+
+        // ==================== 价格走势图 ====================
+        let chart = null;
+        async function loadChart() {
+            const dom = document.getElementById('priceChart');
+            if (!dom) return;
+            if (!chart) chart = echarts.init(dom);
+            chart.showLoading({ text: "加载行情中…" });
+            try {
+                const r = await fetch(`https://web.ifzq.gtimg.cn/appstock/app/fqkline/get?param=hk${rec.code},day,,,90,qfq`);
+                const j = await r.json();
+                const arr = (j.data && j.data["hk" + rec.code] && j.data["hk" + rec.code].day) || [];
+                const dates = arr.map(x => x[0]);
+                const closes = arr.map(x => num(x[2], 0));
+
+                const calMap = {};
+                (rec.calendar || []).forEach(x => { calMap[x.tradeDate] = num(x.valueUsedShare, 0) || 0; });
+                const buys = dates.map(d => calMap[d] ? calMap[d] / 1e4 : 0);
+
+                chart.hideLoading();
+                chart.setOption({
+                    backgroundColor: "transparent",
+                    tooltip: {
+                        trigger: "axis",
+                        backgroundColor: "rgba(30,30,30,0.9)",
+                        borderWidth: 0,
+                        textStyle: { color: "#fff", fontSize: 12 },
+                    },
+                    legend: { data: ["收盘价", "绿鞋买入"], textStyle: { color: "#86868B" }, top: 0 },
+                    grid: { left: 50, right: 20, top: 34, bottom: 24 },
+                    xAxis: {
+                        type: "category", data: dates,
+                        axisLine: { lineStyle: { color: "#d1d1d6" } },
+                        axisLabel: { color: "#86868B", fontSize: 10 },
+                    },
+                    yAxis: [
+                        { type: "value", scale: true, splitLine: { lineStyle: { color: "rgba(0,0,0,0.05)" } }, axisLabel: { color: "#86868B", fontSize: 10 } },
+                        { type: "value", name: "万股", splitLine: { show: false }, axisLabel: { color: "#86868B", fontSize: 10 } },
+                    ],
+                    series: [
+                        {
+                            name: "收盘价", type: "line", data: closes, smooth: true, symbol: "none",
+                            lineStyle: { color: "#007AFF", width: 2 },
+                            areaStyle: { color: "rgba(0,122,255,0.08)" },
+                        },
+                        {
+                            name: "绿鞋买入", type: "bar", yAxisIndex: 1, data: buys,
+                            itemStyle: { color: "rgba(255,149,0,0.7)" }, barMaxWidth: 12,
+                        },
+                    ],
+                });
+            } catch (err) {
+                chart.hideLoading();
+                chart.setOption({
+                    title: { text: "行情加载失败", left: "center", top: "middle", textStyle: { color: "#86868B", fontSize: 13, fontWeight: 400 } },
+                });
+            }
+        }
+
+        // ==================== 关注 ====================
+        document.getElementById('watchBtn').addEventListener('click', () => {
+            try {
+                let list = JSON.parse(localStorage.getItem("greenshoe-watch") || "[]");
+                if (!list.includes(rec.code)) {
+                    list.push(rec.code);
+                    localStorage.setItem("greenshoe-watch", JSON.stringify(list));
+                    document.getElementById('watchBtn').textContent = "已关注";
+                }
+            } catch (err) { /* ignore */ }
+        });
+
+        // ==================== 刷新 ====================
+        async function apiPost(name, payload) {
+            const r = await fetch(`${GREEN_API}/${name}`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload || {})
+            });
+            const j = await r.json();
+            return j && j.result === 1 ? j.data : null;
+        }
+
+        async function refreshLive() {
+            const btn = document.getElementById('refreshBtn');
+            btn.disabled = true;
+            btn.textContent = "刷新中…";
+            try {
+                const cal = await apiPost("getGreenShoeCalendar", { code: rec.code, stabilizerId: null, tradeDate: null });
+                let price = null;
+                try {
+                    const r = await fetch(`https://qt.gtimg.cn/q=hk${rec.code}`);
+                    const buf = await r.arrayBuffer();
+                    const text = new TextDecoder("gbk").decode(buf);
+                    const m = /v_hk\d+="([^"]*)"/.exec(text);
+                    const f = m ? m[1].split("~") : [];
+                    if (f.length >= 33) {
+                        price = { price: num(f[3], 0), prevClose: num(f[4], 0), changePct: num(f[32], 0) };
+                    }
+                } catch (err) { /* ignore */ }
+
+                const gv = (cal && cal.greenShoeViewVO) || [];
+                const gather = (cal && cal.greenshoeGatherVO) || {};
+                const first = gv[0] || {};
+                const quotaShare = num(gather.valueInitialShare);
+                const quotaAmount = num(gather.valueInitial);
+                const usedShare = num(gather.valueUsedSumShare, 0);
+                const usedAmount = num(gather.valueUsedSum, 0);
+                const issuePrice = (quotaAmount && quotaShare) ? quotaAmount / quotaShare : rec.issuePrice;
+                rec = Object.assign({}, rec, {
+                    listDate: first.tradeDate || rec.listDate,
+                    expireDate: first.endDate || rec.expireDate,
+                    stabilizer: first.name || rec.stabilizer,
+                    stabilizerId: first.stabilizerId || rec.stabilizerId,
+                    issuePrice,
+                    lastPrice: price ? price.price : rec.lastPrice,
+                    prevClose: price ? price.prevClose : rec.prevClose,
+                    changePct: price ? price.changePct : rec.changePct,
+                    vsIssuePct: (price && issuePrice) ? Math.round((price.price / issuePrice - 1) * 10000) / 100 : rec.vsIssuePct,
+                    quotaShare, quotaAmount, usedShare, usedAmount,
+                    usedPct: quotaAmount ? (usedAmount ? Math.round(usedAmount / quotaAmount * 10000) / 100 : 0) : null,
+                    leftShare: num(gather.valueLeftShare),
+                    leftAmount: num(gather.valueLeft),
+                    todayUsedShare: num(gather.valueUsedShare, 0),
+                    todayUsedAmount: num(gather.valueUsed, 0),
+                    percentLeft: num(gather.percentLeft),
+                    valueType: num(gather.valueType, 0),
+                    dataDate: String(cal && cal.tradeDate || "").slice(0, 10),
+                    hasData: !!(gv.length || quotaShare > 0),
+                    calendar: (gv || []).slice().sort((a, b) => String(a.tradeDate).localeCompare(String(b.tradeDate)))
+                        .map(row => ({
+                            tradeDate: String(row.tradeDate || "").slice(0, 10),
+                            valueType: num(row.valueType, 0),
+                            valueTypeText: "",
+                            valuePredict: num(row.valuePredict),
+                            valueAjust: num(row.valueAjust),
+                            valueActual: num(row.valueActual),
+                            valueUsedShare: num(row.valueUsedShare),
+                            valueActualShare: num(row.valueActualShare),
+                            colourProportion: num(row.colourProportion, 0),
+                        })),
+                    brokerBuyTop10: ((cal && cal.brokerTradeTop10VO && cal.brokerTradeTop10VO.cleanBuyVO) || []).map(it => ({
+                        name: it.brokerNameShort || "", netVolume: num(it.netVolume), pct: num(it.percentLeft, 0) * 100, isCcass: it.isCcass || 0,
+                    })),
+                    brokerSellTop10: ((cal && cal.brokerTradeTop10VO && cal.brokerTradeTop10VO.cleanSaleVO) || []).map(it => ({
+                        name: it.brokerNameShort || "", netVolume: num(it.netVolume), pct: num(it.percentLeft, 0) * 100, isCcass: it.isCcass || 0,
+                    })),
+                    traceCount: ((cal && cal.traceCountVO) || []).map(it => ({
+                        type: it.type || "", priceAverage: num(it.priceAverage), orderCount: num(it.orderCount, 0),
+                        volumeTotal: num(it.volumeTotal, 0), amountTotal: num(it.amountTotal, 0),
+                    })),
+                });
+                // 重算状态
+                const usedPct = rec.usedPct;
+                if (!rec.hasData) { rec.status = "nodata"; rec.statusText = "暂无数据"; rec.statusClass = "tag-gray"; }
+                else if (usedPct != null && usedPct >= 99.995) { rec.status = "zero"; rec.statusText = "额度耗尽"; rec.statusClass = "tag-red"; }
+                else if (rec.expireDate && new Date(rec.expireDate) >= new Date(new Date().toDateString())) { rec.status = "protect"; rec.statusText = "绿鞋保护中"; rec.statusClass = "tag-orange"; }
+                else { rec.status = "expired"; rec.statusText = "已到期"; rec.statusClass = "tag-gray"; }
+
+                renderHeader();
+                renderStats();
+                renderQuota();
+                renderDarkFirst();
+                renderCalendar();
+                renderDailyTable();
+                renderBrokers();
+                renderTrace();
+                loadChart();
+                btn.textContent = "刷新数据";
+            } catch (err) {
+                btn.textContent = "刷新失败，重试";
+            }
+            btn.disabled = false;
+        }
+        document.getElementById('refreshBtn').addEventListener('click', refreshLive);
+
+        // 搜索跳转
+        document.getElementById('searchBtn').addEventListener('click', () => {
+            const val = document.getElementById('stockSearch').value.trim();
+            if (!val) return;
+            const s = PAGE_DATA.stocks.find(x => x.code === val || String(x.code).replace(/\.HK$/i, "") === val ||
+                x.name.includes(val));
+            if (s) location.href = `greenshoe_detail.html?code=${s.code}&name=${encodeURIComponent(s.name)}`;
+            else location.href = `hk_greenshoe.html?q=${encodeURIComponent(val)}`;
+        });
+        document.getElementById('stockSearch').addEventListener('keydown', e => {
+            if (e.key === "Enter") document.getElementById('searchBtn').click();
+        });
+
+        // ==================== 初始化 ====================
+        if (!rec) {
+            document.getElementById('notFound').classList.remove('hidden');
+        } else {
+            document.getElementById('stockBox').classList.remove('hidden');
+            try {
+                const list = JSON.parse(localStorage.getItem("greenshoe-watch") || "[]");
+                if (list.includes(rec.code)) document.getElementById('watchBtn').textContent = "已关注";
+            } catch (err) { /* ignore */ }
+            renderHeader();
+            renderStats();
+            renderQuota();
+            renderDarkFirst();
+            renderCalendar();
+            renderDailyTable();
+            renderBrokers();
+            renderTrace();
+            loadChart();
+            window.addEventListener("resize", () => chart && chart.resize());
+        }
+    </script>
+</body>
+</html>

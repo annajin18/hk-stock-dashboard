@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>绿鞋使用跟踪 | 港股数据助手</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PingFang+SC:wght@300;400;500;600;700&family=SF+Pro+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        appleBg: '#F5F5F7',
+                        appleCard: '#ffffff',
+                        appleBlue: '#007AFF',
+                        appleBlueLight: '#E6F0FF',
+                        appleBlueDarkBg: 'rgba(0,122,255,0.15)',
+                        appleRed: '#FF3B30',
+                        appleGreen: '#34C759',
+                        appleOrange: '#FF9500',
+                        applePurple: '#AF52DE',
+                        appleGrayTag: '#86868B',
+                        appleTextMain: '#1D1D1F',
+                        appleTextGray: '#86868B',
+                        appleLine: '#E5E5EA'
+                    },
+                    fontFamily: {
+                        pingfang: ['PingFang SC', 'system-ui', 'sans-serif'],
+                        sfpro: ['SF Pro Display', 'sans-serif']
+                    },
+                    borderRadius: {
+                        'appleBig': '20px',
+                        'appleMid': '16px',
+                        'appleSmall': '8px'
+                    },
+                    boxShadow: {
+                        appleCard: '0 4px 14px rgba(0,0,0,0.06)',
+                        appleHover: '0 6px 20px rgba(0,0,0,0.08)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .glass {
+                backdrop-filter: blur(20px);
+                background: rgba(255,255,255,0.75);
+            }
+            .glass-dark {
+                backdrop-filter: blur(20px);
+                background: rgba(30,30,30,0.75);
+            }
+            .text-balance {
+                text-wrap: balance;
+            }
+            .row-hover{
+                transition: background 0.22s ease;
+            }
+            .row-hover:hover{
+                background:rgba(0,122,255,0.06);
+            }
+            .scroll-table::-webkit-scrollbar {
+                width: 4px;
+                height:6px;
+            }
+            .scroll-table::-webkit-scrollbar-thumb {
+                background: #d1d1d6;
+                border-radius: 4px;
+            }
+            .dark .scroll-table::-webkit-scrollbar-thumb {
+                background: #48484a;
+            }
+            .scroll-table{
+                -webkit-overflow-scrolling: touch;
+            }
+            .mini-bar{
+                height:6px;border-radius:3px;background:#e5e5ea;overflow:hidden;
+            }
+            .dark .mini-bar{
+                background:#3a3a3c;
+            }
+        }
+        body {
+            background-color: #F5F5F7;
+            transition: background-color 0.3s ease;
+        }
+        .dark body {
+            background-color: #1C1C1E;
+        }
+        .tag-green{
+            color:#34C759;
+            background:rgba(52,199,89,0.12);
+        }
+        .tag-orange{
+            color:#FF9500;
+            background:rgba(255,149,0,0.12);
+        }
+        .tag-red{
+            color:#FF3B30;
+            background:rgba(255,59,48,0.12);
+        }
+        .tag-gray{
+            color:#86868B;
+            background:rgba(134,134,139,0.12);
+        }
+    </style>
+</head>
+<body class="font-pingfang text-appleTextMain dark:text-white dark:bg-[#1C1C1E] transition-colors duration-300">
+    <header class="fixed top-0 left-0 right-0 h-[64px] glass dark:glass-dark z-50 border-b border-appleLine dark:border-gray-700">
+        <div class="container mx-auto h-full px-6 md:px-12 flex items-center justify-between">
+            <div class="flex items-center">
+                <h1 class="text-[17px] md:text-[20px] font-semibold">港股数据助手</h1>
+            </div>
+            <nav class="hidden lg:flex gap-1 shrink-0">
+                <a href="hk_unlock_overview.html" class="px-3 py-2 rounded-appleSmall hover:bg-black/5 dark:hover:bg-white/10 transition-colors whitespace-nowrap">港股解禁概览</a>
+                <a href="hk_ggt_ru_tong.html" class="px-3 py-2 rounded-appleSmall hover:bg-black/5 dark:hover:bg-white/10 transition-colors whitespace-nowrap">港股通入通看板</a>
+                <a href="hk_greenshoe.html" class="px-3 py-2 rounded-appleSmall bg-appleBlue text-white font-medium whitespace-nowrap">绿鞋使用跟踪</a>
+                <a href="hk_ipo_reminder.html" class="px-3 py-2 rounded-appleSmall hover:bg-black/5 dark:hover:bg-white/10 transition-colors whitespace-nowrap">港股打新提醒</a>
+                <a href="crs_calculator.html" class="px-3 py-2 rounded-appleSmall hover:bg-black/5 dark:hover:bg-white/10 transition-colors whitespace-nowrap">CRS计算器</a>
+            </nav>
+            <div class="flex items-center gap-3 md:gap-4">
+                <input id="stockSearch" type="text" placeholder="输入股票代码/名称" class="h-9 px-3 rounded-appleSmall bg-white/80 dark:bg-gray-800 border border-appleLine dark:border-gray-600 outline-none text-sm w-[120px] lg:w-[180px]">
+                <button id="searchBtn" class="hidden sm:block bg-appleBlue text-white px-3 md:px-4 py-2 rounded-appleSmall text-sm">查询</button>
+                <button id="themeToggle" class="w-11 h-6 rounded-full bg-gray-300 dark:bg-appleBlue relative transition-colors">
+                    <span class="absolute top-[2px] left-[2px] w-5 h-5 bg-white rounded-full transition-all dark:left-[22px]"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 md:px-12 pt-[88px] pb-28 lg:pb-16">
+        <div class="flex justify-end pt-2">
+            <span class="text-xs text-appleTextGray">{{render_date}}｜数据生成 {{generated_at}}</span>
+        </div>
+        <div class="my-10">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-center">
+                <div>
+                    <h2 class="text-[32px] font-bold">绿鞋使用跟踪</h2>
+                    <p class="text-appleTextGray mt-2 text-[16px]">港股新股超额配售（绿鞋）使用情况追踪，按上市时间倒序；点击条目查看单只标的完整绿鞋详情</p>
+                </div>
+                <div class="mt-4 md:mt-0 flex gap-3">
+                    <select id="filterStatus" class="h-9 px-3 rounded-appleSmall bg-white dark:bg-gray-800 border border-appleLine dark:border-gray-600 text-sm">
+                        <option value="all">全部标的</option>
+                        <option value="protect">绿鞋保护期中</option>
+                        <option value="expired">绿鞋已到期</option>
+                        <option value="zero">绿鞋额度耗尽</option>
+                        <option value="nodata">暂无数据</option>
+                    </select>
+                    <button id="refreshBtn" class="h-9 px-4 rounded-appleSmall border border-appleLine dark:border-gray-600 text-sm">刷新数据</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div class="bg-appleCard dark:bg-gray-800 rounded-appleBig p-6 shadow-appleCard">
+                <p class="text-appleTextGray text-sm">绿鞋标的数</p>
+                <p id="statTotal" class="text-[28px] font-bold mt-2">{{stat_total}}</p>
+            </div>
+            <div class="bg-appleCard dark:bg-gray-800 rounded-appleBig p-6 shadow-appleCard">
+                <p class="text-appleTextGray text-sm">当前处于绿鞋保护期</p>
+                <p id="statProtect" class="text-[28px] font-bold mt-2 text-appleOrange">{{stat_protect}}</p>
+            </div>
+            <div class="bg-appleCard dark:bg-gray-800 rounded-appleBig p-6 shadow-appleCard">
+                <p class="text-appleTextGray text-sm">绿鞋有回购操作标的</p>
+                <p id="statUsed" class="text-[28px] font-bold mt-2 text-appleBlue">{{stat_used}}</p>
+            </div>
+            <div class="bg-appleCard dark:bg-gray-800 rounded-appleBig p-6 shadow-appleCard">
+                <p class="text-appleTextGray text-sm">绿鞋已到期完结</p>
+                <p id="statDone" class="text-[28px] font-bold mt-2 text-appleTextGray">{{stat_done}}</p>
+            </div>
+        </div>
+
+        <div class="bg-appleCard dark:bg-gray-800 rounded-appleBig p-8 shadow-appleCard mb-8">
+            <div class="flex justify-between items-center mb-5">
+                <h3 class="text-xl font-bold">新股绿鞋一览（上市时间倒序）</h3>
+                <span id="listInfo" class="text-xs text-appleTextGray">点击任意一行，打开该股票【绿鞋详情页】</span>
+            </div>
+            <div class="hidden md:block overflow-x-auto scroll-table">
+                <table class="w-full text-sm min-w-[1200px]">
+                    <thead>
+                        <tr class="border-b border-appleLine dark:border-gray-700 text-left text-appleTextGray">
+                            <th class="py-3 pr-3">代码｜名称</th>
+                            <th class="py-3 pr-3">上市日期</th>
+                            <th class="py-3 pr-3">绿鞋到期日</th>
+                            <th class="py-3 pr-3">稳价人</th>
+                            <th class="py-3 pr-3">发行价(HKD)</th>
+                            <th class="py-3 pr-3">现价(HKD)</th>
+                            <th class="py-3 pr-3">较发行价</th>
+                            <th class="py-3 pr-3">绿鞋总额度(万股)</th>
+                            <th class="py-3 pr-3">已行使占比</th>
+                            <th class="py-3 pr-3">剩余额度(万股)</th>
+                            <th class="py-3">状态</th>
+                        </tr>
+                    </thead>
+                    <tbody id="greenShoeTableBody"></tbody>
+                </table>
+            </div>
+            <!-- 手机端卡片列表（上下滑动） -->
+            <div id="mobileList" class="md:hidden space-y-3"></div>
+
+            <div class="flex justify-between items-center mt-6 pt-4 border-t border-appleLine dark:border-gray-700">
+                <div id="pageInfo" class="text-xs text-appleTextGray"></div>
+                <div class="flex gap-2">
+                    <button id="prevPage" class="px-3 py-1 rounded-appleSmall border border-appleLine dark:border-gray-600 text-sm disabled:opacity-40">上一页</button>
+                    <span id="pageNum" class="px-3 py-1 rounded-appleSmall bg-appleBlue text-white text-sm"></span>
+                    <button id="nextPage" class="px-3 py-1 rounded-appleSmall border border-appleLine dark:border-gray-600 text-sm disabled:opacity-40">下一页</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="bg-appleCard dark:bg-gray-800 rounded-appleBig p-6 shadow-appleCard mb-10">
+            <h3 class="text-lg font-semibold mb-3">字段说明</h3>
+            <div class="text-sm text-appleTextGray space-y-2">
+                <p>• <span class="tag-orange px-1 rounded text-xs">绿鞋保护中</span>：还在绿鞋有效期内，承销商（稳价人）可进行二级市场回购；</p>
+                <p>• <span class="tag-red px-1 rounded text-xs">额度耗尽</span>：绿鞋额度已经全部用完，无剩余托底资金；</p>
+                <p>• <span class="tag-gray px-1 rounded text-xs">已到期</span>：绿鞋有效期结束，承销商不再承担回购义务；</p>
+                <p>• 绿鞋额度=初始超额配售数量；已行使占比=累计已用金额/初始额度；每日明细含「预测/修正/实际」三档，实际为准；</p>
+                <p>• 数据来源于 TradeGoMart 绿鞋追踪、腾讯财经行情、招股书及港交所披露，存在披露延迟，<strong>不构成投资建议</strong>。点击行进入详情页，可看绿鞋日历、每日回购明细、券商净买卖和价格走势。</p>
+            </div>
+        </div>
+
+        <footer class="border-t border-appleLine dark:border-gray-700 pt-8 text-sm text-appleTextGray flex flex-col md:flex-row justify-between gap-4">
+            <div>数据来源：TradeGoMart 绿鞋追踪、腾讯财经行情、港交所披露易、招股说明书</div>
+            <div>免责声明：页面数据仅资讯参考，不构成任何投资建议</div>
+            <div>推送设置 | 关于本站</div>
+        </footer>
+    </main>
+
+    <!-- 手机端底部导航 -->
+    <nav class="fixed bottom-0 left-0 right-0 lg:hidden z-50 border-t border-appleLine dark:border-gray-700 glass dark:glass-dark" style="padding-bottom: env(safe-area-inset-bottom);">
+        <div class="grid grid-cols-3 h-14">
+            <a href="hk_unlock_overview.html" class="flex flex-col items-center justify-center gap-0.5 text-[11px] text-appleTextGray active:bg-appleBlueLight/40">
+                <span class="text-lg leading-none">📊</span>解禁概览
+            </a>
+            <a href="hk_ggt_ru_tong.html" class="flex flex-col items-center justify-center gap-0.5 text-[11px] text-appleTextGray active:bg-appleBlueLight/40">
+                <span class="text-lg leading-none">📈</span>入通看板
+            </a>
+            <a href="hk_greenshoe.html" class="flex flex-col items-center justify-center gap-0.5 text-[11px] text-appleBlue font-semibold">
+                <span class="text-lg leading-none">👟</span>绿鞋跟踪
+            </a>
+        </div>
+    </nav>
+
+    <script>
+        // ==================== 数据集（生成时注入） ====================
+        const PAGE_DATA = {{dataset_json}};
+        const GREEN_API = "https://cloudapi.livereport8.com/livereport/GreenShoeTrace";
+
+        // ==================== 暗黑模式 ====================
+        const toggle = document.getElementById('themeToggle');
+        const html = document.documentElement;
+        toggle.addEventListener('click', () => html.classList.toggle('dark'));
+
+        // ==================== 工具函数 ====================
+        function num(v, d = null) {
+            if (v === null || v === undefined || v === "" || v === "--") return d;
+            const n = Number(v);
+            return isNaN(n) ? d : n;
+        }
+        function fmtWan(v) {
+            const n = num(v, 0);
+            return n ? (n / 1e4).toFixed(2) + "万股" : "--";
+        }
+        function fmtYi(v) {
+            const n = num(v, 0);
+            return n ? (n / 1e8).toFixed(2) + "亿港元" : "--";
+        }
+        function esc(s) {
+            return String(s == null ? "" : s).replace(/[&<>"']/g, c => ({
+                "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+            }[c]));
+        }
+
+        // ==================== 状态过滤 ====================
+        let filter = "all";
+        let keyword = "";
+        let page = 1;
+        const PAGE_SIZE = 20;
+
+        function getFiltered() {
+            const k = keyword.trim().toLowerCase();
+            return PAGE_DATA.stocks.filter(s => {
+                if (filter !== "all" && s.status !== filter) return false;
+                if (k) {
+                    const code = String(s.code || "").toLowerCase();
+                    const name = String(s.name || "").toLowerCase();
+                    if (!code.includes(k) && !name.includes(k)) return false;
+                }
+                return true;
+            });
+        }
+
+        function renderStats() {
+            const sum = PAGE_DATA.summary;
+            document.getElementById('statTotal').textContent = sum.total;
+            document.getElementById('statProtect').textContent = sum.protect;
+            document.getElementById('statUsed').textContent = sum.used;
+            document.getElementById('statDone').textContent = sum.expired + sum.zero;
+        }
+
+        function renderTable() {
+            const list = getFiltered();
+            const totalPages = Math.max(1, Math.ceil(list.length / PAGE_SIZE));
+            if (page > totalPages) page = totalPages;
+            const slice = list.slice((page - 1) * PAGE_SIZE, page * PAGE_SIZE);
+
+            renderMobileCards(slice);
+
+            const tbody = document.getElementById("greenShoeTableBody");
+            tbody.innerHTML = "";
+            if (!slice.length) {
+                tbody.innerHTML = '<tr><td colspan="11" class="py-8 text-center text-appleTextGray">暂无匹配标的</td></tr>';
+            }
+            slice.forEach(item => {
+                const tr = document.createElement("tr");
+                tr.className = "border-b border-appleLine dark:border-gray-700 row-hover cursor-pointer";
+                tr.dataset.code = item.code;
+                tr.dataset.name = item.name;
+
+                const usedPct = num(item.usedPct, 0);
+                const barColor = usedPct >= 99.99 ? '#FF3B30' : (usedPct > 0 ? '#007AFF' : '#C7C7CC');
+                const pctColor = item.vsIssuePct == null ? 'text-appleTextGray' :
+                    (item.vsIssuePct >= 0 ? 'text-appleGreen' : 'text-appleRed');
+                const pctTxt = item.vsIssuePct == null ? "--" :
+                    (item.vsIssuePct >= 0 ? "+" : "") + item.vsIssuePct.toFixed(2) + "%";
+
+                tr.innerHTML = `
+                    <td class="py-3 pr-3 font-medium">${esc(item.code)}<br><span class="text-xs text-appleTextGray">${esc(item.name)}</span></td>
+                    <td class="py-3 pr-3">${esc(item.listDate || "--")}</td>
+                    <td class="py-3 pr-3">${esc(item.expireDate || "--")}</td>
+                    <td class="py-3 pr-3">${esc(item.stabilizer || "--")}</td>
+                    <td class="py-3 pr-3">${item.issuePrice ? item.issuePrice.toFixed(2) : "--"}</td>
+                    <td class="py-3 pr-3">${item.lastPrice ? item.lastPrice.toFixed(2) : "--"}</td>
+                    <td class="py-3 pr-3 ${pctColor}">${pctTxt}</td>
+                    <td class="py-3 pr-3">${item.quotaShare ? (item.quotaShare / 1e4).toFixed(0) : "--"}</td>
+                    <td class="py-3 pr-3">
+                        <div class="flex items-center gap-2">
+                            <div class="mini-bar flex-1 max-w-[90px]"><div style="width:${Math.min(100, usedPct)}%;height:100%;background:${barColor}"></div></div>
+                            <span class="${usedPct >= 99.99 ? 'text-appleRed' : usedPct > 0 ? 'text-appleBlue' : 'text-appleTextGray'}">${usedPct.toFixed(1)}%</span>
+                        </div>
+                    </td>
+                    <td class="py-3 pr-3">${item.leftShare != null ? (item.leftShare / 1e4).toFixed(0) : "--"}</td>
+                    <td class="py-3"><span class="${item.statusClass} px-2 py-0.5 rounded text-xs">${esc(item.statusText)}</span></td>
+                `;
+                tbody.appendChild(tr);
+            });
+
+            document.getElementById('pageInfo').textContent = "共" + list.length + "条记录";
+            document.getElementById('pageNum').textContent = page + " / " + totalPages;
+            document.getElementById('prevPage').disabled = page <= 1;
+            document.getElementById('nextPage').disabled = page >= totalPages;
+        }
+
+        function renderMobileCards(list) {
+            const box = document.getElementById('mobileList');
+            box.innerHTML = "";
+            if (!list.length) {
+                box.innerHTML = '<div class="text-center text-appleTextGray py-8 text-sm">暂无匹配标的</div>';
+                return;
+            }
+            list.forEach(item => {
+                const usedPct = num(item.usedPct, 0);
+                const barColor = usedPct >= 99.99 ? '#FF3B30' : (usedPct > 0 ? '#007AFF' : '#C7C7CC');
+                const pctColor = item.vsIssuePct == null ? 'text-appleTextGray' :
+                    (item.vsIssuePct >= 0 ? 'text-appleGreen' : 'text-appleRed');
+                const pctTxt = item.vsIssuePct == null ? "--" :
+                    (item.vsIssuePct >= 0 ? "+" : "") + item.vsIssuePct.toFixed(2) + "%";
+                const div = document.createElement("div");
+                div.className = "bg-appleCard dark:bg-gray-800 rounded-appleMid p-4 shadow-appleCard border border-appleLine/60 dark:border-gray-700 cursor-pointer";
+                div.dataset.code = item.code;
+                div.dataset.name = item.name;
+                div.innerHTML = `
+                    <div class="flex justify-between items-start gap-2">
+                        <div class="min-w-0">
+                            <p class="font-semibold text-[15px]">${esc(item.code)} <span class="text-xs text-appleTextGray font-normal">${esc(item.name)}</span></p>
+                            <p class="text-xs text-appleTextGray mt-0.5 truncate">上市 ${esc(item.listDate || "--")} · 到期 ${esc(item.expireDate || "--")}</p>
+                        </div>
+                        <span class="${item.statusClass} px-2 py-0.5 rounded text-xs shrink-0">${esc(item.statusText)}</span>
+                    </div>
+                    <div class="grid grid-cols-3 gap-y-2 gap-x-1 mt-3 text-center">
+                        <div><p class="text-[11px] text-appleTextGray">发行价</p><p class="text-sm font-semibold mt-0.5">${item.issuePrice ? item.issuePrice.toFixed(2) : "--"}</p></div>
+                        <div><p class="text-[11px] text-appleTextGray">现价</p><p class="text-sm font-semibold mt-0.5">${item.lastPrice ? item.lastPrice.toFixed(2) : "--"}</p></div>
+                        <div><p class="text-[11px] text-appleTextGray">较发行价</p><p class="text-sm font-semibold mt-0.5 ${pctColor}">${pctTxt}</p></div>
+                        <div><p class="text-[11px] text-appleTextGray">总额度</p><p class="text-sm font-semibold mt-0.5">${item.quotaShare ? (item.quotaShare / 1e4).toFixed(0) + "万" : "--"}</p></div>
+                        <div><p class="text-[11px] text-appleTextGray">已行使</p><p class="text-sm font-semibold mt-0.5 ${usedPct >= 99.99 ? 'text-appleRed' : usedPct > 0 ? 'text-appleBlue' : 'text-appleTextGray'}">${usedPct.toFixed(1)}%</p></div>
+                        <div><p class="text-[11px] text-appleTextGray">剩余</p><p class="text-sm font-semibold mt-0.5">${item.leftShare != null ? (item.leftShare / 1e4).toFixed(0) + "万" : "--"}</p></div>
+                    </div>
+                    <div class="mini-bar mt-3"><div style="width:${Math.min(100, usedPct)}%;height:100%;background:${barColor}"></div></div>
+                    <div class="flex justify-between items-center mt-2">
+                        <p class="text-[11px] text-appleTextGray">稳价人：${esc(item.stabilizer || "--")}</p>
+                        <span class="text-[11px] text-appleBlue">查看详情 ›</span>
+                    </div>`;
+                box.appendChild(div);
+            });
+        }
+
+        document.getElementById('prevPage').addEventListener('click', () => { if (page > 1) { page--; renderTable(); } });
+        document.getElementById('nextPage').addEventListener('click', () => { page++; renderTable(); });
+        document.getElementById('filterStatus').addEventListener('change', e => { filter = e.target.value; page = 1; renderTable(); });
+        document.getElementById('searchBtn').addEventListener('click', () => {
+            keyword = document.getElementById('stockSearch').value;
+            page = 1;
+            renderTable();
+        });
+        document.getElementById('stockSearch').addEventListener('keydown', e => {
+            if (e.key === "Enter") {
+                keyword = document.getElementById('stockSearch').value;
+                page = 1;
+                renderTable();
+            }
+        });
+
+        document.getElementById("greenShoeTableBody").addEventListener("click", function (e) {
+            const tr = e.target.closest("tr[data-code]");
+            if (!tr) return;
+            const code = tr.dataset.code;
+            const name = tr.dataset.name;
+            location.href = `greenshoe_detail.html?code=${encodeURIComponent(code)}&name=${encodeURIComponent(name)}`;
+        });
+
+        document.getElementById("mobileList").addEventListener("click", function (e) {
+            const card = e.target.closest("div[data-code]");
+            if (!card) return;
+            location.href = `greenshoe_detail.html?code=${encodeURIComponent(card.dataset.code)}&name=${encodeURIComponent(card.dataset.name)}`;
+        });
+
+        // ==================== 实时刷新 ====================
+        async function apiPost(name, payload) {
+            const r = await fetch(`${GREEN_API}/${name}`, {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(payload || {})
+            });
+            const j = await r.json();
+            return j && j.result === 1 ? j.data : null;
+        }
+
+        async function fetchPrices(codes) {
+            const out = {};
+            for (let i = 0; i < codes.length; i += 50) {
+                const batch = codes.slice(i, i + 50);
+                try {
+                    const r = await fetch(`https://qt.gtimg.cn/q=${batch.map(c => "hk" + c).join(",")}`);
+                    const buf = await r.arrayBuffer();
+                    const text = new TextDecoder("gbk").decode(buf);
+                    const re = /v_hk(\d+)="([^"]*)"/g;
+                    let m;
+                    while ((m = re.exec(text)) !== null) {
+                        const f = m[2].split("~");
+                        if (f.length < 33) continue;
+                        out[m[1]] = { price: num(f[3], 0), prevClose: num(f[4], 0), changePct: num(f[32], 0) };
+                    }
+                } catch (err) { /* 单批失败忽略 */ }
+            }
+            return out;
+        }
+
+        function buildRecord(stock, cal, price) {
+            const gv = (cal && cal.greenShoeViewVO) || [];
+            const gather = (cal && cal.greenshoeGatherVO) || {};
+            const first = gv[0] || {};
+            const quotaShare = num(gather.valueInitialShare);
+            const quotaAmount = num(gather.valueInitial);
+            const usedShare = num(gather.valueUsedSumShare, 0);
+            const usedAmount = num(gather.valueUsedSum, 0);
+            const leftShare = num(gather.valueLeftShare);
+            const leftAmount = num(gather.valueLeft);
+            const issuePrice = (quotaAmount && quotaShare) ? quotaAmount / quotaShare : null;
+            const lastPrice = price ? price.price : null;
+            const vsIssue = (lastPrice && issuePrice) ? (lastPrice / issuePrice - 1) * 100 : null;
+            let usedPct = null;
+            if (quotaAmount) usedPct = usedAmount ? usedAmount / quotaAmount * 100 : 0;
+            else if (quotaShare) usedPct = usedShare ? usedShare / quotaShare * 100 : 0;
+
+            const listDate = first.tradeDate || stock.listDate || "";
+            const expireDate = first.endDate || stock.expireDate || "";
+            const hasData = !!(gv.length || quotaShare > 0);
+            let status, statusText, statusClass;
+            if (!hasData) { status = "nodata"; statusText = "暂无数据"; statusClass = "tag-gray"; }
+            else if (usedPct != null && usedPct >= 99.995) { status = "zero"; statusText = "额度耗尽"; statusClass = "tag-red"; }
+            else if (expireDate && new Date(expireDate) >= new Date(new Date().toDateString())) { status = "protect"; statusText = "绿鞋保护中"; statusClass = "tag-orange"; }
+            else { status = "expired"; statusText = "已到期"; statusClass = "tag-gray"; }
+
+            let protectPct = 0, daysLeft = null;
+            if (listDate && expireDate) {
+                const ld = new Date(listDate), ed = new Date(expireDate), td = new Date(new Date().toDateString());
+                const total = Math.round((ed - ld) / 86400000);
+                if (total > 0) {
+                    if (td > ed) { protectPct = 100; daysLeft = -Math.round((td - ed) / 86400000); }
+                    else if (td < ld) { protectPct = 0; daysLeft = Math.round((ed - td) / 86400000); }
+                    else { protectPct = Math.min(100, Math.round((td - ld) / 86400000 / total * 1000) / 10); daysLeft = Math.round((ed - td) / 86400000); }
+                }
+            }
+
+            const calendar = (gv || []).slice().sort((a, b) => String(a.tradeDate).localeCompare(String(b.tradeDate)))
+                .map(row => ({
+                    tradeDate: String(row.tradeDate || "").slice(0, 10),
+                    valueType: num(row.valueType, 0),
+                    valueTypeText: ({"-1": "已用完", "0": "未使用", "1": "预测", "2": "修正", "3": "实际"}[String(num(row.valueType, 0))]) || "",
+                    valuePredict: num(row.valuePredict),
+                    valueAjust: num(row.valueAjust),
+                    valueActual: num(row.valueActual),
+                    valueUsedShare: num(row.valueUsedShare),
+                    valueActualShare: num(row.valueActualShare),
+                    colourProportion: num(row.colourProportion, 0),
+                }));
+
+            const top = (cal && cal.brokerTradeTop10VO) || {};
+            const brokerList = items => (items || []).map(it => ({
+                name: it.brokerNameShort || "",
+                netVolume: num(it.netVolume),
+                pct: num(it.percentLeft, 0) * 100,
+                isCcass: it.isCcass || 0,
+            }));
+            const traceCount = ((cal && cal.traceCountVO) || []).map(it => ({
+                type: it.type || "",
+                priceAverage: num(it.priceAverage),
+                orderCount: num(it.orderCount, 0),
+                volumeTotal: num(it.volumeTotal, 0),
+                amountTotal: num(it.amountTotal, 0),
+            }));
+
+            return Object.assign({}, stock, {
+                listDate, expireDate, stabilizer: first.name || stock.stabilizer || "",
+                stabilizerId: first.stabilizerId || "",
+                issuePrice: issuePrice ? Math.round(issuePrice * 10000) / 10000 : null,
+                lastPrice: lastPrice != null ? Math.round(lastPrice * 10000) / 10000 : null,
+                prevClose: price ? price.prevClose : null,
+                changePct: price ? price.changePct : null,
+                vsIssuePct: vsIssue != null ? Math.round(vsIssue * 100) / 100 : null,
+                quotaShare, quotaAmount, usedShare, usedAmount,
+                usedPct: usedPct != null ? Math.round(usedPct * 100) / 100 : null,
+                leftShare, leftAmount,
+                todayUsedShare: num(gather.valueUsedShare, 0),
+                todayUsedAmount: num(gather.valueUsed, 0),
+                percentLeft: num(gather.percentLeft),
+                valueType: num(gather.valueType, 0),
+                status, statusText, statusClass, protectPct, daysLeft,
+                dataDate: String(cal && cal.tradeDate || "").slice(0, 10),
+                hasData, calendar, brokerBuyTop10: brokerList(top.cleanBuyVO),
+                brokerSellTop10: brokerList(top.cleanSaleVO), traceCount,
+            });
+        }
+
+        async function refreshLive() {
+            const btn = document.getElementById('refreshBtn');
+            btn.disabled = true;
+            btn.textContent = "刷新中…";
+            try {
+                const list = await apiPost("greenShoeStockList");
+                if (!list) throw new Error("名单接口失败");
+                const stocks = list.filter(s => s.stockCode).map(s => ({
+                    code: String(s.stockCode).replace(/\.HK$/i, "").padStart(5, "0"),
+                    name: s.stockName || "",
+                }));
+
+                const calendars = {};
+                let done = 0;
+                const queue = stocks.slice();
+                async function worker() {
+                    while (queue.length) {
+                        const s = queue.shift();
+                        try {
+                            calendars[s.code] = await apiPost("getGreenShoeCalendar", { code: s.code, stabilizerId: null, tradeDate: null });
+                        } catch (err) { calendars[s.code] = null; }
+                        done++;
+                        btn.textContent = `刷新中… ${done}/${stocks.length}`;
+                    }
+                }
+                await Promise.all(Array.from({ length: 6 }, worker));
+
+                const prices = await fetchPrices(stocks.map(s => s.code));
+                const records = stocks.map(s => buildRecord(s, calendars[s.code], prices[s.code]));
+                records.sort((a, b) => String(b.listDate || "").localeCompare(String(a.listDate || "")));
+                PAGE_DATA.stocks = records;
+                PAGE_DATA.summary = {
+                    total: records.length,
+                    protect: records.filter(r => r.status === "protect").length,
+                    zero: records.filter(r => r.status === "zero").length,
+                    expired: records.filter(r => r.status === "expired").length,
+                    used: records.filter(r => (r.usedPct || 0) > 0).length,
+                    nodata: records.filter(r => r.status === "nodata").length,
+                };
+                page = 1;
+                renderStats();
+                renderTable();
+                btn.textContent = "刷新数据";
+                document.getElementById('listInfo').textContent = "已实时刷新（" + new Date().toLocaleString() + "）";
+            } catch (err) {
+                btn.textContent = "刷新失败，重试";
+            }
+            btn.disabled = false;
+        }
+
+        document.getElementById('refreshBtn').addEventListener('click', refreshLive);
+
+        // ==================== 初始化 ====================
+        const q = new URLSearchParams(location.search).get("q");
+        if (q) {
+            keyword = q;
+            document.getElementById('stockSearch').value = q;
+        }
+        renderStats();
+        renderTable();
+    </script>
+</body>
+</html>

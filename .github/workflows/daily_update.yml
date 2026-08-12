@@ -1,0 +1,50 @@
+name: 每日自动更新
+
+on:
+  schedule:
+    # 每天北京时间 08:00 自动更新(UTC 00:00)
+    - cron: '0 0 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: 安装依赖
+        run: pip install requests openpyxl beautifulsoup4 pdfplumber pymupdf
+
+      - name: 生成绿鞋跟踪页面
+        run: python generate_greenshoe_html.py
+
+      - name: 生成解禁概览页面
+        run: python generate_unlock_html.py --no-ccass
+
+      - name: 收集待发布文件
+        run: |
+          mkdir -p _site
+          cp *.html _site/
+
+      - name: 上传发布内容
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: 部署到 GitHub Pages
+        uses: actions/deploy-pages@v4
