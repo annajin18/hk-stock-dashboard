@@ -1,11 +1,6 @@
 name: 每日自动更新
 
 on:
-  push:
-    branches: [main]
-  schedule:
-    # 每天北京时间 08:00 自动更新(UTC 00:00)
-    - cron: '0 0 * * *'
   workflow_dispatch: {}
 
 permissions:
@@ -18,8 +13,6 @@ concurrency:
 jobs:
   update-and-deploy:
     runs-on: ubuntu-latest
-    # 由自动更新机器人提交的代码不再重复触发构建,避免死循环
-    if: github.event_name != 'push' || github.actor != 'github-actions[bot]'
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
@@ -49,15 +42,3 @@ jobs:
           fi
           git commit -m "每日自动更新 $(date +%F)"
           git push
-
-      - name: 上传到腾讯云 COS
-        env:
-          TENCENT_SECRET_ID: ${{ secrets.TENCENT_SECRET_ID }}
-          TENCENT_SECRET_KEY: ${{ secrets.TENCENT_SECRET_KEY }}
-        run: |
-          pip install coscmd
-          mkdir -p publish
-          cp index.html hk_greenshoe.html greenshoe_detail.html hk_unlock_overview.html hk_ggt_ru_tong.html hk_ipo_reminder.html crs_calculator.html publish/
-          cp -r vendor publish/
-          coscmd config -a "$TENCENT_SECRET_ID" -s "$TENCENT_SECRET_KEY" -b hk-dashboard-1462592466 -r ap-guangzhou
-          coscmd upload -r ./publish/ /
