@@ -53,3 +53,11 @@ jobs:
           fi
           git commit -m "每日自动更新 $(date +%F)"
           git push
+
+      - name: 部署到 Cloudflare Workers
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        run: |
+          npm install -g wrangler
+          npx wrangler deploy --config wrangler.jsonc
