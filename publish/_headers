@@ -1,0 +1,8 @@
+/*.html
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/*.json
+  Cache-Control: no-cache, no-store, must-revalidate
+
+/vendor/*
+  Cache-Control: public, max-age=86400

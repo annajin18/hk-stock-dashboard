@@ -175,22 +175,22 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="text-center">
                     <p class="text-appleTextGray text-sm">本周解禁总市值</p>
-                    <p class="text-[28px] font-bold mt-2">128.6 亿 HKD</p>
-                    <p class="text-xs text-appleTextGray mt-1">环比上周 ↓12.3%</p>
+                    <p class="text-[28px] font-bold mt-2" id="statWeekValue">--</p>
+                    <p class="text-xs text-appleTextGray mt-1" id="statWeekNote">加载中...</p>
                 </div>
                 <div class="text-center">
                     <p class="text-appleTextGray text-sm">本月解禁个股总数</p>
-                    <p class="text-[28px] font-bold mt-2">37 只</p>
-                    <p class="text-xs text-appleTextGray mt-1">大额解禁标的11只</p>
+                    <p class="text-[28px] font-bold mt-2" id="statMonthCount">--</p>
+                    <p class="text-xs text-appleTextGray mt-1" id="statMonthNote">加载中...</p>
                 </div>
                 <div class="text-center">
                     <p class="text-appleTextGray text-sm">5亿港元以上大额解禁</p>
-                    <p class="text-[28px] font-bold mt-2">11 只</p>
-                    <p class="text-xs text-appleTextGray mt-1">集中板块：主板</p>
+                    <p class="text-[28px] font-bold mt-2" id="statLargeCount">--</p>
+                    <p class="text-xs text-appleTextGray mt-1" id="statLargeNote">加载中...</p>
                 </div>
                 <div class="text-center">
                     <p class="text-appleTextGray text-sm">本月大额解禁</p>
-                    <p class="text-[28px] font-bold mt-2">11 只</p>
+                    <p class="text-[28px] font-bold mt-2" id="statMonthLarge">--</p>
                     <p class="text-xs text-appleOrange mt-1">下方专区查看明细</p>
                 </div>
             </div>
@@ -206,7 +206,7 @@
                     <span class="px-2 py-0.5 rounded-appleSmall bg-gray-100 dark:bg-gray-700 text-appleGrayTag">股东配售</span>
                 </div>
             </div>
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-10 gap-3">
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 lg:grid-cols-10 gap-3" id="unlockCalendar">
                 <div class="border border-appleLine dark:border-gray-700 rounded-appleSmall p-3 day-item day-today">
                     <div class="font-medium mb-2 text-sm sticky top-0 bg-inherit pb-1">8.10 周一（今日）</div>
                     <div class="space-y-2 text-xs">
@@ -334,7 +334,7 @@
                 <h3 class="text-xl font-bold">本月大额解禁股票</h3>
                 <span class="text-sm text-appleOrange">共11只标的，点击个股查看完整解禁详情</span>
             </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4" id="largeUnlockList">
                 <div class="border border-appleLine dark:border-gray-700 rounded-appleMid p-4 stock-row" data-code="00700.HK" data-name="腾讯控股">
                     <div class="font-semibold">00700.HK 腾讯控股</div>
                     <div class="mt-2 text-sm space-y-1">
@@ -474,15 +474,15 @@
                 <div class="grid grid-cols-3 gap-4">
                     <div class="bg-gray-50 dark:bg-gray-700 p-3 rounded-appleSmall text-center">
                         <div class="text-xs text-appleTextGray">现价</div>
-                        <div class="font-semibold">89.6 HKD</div>
+                        <div class="font-semibold" id="modalPrice">--</div>
                     </div>
                     <div class="bg-gray-50 dark:bg-gray-700 p-3 rounded-appleSmall text-center">
                         <div class="text-xs text-appleTextGray">发行价</div>
-                        <div class="font-semibold">80.0 HKD</div>
+                        <div class="font-semibold" id="modalIssuePrice">--</div>
                     </div>
                     <div class="bg-gray-50 dark:bg-gray-700 p-3 rounded-appleSmall text-center">
                         <div class="text-xs text-appleTextGray">上市日</div>
-                        <div class="font-semibold">2026-02-12</div>
+                        <div class="font-semibold" id="modalListDate">--</div>
                     </div>
                 </div>
                 <div>
@@ -497,36 +497,21 @@
                                     <th class="pb-2">解禁股份</th>
                                 </tr>
                             </thead>
-                            <tbody>
-                                <tr class="border-b border-appleLine dark:border-gray-700">
-                                    <td class="py-2 pr-3">贝莱德</td>
-                                    <td class="py-2 pr-3">1.2亿股</td>
-                                    <td class="py-2 pr-3">80.0 HKD</td>
-                                    <td class="py-2">1.2亿股</td>
-                                </tr>
-                                <tr>
-                                    <td class="py-2 pr-3">淡马锡</td>
-                                    <td class="py-2 pr-3">0.85亿股</td>
-                                    <td class="py-2 pr-3">80.0 HKD</td>
-                                    <td class="py-2">0.85亿股</td>
-                                </tr>
+                            <tbody id="modalInvestors">
+                                <tr><td colspan="4" class="py-2 text-appleTextGray">加载中...</td></tr>
                             </tbody>
                         </table>
                     </div>
                 </div>
                 <div>
                     <h4 class="font-medium mb-2">解禁时间线</h4>
-                    <div class="flex items-center text-sm">
-                        <div class="text-center">2026-02-12<br /><span class="text-appleTextGray text-xs">上市日</span></div>
-                        <div class="flex-1 h-[2px] mx-3 bg-appleBlue"></div>
-                        <div class="text-center">2026-02-12<br /><span class="text-appleTextGray text-xs">锁仓起始</span></div>
-                        <div class="flex-1 h-[2px] mx-3 bg-appleBlue"></div>
-                        <div class="text-center text-appleRed font-medium">2026-08-12<br /><span class="text-xs">解禁到期</span></div>
+                    <div class="flex items-center text-sm" id="modalTimeline">
+                        <div class="text-center">--<br /><span class="text-appleTextGray text-xs">上市日</span></div>
                     </div>
                 </div>
                 <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-appleSmall text-sm">
                     <div class="font-medium text-appleOrange mb-1">风险提示</div>
-                    <p class="text-appleTextGray">本次解禁股份占流通盘8.72%，基石机构持仓成本较低，短期存在集中减持抛压可能性，注意股价波动风险。解禁到期≠必然减持，需持续跟踪交易所CCASS持仓变动。</p>
+                    <p class="text-appleTextGray" id="modalRisk">--</p>
                 </div>
             </div>
             <div class="flex justify-end gap-3 mt-6">
@@ -579,6 +564,198 @@
         modal.addEventListener('click',(e)=>{
             if(e.target === modal) closeBtn.click();
         })
+
+        // ============ 解禁数据动态渲染 ============
+        const unlockState = { data: null };
+
+        function fmtYi(v) {
+            const yi = (v || 0) / 1e8;
+            return yi >= 100 ? yi.toFixed(0) : yi.toFixed(1);
+        }
+
+        function fmtShares(v) {
+            const yi = (v || 0) / 1e8;
+            return yi >= 1 ? yi.toFixed(2) + '亿股' : (v || 0).toLocaleString() + '股';
+        }
+
+        function typeBadge(type) {
+            if (type === '基石解禁') return '<span class="px-1 py-0 rounded-[4px] bg-appleBlue/10 text-appleBlue">基石解禁</span>';
+            if (type === '国际配售') return '<span class="px-1 py-0 rounded-[4px] bg-applePurple/10 text-applePurple">国际配售</span>';
+            return '<span class="px-1 py-0 rounded-[4px] bg-gray-100 dark:bg-gray-700 text-appleGrayTag">股东配售</span>';
+        }
+
+        function fillModal(stock) {
+            if (!stock) return;
+            modalTitle.textContent = `${stock.code} ${stock.name} 解禁详情`;
+            document.getElementById('modalPrice').textContent = (stock.price ? stock.price.toFixed(2) : '--') + ' HKD';
+            document.getElementById('modalIssuePrice').textContent = (stock.issuePrice ? stock.issuePrice.toFixed(2) : '--') + ' HKD';
+            document.getElementById('modalListDate').textContent = stock.listingDate || '--';
+
+            const tbody = document.getElementById('modalInvestors');
+            const inv = stock.investors || [];
+            if (!inv.length) {
+                tbody.innerHTML = '<tr><td colspan="4" class="py-2 text-appleTextGray">暂无投资人明细</td></tr>';
+            } else {
+                tbody.innerHTML = inv.map((x, idx) => `
+                    <tr class="${idx < inv.length - 1 ? 'border-b border-appleLine dark:border-gray-700' : ''}">
+                        <td class="py-2 pr-3">${x.name || '--'}</td>
+                        <td class="py-2 pr-3">${fmtShares(x.shares)}</td>
+                        <td class="py-2 pr-3">${x.amount ? (x.amount / 1e8).toFixed(2) + ' 亿' : '--'}</td>
+                        <td class="py-2">${fmtShares(x.shares)}</td>
+                    </tr>`).join('');
+            }
+
+            const tl = document.getElementById('modalTimeline');
+            const listDate = stock.listingDate || '--';
+            const lockStart = stock.lockStartDate || stock.listingDate || '--';
+            const liftDate = stock.liftDate || '--';
+            tl.innerHTML = `
+                <div class="text-center">${listDate}<br /><span class="text-appleTextGray text-xs">上市日</span></div>
+                <div class="flex-1 h-[2px] mx-3 bg-appleBlue"></div>
+                <div class="text-center">${lockStart}<br /><span class="text-appleTextGray text-xs">锁仓起始</span></div>
+                <div class="flex-1 h-[2px] mx-3 bg-appleBlue"></div>
+                <div class="text-center text-appleRed font-medium">${liftDate}<br /><span class="text-xs">解禁到期</span></div>`;
+
+            document.getElementById('modalRisk').textContent = stock.riskText || '暂无风险提示。';
+        }
+
+        function bindStockRows(container) {
+            if (!container) return;
+            container.querySelectorAll('.stock-row').forEach(row => {
+                row.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const code = row.dataset.code;
+                    const name = row.dataset.name;
+                    const stock = (unlockState.data || []).find(s => s.code === code);
+                    if (stock) fillModal(stock);
+                    else openModal(code, name);
+                });
+            });
+        }
+
+        async function loadUnlockData() {
+            try {
+                const resp = await fetch('unlock_data.json', { cache: 'no-store' });
+                if (!resp.ok) throw new Error('HTTP ' + resp.status);
+                const payload = await resp.json();
+                const stocks = payload.stocks || [];
+                unlockState.data = stocks;
+                const todayStr = payload.today || new Date().toISOString().slice(0, 10);
+
+                const now = new Date(todayStr + 'T00:00:00');
+                const dow = (now.getDay() + 6) % 7; // 0=周一
+                const monday = new Date(now); monday.setDate(now.getDate() - dow);
+                const sunday = new Date(monday); sunday.setDate(monday.getDate() + 6);
+                const monthStart = new Date(now.getFullYear(), now.getMonth(), 1);
+                const monthEnd = new Date(now.getFullYear(), now.getMonth() + 1, 0);
+
+                let weekAmount = 0, weekCount = 0, monthCount = 0, largeCount = 0, monthLarge = 0;
+                const byDate = {};
+                stocks.forEach(s => {
+                    const d = s.liftDate ? new Date(s.liftDate + 'T00:00:00') : null;
+                    const amt = s.totalAmountHKD || 0;
+                    if (!d) return;
+                    const key = s.liftDate;
+                    if (!byDate[key]) byDate[key] = [];
+                    byDate[key].push(s);
+                    if (d >= monday && d <= sunday) { weekAmount += amt; weekCount++; }
+                    if (d >= monthStart && d <= monthEnd) { monthCount++; if (amt >= 5e8) monthLarge++; }
+                    if (amt >= 5e8) largeCount++;
+                });
+
+                document.getElementById('statWeekValue').textContent = weekAmount ? fmtYi(weekAmount) + ' 亿 HKD' : '0 亿 HKD';
+                document.getElementById('statWeekNote').textContent = '本周 ' + weekCount + ' 只解禁';
+                document.getElementById('statMonthCount').textContent = monthCount + ' 只';
+                document.getElementById('statMonthNote').textContent = '大额解禁标的 ' + monthLarge + ' 只';
+                document.getElementById('statLargeCount').textContent = largeCount + ' 只';
+                document.getElementById('statLargeNote').textContent = '解禁市值 5 亿港元以上';
+                document.getElementById('statMonthLarge').textContent = monthLarge + ' 只';
+
+                // 日历：从今天起展示未来 10 天
+                const cal = document.getElementById('unlockCalendar');
+                if (cal) {
+                    let html = '';
+                    for (let i = 0; i < 10; i++) {
+                        const d = new Date(now); d.setDate(now.getDate() + i);
+                        const key = d.toISOString().slice(0, 10);
+                        const dayStocks = byDate[key] || [];
+                        const week = ['周一','周二','周三','周四','周五','周六','周日'][(d.getDay() + 6) % 7];
+                        const isToday = i === 0;
+                        html += `<div class="border border-appleLine dark:border-gray-700 rounded-appleSmall p-3 day-item ${isToday ? 'day-today' : ''}">`;
+                        html += `<div class="font-medium mb-2 text-sm sticky top-0 bg-inherit pb-1">${d.getMonth() + 1}.${d.getDate()} ${week}${isToday ? '（今日）' : ''}</div>`;
+                        if (dayStocks.length) {
+                            html += '<div class="space-y-2 text-xs">';
+                            dayStocks.forEach(s => {
+                                html += `<div class="border-b border-appleLine dark:border-gray-700 pb-2 stock-row" data-code="${s.code}" data-name="${s.name}">`;
+                                html += `<div>${s.code} ${s.name}</div>`;
+                                html += `<div class="text-appleTextGray">${fmtYi(s.totalAmountHKD)}亿｜${fmtShares(s.totalShares)}</div>`;
+                                html += typeBadge(s.unlockType) + '</div>';
+                            });
+                            html += '</div>';
+                        } else {
+                            html += '<div class="text-xs text-appleTextGray">无解禁</div>';
+                        }
+                        html += '</div>';
+                    }
+                    cal.innerHTML = html;
+                    bindStockRows(cal);
+                }
+
+                // 本月大额解禁列表
+                const list = document.getElementById('largeUnlockList');
+                if (list) {
+                    const monthLargeList = stocks
+                        .filter(s => {
+                            const d = s.liftDate ? new Date(s.liftDate + 'T00:00:00') : null;
+                            return d && d >= monthStart && d <= monthEnd && (s.totalAmountHKD || 0) >= 5e8;
+                        })
+                        .sort((a, b) => (b.totalAmountHKD || 0) - (a.totalAmountHKD || 0))
+                        .slice(0, 12);
+                    const span = list.previousElementSibling;
+                    if (span && span.tagName === 'SPAN') {
+                        span.textContent = `共${monthLargeList.length}只标的，点击个股查看完整解禁详情`;
+                    }
+                    if (monthLargeList.length) {
+                        list.innerHTML = monthLargeList.map(s => `
+                            <div class="border border-appleLine dark:border-gray-700 rounded-appleMid p-4 stock-row" data-code="${s.code}" data-name="${s.name}">
+                                <div class="font-semibold">${s.code} ${s.name}</div>
+                                <div class="mt-2 text-sm space-y-1">
+                                    <div>解禁市值：${fmtYi(s.totalAmountHKD)} 亿 HKD</div>
+                                    <div>解禁日期：${s.liftDate ? s.liftDate.slice(5) : '--'}</div>
+                                    ${typeBadge(s.unlockType)}
+                                </div>
+                            </div>`).join('');
+                        bindStockRows(list);
+                    } else {
+                        list.innerHTML = '<div class="col-span-full text-sm text-appleTextGray">本月暂无大额解禁标的</div>';
+                    }
+                }
+
+                // 顶部日期
+                const dateSpan = document.querySelector('header span.text-sm.text-appleTextGray');
+                if (dateSpan && dateSpan.textContent.includes('20')) {
+                    const d = new Date(todayStr + 'T00:00:00');
+                    const week = ['周日','周一','周二','周三','周四','周五','周六'][d.getDay()];
+                    dateSpan.textContent = `${todayStr} ${week}｜港股交易日`;
+                }
+            } catch (err) {
+                console.error('解禁数据加载失败:', err);
+                document.getElementById('statWeekNote').textContent = '数据加载失败';
+            }
+        }
+
+        // 初始绑定静态行的点击（数据加载后会重新绑定）
+        document.querySelectorAll('.stock-row').forEach(row => {
+            row.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const code = row.dataset.code;
+                const name = row.dataset.name;
+                const stock = (unlockState.data || []).find(s => s.code === code);
+                if (stock) fillModal(stock);
+                else openModal(code, name);
+            });
+        });
+        loadUnlockData();
     </script>
 </body>
 </html>

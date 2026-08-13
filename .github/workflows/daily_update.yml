@@ -44,6 +44,7 @@ jobs:
         run: |
           mkdir -p publish
           cp index.html hk_greenshoe.html greenshoe_detail.html hk_unlock_overview.html hk_ggt_ru_tong.html hk_ipo_reminder.html crs_calculator.html publish/
+          cp unlock_data.json publish/
           cp -r vendor publish/
 
       - name: 部署到 Cloudflare Workers
