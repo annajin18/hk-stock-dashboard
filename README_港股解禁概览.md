@@ -40,6 +40,34 @@ python generate_unlock_html.py --no-ccass
 python generate_unlock_html.py --date 2026-08-11 --no-ccass
 ```
 
+## 自动更新（Windows 计划任务）
+
+已注册计划任务 `HKUnlockDaily`：每天 **17:00**（港股收盘后）自动运行
+`run_unlock_daily.bat`，生成最新 `hk_unlock_overview.html`，无需手动操作。
+
+相关操作：
+
+```bash
+# 查看任务状态/下次运行时间
+schtasks /Query /TN "HKUnlockDaily" /V /FO LIST
+# 立即手动触发一次
+schtasks /Run /TN "HKUnlockDaily"
+# 停止自动运行（删除任务）
+schtasks /Delete /TN "HKUnlockDaily" /F
+```
+
+运行日志保存在 `logs/unlock_daily.log`。如需改时间（例如收盘后 18:00）：
+
+```bash
+schtasks /Change /TN "HKUnlockDaily" /ST 18:00
+```
+
+注意：
+- 已开启「唤醒电脑运行」（含电池供电时也允许运行），电脑处于**睡眠**状态时到点会自动唤醒执行；
+  完全关机（关机/休眠）状态下无法唤醒，需保持电源通电。
+- 若主板 BIOS 中关闭了「唤醒定时器/ErP」，需要在 BIOS 中开启，否则无法从睡眠中唤醒。
+- 任务以当前 Windows 用户身份运行，日志见 `logs/unlock_daily.log`。
+
 ## 解禁日历
 
 日历模块固定展示「本周 + 下周」两个自然周的周一至周五（共 10 个工作日格子），

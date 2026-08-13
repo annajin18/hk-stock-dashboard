@@ -42,7 +42,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add *.html greenshoe_data.json unlock_data.json
+          git add *.html greenshoe_data.json unlock_data.json vendor/
           if git diff --cached --quiet; then
             echo "页面没有变化,无需提交"
             exit 0
@@ -58,5 +58,6 @@ jobs:
           pip install coscmd
           mkdir -p publish
           cp index.html hk_greenshoe.html greenshoe_detail.html hk_unlock_overview.html hk_ggt_ru_tong.html hk_ipo_reminder.html crs_calculator.html publish/
+          cp -r vendor publish/
           coscmd config -a "$TENCENT_SECRET_ID" -s "$TENCENT_SECRET_KEY" -b hk-dashboard-1462592466 -r ap-guangzhou
           coscmd upload -r ./publish/ /
