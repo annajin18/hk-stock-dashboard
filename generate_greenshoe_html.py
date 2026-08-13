@@ -38,7 +38,7 @@ BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 GREEN_API = "https://cloudapi.livereport8.com/livereport/GreenShoeTrace"
 # 腾讯云 SCF 云函数地址(部署后填写,例如 https://hk-data-proxy-xxx.ap-shanghai.app.tcloudbase.com)
 # 留空表示页面直连原接口;填写后页面刷新数据将走云函数
-API_BASE = ""
+API_BASE = "https://1462592466-dsqk4bogcz.ap-guangzhou.tencentscf.com"
 API_HEADERS = {
     "Content-Type": "application/json",
     "User-Agent": "Mozilla/5.0",
