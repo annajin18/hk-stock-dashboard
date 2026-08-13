@@ -1,6 +1,11 @@
 name: 每日自动更新
 
 on:
+  push:
+    branches: [main]
+  schedule:
+    # 每天北京时间 08:00 自动更新(UTC 00:00)
+    - cron: '0 0 * * *'
   workflow_dispatch: {}
 
 permissions:
@@ -31,11 +36,17 @@ jobs:
       - name: 生成解禁概览页面
         run: python generate_unlock_html.py --no-ccass
 
+      - name: 同步部署目录
+        run: |
+          mkdir -p publish
+          cp index.html hk_greenshoe.html greenshoe_detail.html hk_unlock_overview.html hk_ggt_ru_tong.html hk_ipo_reminder.html crs_calculator.html publish/
+          cp -r vendor publish/
+
       - name: 提交更新后的页面
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add *.html greenshoe_data.json unlock_data.json vendor/
+          git add *.html greenshoe_data.json unlock_data.json vendor/ publish/
           if git diff --cached --quiet; then
             echo "页面没有变化,无需提交"
             exit 0

@@ -1,0 +1,9 @@
+{
+  "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
+  "name": "bitter-pond-1b2b",
+  "assets": {
+    "directory": "./publish",
+    "not_found_handling": "404-page"
+  },
+  "compatibility_date": "2026-08-13"
+}
