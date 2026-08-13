@@ -383,7 +383,11 @@
     <script>
         // ==================== 数据集（生成时注入） ====================
         const PAGE_DATA = {{dataset_json}};
-        const GREEN_API = "https://cloudapi.livereport8.com/livereport/GreenShoeTrace";
+        // 云函数地址(生成时注入):填写后页面数据走云函数,留空则直连原接口
+        const API_BASE = "{{api_base}}";
+        const GREEN_API = API_BASE
+            ? API_BASE + "/api/greenshoe"
+            : "https://cloudapi.livereport8.com/livereport/GreenShoeTrace";
         const params = new URLSearchParams(location.search);
         const curCode = String(params.get("code") || "").replace(/\.HK$/i, "").padStart(5, "0");
         let rec = PAGE_DATA.stocks.find(s => s.code === curCode) || null;
@@ -808,9 +812,18 @@
                 const cal = await apiPost("getGreenShoeCalendar", { code: rec.code, stabilizerId: null, tradeDate: null });
                 let price = null;
                 try {
-                    const r = await fetch(`https://qt.gtimg.cn/q=hk${rec.code}`);
-                    const buf = await r.arrayBuffer();
-                    const text = new TextDecoder("gbk").decode(buf);
+                    const url = API_BASE
+                        ? `${API_BASE}/api/quote?codes=hk${rec.code}`
+                        : `https://qt.gtimg.cn/q=hk${rec.code}`;
+                    const r = await fetch(url);
+                    let text;
+                    if (API_BASE) {
+                        const j = await r.json();
+                        text = (j && j.data) || "";
+                    } else {
+                        const buf = await r.arrayBuffer();
+                        text = new TextDecoder("gbk").decode(buf);
+                    }
                     const m = /v_hk\d+="([^"]*)"/.exec(text);
                     const f = m ? m[1].split("~") : [];
                     if (f.length >= 33) {
