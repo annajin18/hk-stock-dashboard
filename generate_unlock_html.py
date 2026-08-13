@@ -1229,6 +1229,23 @@ def generate_html(template_path, data, output_path):
         json.dump(data, f, ensure_ascii=False, indent=2, default=str)
     logger.info(f"  中间JSON: {OUTPUT_JSON}")
 
+    # 将最新数据嵌入 index.html（本地双击打开时的兜底数据）
+    index_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "index.html")
+    try:
+        with open(index_path, "r", encoding="utf-8") as f:
+            idx = f.read()
+        embedded = "window.__UNLOCK_EMBEDDED__ = " + json.dumps(data, ensure_ascii=False, default=str).replace("<", "\\u003c") + ";"
+        pattern = re.compile(r'<script id="unlockEmbedded">.*?</script>', re.S)
+        if pattern.search(idx):
+            new_block = '<script id="unlockEmbedded">\n            ' + embedded + '\n        </script>'
+            with open(index_path, "w", encoding="utf-8") as f:
+                f.write(pattern.sub(lambda _: new_block, idx, count=1))
+            logger.info("  已嵌入最新数据到 index.html")
+        else:
+            logger.warning("  index.html 未找到 unlockEmbedded 区块，跳过本地兜底数据")
+    except Exception as e:
+        logger.warning(f"  嵌入数据到 index.html 失败: {e}")
+
 
 # ============================
 # Main

@@ -6,6 +6,7 @@
 
 /*.json
   Cache-Control: no-cache, no-store, must-revalidate
+  Access-Control-Allow-Origin: *
 
 /vendor/*
   Cache-Control: public, max-age=86400
