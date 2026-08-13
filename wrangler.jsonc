@@ -1,6 +1,6 @@
 {
   "$schema": "https://raw.githubusercontent.com/cloudflare/workers-sdk/main/packages/wrangler/config-schema.json",
-  "name": "bitter-pond-1b2b",
+  "name": "hkstock-dashboard",
   "assets": {
     "directory": "./publish",
     "not_found_handling": "404-page"
