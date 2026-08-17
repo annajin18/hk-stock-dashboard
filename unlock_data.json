@@ -9673,6 +9673,42 @@
       "riskText": "现价较发行价涨幅96%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值2.5亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
+      "code": "03223.HK",
+      "code_raw": "03223",
+      "name": "君正股份",
+      "listingDate": "2026-08-25",
+      "liftDate": "2027-02-25",
+      "liftDateObj": "2027-02-25",
+      "totalShares": 14624500,
+      "totalAmountHKD": 0,
+      "unlockType": "基石解禁",
+      "industry": "",
+      "source": "智通财经",
+      "investors": [
+        {
+          "name": "Arrow Target Investment L.P.",
+          "shares": 14624500,
+          "amount": 0,
+          "currency": "HKD",
+          "percentage": 0,
+          "lockupMonths": 6
+        }
+      ],
+      "price": 0,
+      "prevClose": 0,
+      "changePct": 0,
+      "unlockValue": 0,
+      "unlockValueYi": 0.0,
+      "issuePrice": 0.0,
+      "ccassValidated": false,
+      "ccassRatio": 0,
+      "ccassNote": "未经过CCASS交叉校验，仅供参考",
+      "deviation": 0,
+      "deviationFlag": "ok",
+      "isLarge": false,
+      "riskText": "解禁到期≠必然减持，需持续跟踪交易所CCASS持仓变动。本页面数据仅供资讯参考，不构成任何投资建议。"
+    },
+    {
       "code": "06658.HK",
       "code_raw": "06658",
       "name": "溜溜梅",
@@ -10059,5 +10095,5 @@
   ],
   "dropped": [],
   "warnings": [],
-  "today": "2026-08-16"
+  "today": "2026-08-17"
 }
