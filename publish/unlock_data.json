@@ -214,11 +214,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 43.12,
-      "prevClose": 42.58,
-      "changePct": 1.27,
-      "unlockValue": 6378586368,
-      "unlockValueYi": 63.78586368,
+      "price": 41.3,
+      "prevClose": 42.9,
+      "changePct": -3.73,
+      "unlockValue": 6109360320,
+      "unlockValueYi": 61.0936032,
       "issuePrice": 19.6,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -226,7 +226,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅120%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值63.8亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅111%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值61.1亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "02513.HK",
@@ -330,11 +330,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 799.0,
-      "prevClose": 794.0,
-      "changePct": 0.63,
-      "unlockValue": 20519598400,
-      "unlockValueYi": 205.195984,
+      "price": 750.0,
+      "prevClose": 742.0,
+      "changePct": 1.08,
+      "unlockValue": 19261200000,
+      "unlockValueYi": 192.612,
       "issuePrice": 116.2,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -342,7 +342,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅588%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值205.2亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅545%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值192.6亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "02675.HK",
@@ -470,11 +470,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 35.52,
-      "prevClose": 35.54,
-      "changePct": -0.06,
-      "unlockValue": 479328192,
-      "unlockValueYi": 4.793281920000001,
+      "price": 36.9,
+      "prevClose": 37.1,
+      "changePct": -0.54,
+      "unlockValue": 497950740,
+      "unlockValueYi": 4.9795074,
       "issuePrice": 43.24,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -482,7 +482,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价低于发行价18%，基石投资者处于浮亏，被动减持可能性较低。解禁市值4.8亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价低于发行价15%，基石投资者处于浮亏，被动减持可能性较低。解禁市值5.0亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "09903.HK",
@@ -650,11 +650,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 143.5,
-      "prevClose": 135.1,
-      "changePct": 6.22,
-      "unlockValue": 1569933050,
-      "unlockValueYi": 15.6993305,
+      "price": 131.8,
+      "prevClose": 139.4,
+      "changePct": -5.45,
+      "unlockValue": 1441931540,
+      "unlockValueYi": 14.419315400000002,
       "issuePrice": 144.6,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -662,7 +662,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价低于发行价1%，基石投资者处于浮亏，被动减持可能性较低。解禁市值15.7亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价低于发行价9%，基石投资者处于浮亏，被动减持可能性较低。解禁市值14.4亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "00100.HK",
@@ -790,11 +790,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 304.6,
-      "prevClose": 298.0,
-      "changePct": 2.21,
-      "unlockValue": 5027130584,
-      "unlockValueYi": 50.27130584,
+      "price": 282.4,
+      "prevClose": 286.4,
+      "changePct": -1.4,
+      "unlockValue": 4660740896,
+      "unlockValueYi": 46.60740896,
       "issuePrice": 165.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -802,99 +802,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅85%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值50.3亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
-    },
-    {
-      "code": "03636.HK",
-      "code_raw": "03636",
-      "name": "金浔资源",
-      "listingDate": "2026-01-09",
-      "liftDate": "2026-07-09",
-      "liftDateObj": "2026-07-09",
-      "totalShares": 15627200,
-      "totalAmountHKD": 468816000,
-      "unlockType": "基石解禁",
-      "industry": "铜",
-      "investors": [
-        {
-          "name": "Glencore International AG",
-          "shares": 7780800,
-          "amount": 233424000,
-          "currency": "HKD",
-          "percentage": 21.16,
-          "lockupMonths": 36
-        },
-        {
-          "name": "Stoneylake Global Alpha Fund",
-          "shares": 2593600,
-          "amount": 77808000,
-          "currency": "HKD",
-          "percentage": 7.05,
-          "lockupMonths": 6
-        },
-        {
-          "name": "NR 1 SP",
-          "shares": 2074800,
-          "amount": 62244000,
-          "currency": "HKD",
-          "percentage": 5.64,
-          "lockupMonths": 6
-        },
-        {
-          "name": "华夏基金管理(香港)有限公司",
-          "shares": 778000,
-          "amount": 23340000,
-          "currency": "HKD",
-          "percentage": 2.12,
-          "lockupMonths": 6
-        },
-        {
-          "name": "新亚洲富怡资产管理有限公司",
-          "shares": 778000,
-          "amount": 23340000,
-          "currency": "HKD",
-          "percentage": 2.12,
-          "lockupMonths": 6
-        },
-        {
-          "name": "联域集团有限公司",
-          "shares": 770200,
-          "amount": 23106000,
-          "currency": "HKD",
-          "percentage": 2.09,
-          "lockupMonths": 6
-        },
-        {
-          "name": "Zhengxin Group Investment Limited",
-          "shares": 518600,
-          "amount": 15558000,
-          "currency": "HKD",
-          "percentage": 1.41,
-          "lockupMonths": 6
-        },
-        {
-          "name": "欣旺达财资(香港)有限公司",
-          "shares": 333200,
-          "amount": 9996000,
-          "currency": "HKD",
-          "percentage": 0.91,
-          "lockupMonths": 6
-        }
-      ],
-      "source": "Excel补充",
-      "price": 16.51,
-      "prevClose": 16.32,
-      "changePct": 1.16,
-      "unlockValue": 258005072,
-      "unlockValueYi": 2.5800507200000005,
-      "issuePrice": 30.0,
-      "ccassValidated": false,
-      "ccassRatio": 0,
-      "ccassNote": "未经过CCASS交叉校验，仅供参考",
-      "deviation": 0,
-      "deviationFlag": "ok",
-      "isLarge": false,
-      "riskText": "现价较发行价跌幅45%，持仓处于亏损状态，解禁抛压相对可控。解禁市值2.6亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅71%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值46.6亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06938.HK",
@@ -1007,8 +915,8 @@
       ],
       "source": "Excel补充",
       "price": 55.7,
-      "prevClose": 57.15,
-      "changePct": -2.54,
+      "prevClose": 55.0,
+      "changePct": 1.27,
       "unlockValue": 747516280,
       "unlockValueYi": 7.4751628,
       "issuePrice": 57.97,
@@ -1114,11 +1022,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 73.8,
-      "prevClose": 71.95,
-      "changePct": 2.57,
-      "unlockValue": 1530626760,
-      "unlockValueYi": 15.3062676,
+      "price": 72.5,
+      "prevClose": 72.2,
+      "changePct": 0.42,
+      "unlockValue": 1503664500,
+      "unlockValueYi": 15.036645,
       "issuePrice": 104.8,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -1126,7 +1034,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价跌幅30%，持仓处于亏损状态，解禁抛压相对可控。解禁市值15.3亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅31%，持仓处于亏损状态，解禁抛压相对可控。解禁市值15.0亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "01641.HK",
@@ -1150,11 +1058,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 3.52,
-      "prevClose": 3.52,
+      "price": 3.5,
+      "prevClose": 3.5,
       "changePct": 0.0,
-      "unlockValue": 6269120,
-      "unlockValueYi": 0.0626912,
+      "unlockValue": 6233500,
+      "unlockValueYi": 0.062335,
       "issuePrice": 12.26,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -1323,8 +1231,8 @@
       ],
       "source": "Excel补充",
       "price": 522.0,
-      "prevClose": 513.5,
-      "changePct": 1.66,
+      "prevClose": 516.0,
+      "changePct": 1.16,
       "unlockValue": 7513824600,
       "unlockValueYi": 75.138246,
       "issuePrice": 162.0,
@@ -1398,11 +1306,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 21.8,
-      "prevClose": 21.3,
-      "changePct": 2.35,
-      "unlockValue": 309579620,
-      "unlockValueYi": 3.0957962,
+      "price": 21.62,
+      "prevClose": 21.84,
+      "changePct": -1.01,
+      "unlockValue": 307023458,
+      "unlockValueYi": 3.07023458,
       "issuePrice": 31.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -1490,11 +1398,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 362.6,
-      "prevClose": 361.6,
-      "changePct": 0.28,
-      "unlockValue": 2329197360,
-      "unlockValueYi": 23.2919736,
+      "price": 367.2,
+      "prevClose": 366.4,
+      "changePct": 0.22,
+      "unlockValue": 2358745920,
+      "unlockValueYi": 23.5874592,
       "issuePrice": 236.61,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -1502,7 +1410,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅53%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值23.3亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅55%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值23.6亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "09980.HK",
@@ -1646,11 +1554,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 95.8,
-      "prevClose": 95.75,
-      "changePct": 0.05,
-      "unlockValue": 1927505580,
-      "unlockValueYi": 19.2750558,
+      "price": 96.95,
+      "prevClose": 97.85,
+      "changePct": -0.92,
+      "unlockValue": 1950643695,
+      "unlockValueYi": 19.50643695,
       "issuePrice": 248.01,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -1658,7 +1566,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价跌幅61%，持仓处于亏损状态，解禁抛压相对可控。解禁市值19.3亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅61%，持仓处于亏损状态，解禁抛压相对可控。解禁市值19.5亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "02768.HK",
@@ -1738,11 +1646,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 47.3,
-      "prevClose": 43.32,
-      "changePct": 9.19,
-      "unlockValue": 419513160,
-      "unlockValueYi": 4.1951316,
+      "price": 47.48,
+      "prevClose": 46.78,
+      "changePct": 1.5,
+      "unlockValue": 421109616,
+      "unlockValueYi": 4.21109616,
       "issuePrice": 36.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -1750,7 +1658,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价涨幅31%，存在一定减持动力。解禁市值4.2亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅32%，存在一定减持动力。解禁市值4.2亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "02677.HK",
@@ -1798,11 +1706,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 23.28,
-      "prevClose": 22.96,
-      "changePct": 1.39,
-      "unlockValue": 34929312,
-      "unlockValueYi": 0.34929312,
+      "price": 24.0,
+      "prevClose": 24.0,
+      "changePct": 0.0,
+      "unlockValue": 36009600,
+      "unlockValueYi": 0.360096,
       "issuePrice": 60.51,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -1810,7 +1718,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价跌幅62%，持仓处于亏损状态，解禁抛压相对可控。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅60%，持仓处于亏损状态，解禁抛压相对可控。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "02714.HK",
@@ -1946,11 +1854,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 37.46,
-      "prevClose": 38.42,
-      "changePct": -2.5,
-      "unlockValue": 5131001088,
-      "unlockValueYi": 51.31001088,
+      "price": 37.72,
+      "prevClose": 37.7,
+      "changePct": 0.05,
+      "unlockValue": 5166614016,
+      "unlockValueYi": 51.66614016,
       "issuePrice": 39.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -1958,7 +1866,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价低于发行价4%，基石投资者处于浮亏，被动减持可能性较低。解禁市值51.3亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价低于发行价3%，基石投资者处于浮亏，被动减持可能性较低。解禁市值51.7亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "03200.HK",
@@ -2062,11 +1970,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 114.5,
-      "prevClose": 111.6,
-      "changePct": 2.6,
-      "unlockValue": 2887506800,
-      "unlockValueYi": 28.875068,
+      "price": 112.6,
+      "prevClose": 109.3,
+      "changePct": 3.02,
+      "unlockValue": 2839591840,
+      "unlockValueYi": 28.3959184,
       "issuePrice": 95.8,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -2074,7 +1982,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价变动20%，浮动空间有限。解禁市值28.9亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价变动18%，浮动空间有限。解禁市值28.4亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06809.HK",
@@ -2234,11 +2142,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 322.6,
-      "prevClose": 286.4,
-      "changePct": 12.64,
-      "unlockValue": 10590312800,
-      "unlockValueYi": 105.903128,
+      "price": 314.8,
+      "prevClose": 309.6,
+      "changePct": 1.68,
+      "unlockValue": 10334254400,
+      "unlockValueYi": 103.342544,
       "issuePrice": 106.89,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -2246,7 +2154,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅202%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值105.9亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅195%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值103.3亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "00600.HK",
@@ -2390,11 +2298,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 23.46,
-      "prevClose": 22.28,
-      "changePct": 5.3,
-      "unlockValue": 1200126798,
-      "unlockValueYi": 12.00126798,
+      "price": 22.5,
+      "prevClose": 22.84,
+      "changePct": -1.49,
+      "unlockValue": 1151016750,
+      "unlockValueYi": 11.5101675,
       "issuePrice": 28.2,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -2402,7 +2310,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价低于发行价17%，基石投资者处于浮亏，被动减持可能性较低。解禁市值12.0亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅20%，持仓处于亏损状态，解禁抛压相对可控。解禁市值11.5亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "00470.HK",
@@ -2498,11 +2406,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 28.26,
-      "prevClose": 27.82,
-      "changePct": 1.58,
-      "unlockValue": 1322754516,
-      "unlockValueYi": 13.22754516,
+      "price": 27.78,
+      "prevClose": 27.46,
+      "changePct": 1.17,
+      "unlockValue": 1300287348,
+      "unlockValueYi": 13.00287348,
       "issuePrice": 45.8,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -2510,67 +2418,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价跌幅38%，持仓处于亏损状态，解禁抛压相对可控。解禁市值13.2亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
-    },
-    {
-      "code": "02706.HK",
-      "code_raw": "02706",
-      "name": "海致科技集团",
-      "listingDate": "2026-02-13",
-      "liftDate": "2026-08-13",
-      "liftDateObj": "2026-08-13",
-      "totalShares": 4307400,
-      "totalAmountHKD": 116959500,
-      "unlockType": "基石解禁",
-      "industry": "数码解决方案服务",
-      "investors": [
-        {
-          "name": "JSC International Investment Fund SPC",
-          "shares": 1426200,
-          "amount": 38986500,
-          "currency": "HKD",
-          "percentage": 5.09,
-          "lockupMonths": 11
-        },
-        {
-          "name": "JINGSHENG HENGXING TECHNOLOGY PTE. LTD.",
-          "shares": 1152400,
-          "amount": 31189200,
-          "currency": "HKD",
-          "percentage": 4.11,
-          "lockupMonths": 9
-        },
-        {
-          "name": "Infini Global Master Fund",
-          "shares": 864400,
-          "amount": 23391900,
-          "currency": "HKD",
-          "percentage": 3.08,
-          "lockupMonths": 6
-        },
-        {
-          "name": "Mega Prime Development Limited",
-          "shares": 864400,
-          "amount": 23391900,
-          "currency": "HKD",
-          "percentage": 3.08,
-          "lockupMonths": 6
-        }
-      ],
-      "source": "Excel补充",
-      "price": 44.0,
-      "prevClose": 42.6,
-      "changePct": 3.29,
-      "unlockValue": 189525600,
-      "unlockValueYi": 1.895256,
-      "issuePrice": 27.34,
-      "ccassValidated": false,
-      "ccassRatio": 0,
-      "ccassNote": "未经过CCASS交叉校验，仅供参考",
-      "deviation": 0,
-      "deviationFlag": "ok",
-      "isLarge": false,
-      "riskText": "现价较发行价涨幅61%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值1.9亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅39%，持仓处于亏损状态，解禁抛压相对可控。解禁市值13.0亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "09981.HK",
@@ -2714,11 +2562,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 8.99,
-      "prevClose": 8.995,
-      "changePct": 0.0,
-      "unlockValue": 433845041,
-      "unlockValueYi": 4.338450409999999,
+      "price": 8.95,
+      "prevClose": 8.91,
+      "changePct": 0.45,
+      "unlockValue": 431674610,
+      "unlockValueYi": 4.3167461,
       "issuePrice": 20.12,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -2726,7 +2574,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价跌幅55%，持仓处于亏损状态，解禁抛压相对可控。解禁市值4.3亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅56%，持仓处于亏损状态，解禁抛压相对可控。解禁市值4.3亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "02692.HK",
@@ -2910,11 +2758,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 38.34,
+      "price": 38.5,
       "prevClose": 38.6,
-      "changePct": -0.67,
-      "unlockValue": 350454438,
-      "unlockValueYi": 3.5045443800000005,
+      "changePct": -0.26,
+      "unlockValue": 351916950,
+      "unlockValueYi": 3.5191695,
       "issuePrice": 71.28,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -2994,11 +2842,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 15.16,
-      "prevClose": 14.99,
-      "changePct": 1.13,
-      "unlockValue": 516176776,
-      "unlockValueYi": 5.16176776,
+      "price": 14.77,
+      "prevClose": 14.78,
+      "changePct": -0.07,
+      "unlockValue": 502897822,
+      "unlockValueYi": 5.02897822,
       "issuePrice": 15.36,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -3006,7 +2854,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价低于发行价1%，基石投资者处于浮亏，被动减持可能性较低。解禁市值5.2亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价低于发行价4%，基石投资者处于浮亏，被动减持可能性较低。解禁市值5.0亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "03268.HK",
@@ -3086,11 +2934,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 20.38,
-      "prevClose": 19.88,
-      "changePct": 2.52,
-      "unlockValue": 323785212,
-      "unlockValueYi": 3.23785212,
+      "price": 20.16,
+      "prevClose": 20.1,
+      "changePct": 0.3,
+      "unlockValue": 320289984,
+      "unlockValueYi": 3.20289984,
       "issuePrice": 28.86,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -3098,7 +2946,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价跌幅29%，持仓处于亏损状态，解禁抛压相对可控。解禁市值3.2亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅30%，持仓处于亏损状态，解禁抛压相对可控。解禁市值3.2亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "01989.HK",
@@ -3210,11 +3058,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 142.5,
-      "prevClose": 123.0,
-      "changePct": 15.85,
-      "unlockValue": 2946116250,
-      "unlockValueYi": 29.4611625,
+      "price": 133.9,
+      "prevClose": 131.5,
+      "changePct": 1.83,
+      "unlockValue": 2768315550,
+      "unlockValueYi": 27.6831555,
       "issuePrice": 71.88,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -3222,7 +3070,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅98%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值29.5亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅86%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值27.7亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "02701.HK",
@@ -3278,11 +3126,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 9.18,
-      "prevClose": 8.875,
-      "changePct": 3.38,
-      "unlockValue": 118930020,
-      "unlockValueYi": 1.1893002000000001,
+      "price": 8.79,
+      "prevClose": 8.81,
+      "changePct": -0.23,
+      "unlockValue": 113939496,
+      "unlockValueYi": 1.13939496,
       "issuePrice": 10.8,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -3290,7 +3138,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价低于发行价15%，基石投资者处于浮亏，被动减持可能性较低。解禁市值1.2亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价低于发行价19%，基石投资者处于浮亏，被动减持可能性较低。解禁市值1.1亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "03355.HK",
@@ -3394,11 +3242,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 40.48,
-      "prevClose": 40.18,
-      "changePct": 0.75,
-      "unlockValue": 685038992,
-      "unlockValueYi": 6.85038992,
+      "price": 41.08,
+      "prevClose": 40.8,
+      "changePct": 0.69,
+      "unlockValue": 695192732,
+      "unlockValueYi": 6.95192732,
       "issuePrice": 41.6,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -3406,7 +3254,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价低于发行价3%，基石投资者处于浮亏，被动减持可能性较低。解禁市值6.9亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价低于发行价1%，基石投资者处于浮亏，被动减持可能性较低。解禁市值7.0亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "02632.HK",
@@ -3419,6 +3267,7 @@
       "totalAmountHKD": 109947500,
       "unlockType": "基石解禁",
       "industry": "汽车零件",
+      "source": "智通财经",
       "investors": [
         {
           "name": "盈科壹号(香港)有限公司",
@@ -3437,12 +3286,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 65.0,
-      "prevClose": 65.3,
-      "changePct": -0.46,
-      "unlockValue": 161687500,
-      "unlockValueYi": 1.616875,
+      "price": 65.4,
+      "prevClose": 65.4,
+      "changePct": 0.0,
+      "unlockValue": 162682500,
+      "unlockValueYi": 1.626825,
       "issuePrice": 44.2,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -3450,7 +3298,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价涨幅47%，存在一定减持动力。解禁市值1.6亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅48%，存在一定减持动力。解禁市值1.6亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "00664.HK",
@@ -3463,6 +3311,7 @@
       "totalAmountHKD": 30000000,
       "unlockType": "基石解禁",
       "industry": "玩具及消闲用品",
+      "source": "智通财经",
       "investors": [
         {
           "name": "建投国际(香港)有限公司",
@@ -3473,12 +3322,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 12.95,
-      "prevClose": 12.95,
+      "price": 12.4,
+      "prevClose": 12.4,
       "changePct": 0.0,
-      "unlockValue": 6475000,
-      "unlockValueYi": 0.06475,
+      "unlockValue": 6200000,
+      "unlockValueYi": 0.062,
       "issuePrice": 60.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -3486,7 +3334,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价跌幅78%，持仓处于亏损状态，解禁抛压相对可控。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅79%，持仓处于亏损状态，解禁抛压相对可控。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "01021.HK",
@@ -3499,6 +3347,7 @@
       "totalAmountHKD": 769625760,
       "unlockType": "基石解禁",
       "industry": "工业零件及器材",
+      "source": "智通财经",
       "investors": [
         {
           "name": "HHLRA基金",
@@ -3573,20 +3422,19 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 11.25,
-      "prevClose": 11.11,
-      "changePct": 1.26,
-      "unlockValue": 509238000,
-      "unlockValueYi": 5.09238,
+      "price": 10.53,
+      "prevClose": 10.48,
+      "changePct": 0.48,
+      "unlockValue": 476646768,
+      "unlockValueYi": 4.76646768,
       "issuePrice": 17.0,
       "ccassValidated": false,
       "ccassRatio": 0,
       "ccassNote": "未经过CCASS交叉校验，仅供参考",
       "deviation": 0,
       "deviationFlag": "ok",
-      "isLarge": true,
-      "riskText": "现价较发行价跌幅34%，持仓处于亏损状态，解禁抛压相对可控。解禁市值5.1亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "isLarge": false,
+      "riskText": "现价较发行价跌幅38%，持仓处于亏损状态，解禁抛压相对可控。解禁市值4.8亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06656.HK",
@@ -3599,6 +3447,7 @@
       "totalAmountHKD": 2192126469,
       "unlockType": "基石解禁",
       "industry": "能源储存装置",
+      "source": "智通财经",
       "investors": [
         {
           "name": "Aranda Investments Pte. Ltd.",
@@ -3769,12 +3618,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 337.2,
-      "prevClose": 330.2,
-      "changePct": 2.12,
-      "unlockValue": 2279606880,
-      "unlockValueYi": 22.7960688,
+      "price": 336.4,
+      "prevClose": 336.0,
+      "changePct": 0.12,
+      "unlockValue": 2274198560,
+      "unlockValueYi": 22.7419856,
       "issuePrice": 324.21,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -3782,12 +3630,12 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价变动4%，浮动空间有限。解禁市值22.8亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价变动4%，浮动空间有限。解禁市值22.7亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "00068.HK",
       "code_raw": "00068",
-      "name": "群核科技",
+      "name": "MANYCORE TECH",
       "listingDate": "2026-04-17",
       "liftDate": "2026-10-17",
       "liftDateObj": "2026-10-17",
@@ -3795,6 +3643,7 @@
       "totalAmountHKD": 454524740,
       "unlockType": "基石解禁",
       "industry": "应用软件",
+      "source": "智通财经",
       "investors": [
         {
           "name": "泰康人寿保险有限责任公司",
@@ -3869,20 +3718,19 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 8.6,
-      "prevClose": 8.49,
-      "changePct": 1.3,
-      "unlockValue": 512964200,
-      "unlockValueYi": 5.129642,
+      "price": 8.2,
+      "prevClose": 8.175,
+      "changePct": 0.31,
+      "unlockValue": 489105400,
+      "unlockValueYi": 4.891054,
       "issuePrice": 7.62,
       "ccassValidated": false,
       "ccassRatio": 0,
       "ccassNote": "未经过CCASS交叉校验，仅供参考",
       "deviation": 0,
       "deviationFlag": "ok",
-      "isLarge": true,
-      "riskText": "现价较发行价变动13%，浮动空间有限。解禁市值5.1亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "isLarge": false,
+      "riskText": "现价较发行价变动8%，浮动空间有限。解禁市值4.9亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "03277.HK",
@@ -3891,10 +3739,11 @@
       "listingDate": "2026-04-17",
       "liftDate": "2026-10-17",
       "liftDateObj": "2026-10-17",
-      "totalShares": 32645200,
+      "totalShares": 32841500,
       "totalAmountHKD": 1301989000,
       "unlockType": "基石解禁",
       "industry": "半导体",
+      "source": "智通财经",
       "investors": [
         {
           "name": "HHLR Advisors Ltd.",
@@ -4137,12 +3986,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 86.0,
-      "prevClose": 83.2,
-      "changePct": 3.37,
-      "unlockValue": 2807487200,
-      "unlockValueYi": 28.074872,
+      "price": 79.9,
+      "prevClose": 77.7,
+      "changePct": 2.83,
+      "unlockValue": 2624035850,
+      "unlockValueYi": 26.2403585,
       "issuePrice": 39.88,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -4150,7 +3998,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅116%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值28.1亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅100%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值26.2亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "02476.HK",
@@ -4159,10 +4007,11 @@
       "listingDate": "2026-04-21",
       "liftDate": "2026-10-21",
       "liftDateObj": "2026-10-21",
-      "totalShares": 37220100,
+      "totalShares": 39460700,
       "totalAmountHKD": 7812267345,
       "unlockType": "基石解禁",
       "industry": "电子零件",
+      "source": "智通财经",
       "investors": [
         {
           "name": "Janchor Partners Pan-Asian Master Fund",
@@ -4477,12 +4326,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 222.0,
-      "prevClose": 225.2,
-      "changePct": -1.42,
-      "unlockValue": 8262862200,
-      "unlockValueYi": 82.628622,
+      "price": 223.6,
+      "prevClose": 216.8,
+      "changePct": 3.14,
+      "unlockValue": 8823412520,
+      "unlockValueYi": 88.2341252,
       "issuePrice": 209.89,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -4490,7 +4338,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价变动6%，浮动空间有限。解禁市值82.6亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价变动7%，浮动空间有限。解禁市值88.2亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "03296.HK",
@@ -4503,6 +4351,7 @@
       "totalAmountHKD": 2272732770,
       "unlockType": "基石解禁",
       "industry": "消费性电讯设备",
+      "source": "智通财经",
       "investors": [
         {
           "name": "JPMorgan Asset Management (Asia Pacific) Limited",
@@ -4649,12 +4498,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 73.55,
-      "prevClose": 73.35,
-      "changePct": 0.27,
-      "unlockValue": 2151344855,
-      "unlockValueYi": 21.51344855,
+      "price": 72.2,
+      "prevClose": 71.9,
+      "changePct": 0.42,
+      "unlockValue": 2111857220,
+      "unlockValueYi": 21.1185722,
       "issuePrice": 77.7,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -4662,7 +4510,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价低于发行价5%，基石投资者处于浮亏，被动减持可能性较低。解禁市值21.5亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价低于发行价7%，基石投资者处于浮亏，被动减持可能性较低。解禁市值21.1亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "01879.HK",
@@ -4671,10 +4519,11 @@
       "listingDate": "2026-04-28",
       "liftDate": "2026-10-28",
       "liftDateObj": "2026-10-28",
-      "totalShares": 8974575,
+      "totalShares": 8974600,
       "totalAmountHKD": 1644142140,
       "unlockType": "基石解禁",
       "industry": "半导体设备与材料",
+      "source": "智通财经",
       "investors": [
         {
           "name": "Alibaba Investment Limited",
@@ -4837,12 +4686,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 323.8,
-      "prevClose": 316.2,
-      "changePct": 2.4,
-      "unlockValue": 2905967385,
-      "unlockValueYi": 29.05967385,
+      "price": 324.2,
+      "prevClose": 321.6,
+      "changePct": 0.81,
+      "unlockValue": 2909565320,
+      "unlockValueYi": 29.0956532,
       "issuePrice": 183.2,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -4863,6 +4711,7 @@
       "totalAmountHKD": 415178150,
       "unlockType": "基石解禁",
       "industry": "生物技术",
+      "source": "智通财经",
       "investors": [
         {
           "name": "香港君实有限公司",
@@ -4913,12 +4762,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 21.16,
-      "prevClose": 21.2,
-      "changePct": -0.19,
-      "unlockValue": 317835896,
-      "unlockValueYi": 3.17835896,
+      "price": 21.52,
+      "prevClose": 21.38,
+      "changePct": 0.65,
+      "unlockValue": 323243312,
+      "unlockValueYi": 3.23243312,
       "issuePrice": 27.64,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -4926,51 +4774,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价跌幅23%，持仓处于亏损状态，解禁抛压相对可控。解禁市值3.2亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
-    },
-    {
-      "code": "06810.HK",
-      "code_raw": "06810",
-      "name": "商米科技-W",
-      "listingDate": "2026-04-29",
-      "liftDate": "2026-10-29",
-      "liftDateObj": "2026-10-29",
-      "totalShares": 11520800,
-      "totalAmountHKD": 286407088,
-      "unlockType": "基石解禁",
-      "industry": "电脑及周边器材",
-      "investors": [
-        {
-          "name": "XINWUTANG CO., LIMITED",
-          "shares": 9945700,
-          "amount": 247250102,
-          "currency": "HKD",
-          "percentage": 23.33,
-          "lockupMonths": 6
-        },
-        {
-          "name": "China Orient Enhanced Income Fund",
-          "shares": 1575100,
-          "amount": 39156986,
-          "currency": "HKD",
-          "percentage": 3.7,
-          "lockupMonths": 11
-        }
-      ],
-      "source": "Excel补充",
-      "price": 57.05,
-      "prevClose": 56.55,
-      "changePct": 0.88,
-      "unlockValue": 657261640,
-      "unlockValueYi": 6.5726164,
-      "issuePrice": 24.86,
-      "ccassValidated": false,
-      "ccassRatio": 0,
-      "ccassNote": "未经过CCASS交叉校验，仅供参考",
-      "deviation": 0,
-      "deviationFlag": "ok",
-      "isLarge": true,
-      "riskText": "现价较发行价涨幅129%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值6.6亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅22%，持仓处于亏损状态，解禁抛压相对可控。解禁市值3.2亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "01609.HK",
@@ -4983,6 +4787,7 @@
       "totalAmountHKD": 287905650,
       "unlockType": "基石解禁",
       "industry": "医疗设备及用品",
+      "source": "智通财经",
       "investors": [
         {
           "name": "JSC International Investment Fund SPC – Shenghai SP",
@@ -5017,12 +4822,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 111.1,
-      "prevClose": 110.0,
-      "changePct": 1.0,
-      "unlockValue": 324734190,
-      "unlockValueYi": 3.2473419,
+      "price": 109.5,
+      "prevClose": 109.2,
+      "changePct": 0.27,
+      "unlockValue": 320057550,
+      "unlockValueYi": 3.2005755,
       "issuePrice": 98.5,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -5030,7 +4834,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价变动13%，浮动空间有限。解禁市值3.2亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价变动11%，浮动空间有限。解禁市值3.2亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "01187.HK",
@@ -5043,6 +4847,7 @@
       "totalAmountHKD": 379779250,
       "unlockType": "基石解禁",
       "industry": "医疗设备及用品",
+      "source": "智通财经",
       "investors": [
         {
           "name": "蓝思科技(香港)有限公司",
@@ -5141,12 +4946,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 31.1,
-      "prevClose": 31.104,
-      "changePct": 0.0,
-      "unlockValue": 300287347,
-      "unlockValueYi": 3.002873472,
+      "price": 30.9,
+      "prevClose": 31.2,
+      "changePct": -0.96,
+      "unlockValue": 298317870,
+      "unlockValueYi": 2.9831787,
       "issuePrice": 39.33,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -5167,6 +4971,7 @@
       "totalAmountHKD": 277000000,
       "unlockType": "基石解禁",
       "industry": "数码解决方案服务",
+      "source": "智通财经",
       "investors": [
         {
           "name": "康成亨远景投资有限公司",
@@ -5177,12 +4982,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 26.7,
-      "prevClose": 26.72,
-      "changePct": -0.07,
-      "unlockValue": 280568940,
-      "unlockValueYi": 2.8056894,
+      "price": 26.36,
+      "prevClose": 26.46,
+      "changePct": -0.38,
+      "unlockValue": 276996152,
+      "unlockValueYi": 2.76996152,
       "issuePrice": 26.36,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -5190,7 +4994,67 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价变动1%，浮动空间有限。解禁市值2.8亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价变动0%，浮动空间有限。解禁市值2.8亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+    },
+    {
+      "code": "02706.HK",
+      "code_raw": "02706",
+      "name": "海致科技集团",
+      "listingDate": "2026-02-13",
+      "liftDate": "2026-11-13",
+      "liftDateObj": "2026-11-13",
+      "totalShares": 2578600,
+      "totalAmountHKD": 116959500,
+      "unlockType": "基石解禁",
+      "industry": "数码解决方案服务",
+      "source": "智通财经",
+      "investors": [
+        {
+          "name": "JSC International Investment Fund SPC",
+          "shares": 1426200,
+          "amount": 38986500,
+          "currency": "HKD",
+          "percentage": 5.09,
+          "lockupMonths": 11
+        },
+        {
+          "name": "JINGSHENG HENGXING TECHNOLOGY PTE. LTD.",
+          "shares": 1152400,
+          "amount": 31189200,
+          "currency": "HKD",
+          "percentage": 4.11,
+          "lockupMonths": 9
+        },
+        {
+          "name": "Infini Global Master Fund",
+          "shares": 864400,
+          "amount": 23391900,
+          "currency": "HKD",
+          "percentage": 3.08,
+          "lockupMonths": 6
+        },
+        {
+          "name": "Mega Prime Development Limited",
+          "shares": 864400,
+          "amount": 23391900,
+          "currency": "HKD",
+          "percentage": 3.08,
+          "lockupMonths": 6
+        }
+      ],
+      "price": 44.92,
+      "prevClose": 46.5,
+      "changePct": -3.4,
+      "unlockValue": 115830712,
+      "unlockValueYi": 1.15830712,
+      "issuePrice": 27.34,
+      "ccassValidated": false,
+      "ccassRatio": 0,
+      "ccassNote": "未经过CCASS交叉校验，仅供参考",
+      "deviation": 0,
+      "deviationFlag": "ok",
+      "isLarge": false,
+      "riskText": "现价较发行价涨幅64%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值1.2亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "07630.HK",
@@ -5203,6 +5067,7 @@
       "totalAmountHKD": 279972864,
       "unlockType": "基石解禁",
       "industry": "生物技术",
+      "source": "智通财经",
       "investors": [
         {
           "name": "南京生物医药谷建设发展有限公司及华泰资本投资有限公司",
@@ -5293,12 +5158,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 15.68,
-      "prevClose": 16.65,
-      "changePct": -5.83,
-      "unlockValue": 218422400,
-      "unlockValueYi": 2.184224,
+      "price": 16.17,
+      "prevClose": 16.14,
+      "changePct": 0.19,
+      "unlockValue": 225248100,
+      "unlockValueYi": 2.2524810000000004,
       "issuePrice": 20.09,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -5306,7 +5170,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价跌幅22%，持仓处于亏损状态，解禁抛压相对可控。解禁市值2.2亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价低于发行价20%，基石投资者处于浮亏，被动减持可能性较低。解禁市值2.3亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "07666.HK",
@@ -5315,10 +5179,11 @@
       "listingDate": "2026-05-13",
       "liftDate": "2026-11-13",
       "liftDateObj": "2026-11-13",
-      "totalShares": 110415000,
+      "totalShares": 110000000,
       "totalAmountHKD": 1159432000,
       "unlockType": "基石解禁",
       "industry": "生物技术",
+      "source": "智通财经",
       "investors": [
         {
           "name": "BlackRock, Inc.",
@@ -5465,12 +5330,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 17.12,
-      "prevClose": 16.88,
-      "changePct": 1.42,
-      "unlockValue": 1890304800,
-      "unlockValueYi": 18.903048,
+      "price": 17.59,
+      "prevClose": 16.78,
+      "changePct": 4.83,
+      "unlockValue": 1934900000,
+      "unlockValueYi": 19.349,
       "issuePrice": 10.5,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -5478,7 +5342,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅63%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值18.9亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅68%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值19.3亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "01511.HK",
@@ -5491,6 +5355,7 @@
       "totalAmountHKD": 261231660,
       "unlockType": "基石解禁",
       "industry": "数码解决方案服务",
+      "source": "智通财经",
       "investors": [
         {
           "name": "雄安自动驾驶有限公司",
@@ -5517,12 +5382,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 58.7,
-      "prevClose": 58.85,
-      "changePct": -0.25,
-      "unlockValue": 254300140,
-      "unlockValueYi": 2.5430014,
+      "price": 55.7,
+      "prevClose": 56.0,
+      "changePct": -0.54,
+      "unlockValue": 241303540,
+      "unlockValueYi": 2.4130354,
       "issuePrice": 60.3,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -5530,7 +5394,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价低于发行价3%，基石投资者处于浮亏，被动减持可能性较低。解禁市值2.5亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价低于发行价8%，基石投资者处于浮亏，被动减持可能性较低。解禁市值2.4亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "07688.HK",
@@ -5539,10 +5403,11 @@
       "listingDate": "2026-05-20",
       "liftDate": "2026-11-20",
       "liftDateObj": "2026-11-20",
-      "totalShares": 32665000,
+      "totalShares": 45139700,
       "totalAmountHKD": 862029350,
       "unlockType": "基石解禁",
       "industry": "工业零件及器材",
+      "source": "智通财经",
       "investors": [
         {
           "name": "加皇环球资产管理(亚洲)有限公司",
@@ -5657,12 +5522,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 20.94,
-      "prevClose": 20.54,
-      "changePct": 1.95,
-      "unlockValue": 684005100,
-      "unlockValueYi": 6.840051,
+      "price": 20.04,
+      "prevClose": 20.0,
+      "changePct": 0.2,
+      "unlockValue": 904599588,
+      "unlockValueYi": 9.04599588,
       "issuePrice": 26.39,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -5670,7 +5534,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价跌幅21%，持仓处于亏损状态，解禁抛压相对可控。解禁市值6.8亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅24%，持仓处于亏损状态，解禁抛压相对可控。解禁市值9.0亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06872.HK",
@@ -5679,10 +5543,11 @@
       "listingDate": "2026-05-22",
       "liftDate": "2026-11-22",
       "liftDateObj": "2026-11-22",
-      "totalShares": 3082450,
+      "totalShares": 3082500,
       "totalAmountHKD": 233341465,
       "unlockType": "基石解禁",
       "industry": "药品",
+      "source": "智通财经",
       "investors": [
         {
           "name": "AMR Action Fund, L.P",
@@ -5725,12 +5590,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 128.8,
-      "prevClose": 127.7,
-      "changePct": 0.86,
-      "unlockValue": 397019560,
-      "unlockValueYi": 3.9701956000000007,
+      "price": 131.0,
+      "prevClose": 130.9,
+      "changePct": 0.08,
+      "unlockValue": 403807500,
+      "unlockValueYi": 4.038075,
       "issuePrice": 75.7,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -5738,7 +5602,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价涨幅70%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值4.0亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅73%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值4.0亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "03310.HK",
@@ -5751,6 +5615,7 @@
       "totalAmountHKD": 389000000,
       "unlockType": "基石解禁",
       "industry": "半导体",
+      "source": "智通财经",
       "investors": [
         {
           "name": "Digital Vista GD Investment LP",
@@ -5769,12 +5634,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 28.18,
-      "prevClose": 28.32,
-      "changePct": -0.49,
-      "unlockValue": 526763104,
-      "unlockValueYi": 5.26763104,
+      "price": 27.46,
+      "prevClose": 27.1,
+      "changePct": 1.33,
+      "unlockValue": 513304288,
+      "unlockValueYi": 5.13304288,
       "issuePrice": 20.81,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -5782,7 +5646,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅35%，存在一定减持动力。解禁市值5.3亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅32%，存在一定减持动力。解禁市值5.1亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "03388.HK",
@@ -5795,6 +5659,7 @@
       "totalAmountHKD": 688837600,
       "unlockType": "基石解禁",
       "industry": "电脑及周边器材",
+      "source": "智通财经",
       "investors": [
         {
           "name": "泰康人寿保险有限责任公司",
@@ -5917,12 +5782,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 24.32,
-      "prevClose": 24.38,
-      "changePct": -0.25,
-      "unlockValue": 891060480,
-      "unlockValueYi": 8.9106048,
+      "price": 26.94,
+      "prevClose": 26.04,
+      "changePct": 3.46,
+      "unlockValue": 987054660,
+      "unlockValueYi": 9.8705466,
       "issuePrice": 18.8,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -5930,7 +5794,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅29%，存在一定减持动力。解禁市值8.9亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅43%，存在一定减持动力。解禁市值9.9亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "01081.HK",
@@ -5943,6 +5807,7 @@
       "totalAmountHKD": 2803276494,
       "unlockType": "基石解禁",
       "industry": "环保工程",
+      "source": "智通财经",
       "investors": [
         {
           "name": "GIC Private Limited",
@@ -6065,12 +5930,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 31.62,
-      "prevClose": 31.62,
-      "changePct": 0.0,
-      "unlockValue": 1334914188,
-      "unlockValueYi": 13.34914188,
+      "price": 29.6,
+      "prevClose": 29.82,
+      "changePct": -0.74,
+      "unlockValue": 1249635040,
+      "unlockValueYi": 12.4963504,
       "issuePrice": 66.4,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -6078,7 +5942,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价跌幅52%，持仓处于亏损状态，解禁抛压相对可控。解禁市值13.3亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅55%，持仓处于亏损状态，解禁抛压相对可控。解禁市值12.5亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "01779.HK",
@@ -6091,6 +5955,7 @@
       "totalAmountHKD": 681140400,
       "unlockType": "基石解禁",
       "industry": "生物技术",
+      "source": "智通财经",
       "investors": [
         {
           "name": "华泰资本投资有限公司及上海高毅资产管理合伙企业(有限合伙)",
@@ -6229,12 +6094,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 115.0,
-      "prevClose": 114.5,
-      "changePct": 0.44,
-      "unlockValue": 815396000,
-      "unlockValueYi": 8.15396,
+      "price": 113.8,
+      "prevClose": 113.1,
+      "changePct": 0.62,
+      "unlockValue": 806887520,
+      "unlockValueYi": 8.0688752,
       "issuePrice": 96.06,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -6242,19 +6106,20 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价变动20%，浮动空间有限。解禁市值8.2亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价变动18%，浮动空间有限。解禁市值8.1亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06675.HK",
       "code_raw": "06675",
-      "name": "琻捷电子科技",
+      "name": "SENASIC",
       "listingDate": "2026-06-17",
       "liftDate": "2026-12-17",
       "liftDateObj": "2026-12-17",
-      "totalShares": 15413600,
+      "totalShares": 15413599,
       "totalAmountHKD": 282993696,
       "unlockType": "基石解禁",
       "industry": "半导体",
+      "source": "智通财经",
       "investors": [
         {
           "name": "Oakwise Growth Fund SPC – Greater China Fund SP",
@@ -6329,12 +6194,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 28.32,
-      "prevClose": 28.6,
-      "changePct": -0.98,
-      "unlockValue": 436513152,
-      "unlockValueYi": 4.36513152,
+      "price": 27.24,
+      "prevClose": 27.52,
+      "changePct": -1.02,
+      "unlockValue": 419866437,
+      "unlockValueYi": 4.1986643676,
       "issuePrice": 18.36,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -6342,7 +6206,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价涨幅54%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值4.4亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅48%，存在一定减持动力。解禁市值4.2亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06067.HK",
@@ -6351,10 +6215,11 @@
       "listingDate": "2026-06-23",
       "liftDate": "2026-12-23",
       "liftDateObj": "2026-12-23",
-      "totalShares": 67495500,
+      "totalShares": 74216000,
       "totalAmountHKD": 606109590,
       "unlockType": "基石解禁",
       "industry": "能源储存装置",
+      "source": "智通财经",
       "investors": [
         {
           "name": "Mondeomax Limited",
@@ -6461,12 +6326,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 7.99,
-      "prevClose": 7.875,
-      "changePct": 1.46,
-      "unlockValue": 539289045,
-      "unlockValueYi": 5.39289045,
+      "price": 7.56,
+      "prevClose": 7.555,
+      "changePct": 0.07,
+      "unlockValue": 561072960,
+      "unlockValueYi": 5.6107296,
       "issuePrice": 8.98,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -6474,7 +6338,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价低于发行价11%，基石投资者处于浮亏，被动减持可能性较低。解禁市值5.4亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价低于发行价16%，基石投资者处于浮亏，被动减持可能性较低。解禁市值5.6亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06132.HK",
@@ -6487,6 +6351,7 @@
       "totalAmountHKD": 509434040,
       "unlockType": "基石解禁",
       "industry": "生物技术",
+      "source": "智通财经",
       "investors": [
         {
           "name": "凯博未来有限公司",
@@ -6537,12 +6402,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 42.0,
-      "prevClose": 43.26,
-      "changePct": -2.91,
-      "unlockValue": 261567600,
-      "unlockValueYi": 2.615676,
+      "price": 40.28,
+      "prevClose": 39.9,
+      "changePct": 0.95,
+      "unlockValue": 250855784,
+      "unlockValueYi": 2.50855784,
       "issuePrice": 81.8,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -6550,7 +6414,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价跌幅49%，持仓处于亏损状态，解禁抛压相对可控。解禁市值2.6亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅51%，持仓处于亏损状态，解禁抛压相对可控。解禁市值2.5亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "02335.HK",
@@ -6563,6 +6427,7 @@
       "totalAmountHKD": 449194200,
       "unlockType": "基石解禁",
       "industry": "生物技术",
+      "source": "智通财经",
       "investors": [
         {
           "name": "启源高新创投(香港)有限公司",
@@ -6589,12 +6454,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 22.58,
-      "prevClose": 22.46,
-      "changePct": 0.53,
-      "unlockValue": 557296980,
-      "unlockValueYi": 5.5729698,
+      "price": 22.26,
+      "prevClose": 22.16,
+      "changePct": 0.45,
+      "unlockValue": 549399060,
+      "unlockValueYi": 5.4939906,
       "issuePrice": 18.2,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -6602,7 +6466,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅24%，存在一定减持动力。解禁市值5.6亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅22%，存在一定减持动力。解禁市值5.5亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06106.HK",
@@ -6615,6 +6479,7 @@
       "totalAmountHKD": 462219040,
       "unlockType": "基石解禁",
       "industry": "数码解决方案服务",
+      "source": "智通财经",
       "investors": [
         {
           "name": "Yuanbao Family Office Limited",
@@ -6681,12 +6546,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 71.25,
-      "prevClose": 72.8,
-      "changePct": -2.13,
-      "unlockValue": 324144750,
-      "unlockValueYi": 3.2414475,
+      "price": 69.5,
+      "prevClose": 69.8,
+      "changePct": -0.43,
+      "unlockValue": 316183300,
+      "unlockValueYi": 3.161833,
       "issuePrice": 101.6,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -6694,7 +6558,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价跌幅30%，持仓处于亏损状态，解禁抛压相对可控。解禁市值3.2亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅32%，持仓处于亏损状态，解禁抛压相对可控。解禁市值3.2亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "01688.HK",
@@ -6703,10 +6567,11 @@
       "listingDate": "2026-06-26",
       "liftDate": "2026-12-26",
       "liftDateObj": "2026-12-26",
-      "totalShares": 313241280,
+      "totalShares": 313000000,
       "totalAmountHKD": 3188796231,
       "unlockType": "基石解禁",
       "industry": "电子零件",
+      "source": "智通财经",
       "investors": [
         {
           "name": "Kaide Global Investment Ltd",
@@ -6877,12 +6742,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 6.16,
-      "prevClose": 6.09,
-      "changePct": 1.15,
-      "unlockValue": 1929566285,
-      "unlockValueYi": 19.295662848,
+      "price": 6.08,
+      "prevClose": 6.085,
+      "changePct": -0.16,
+      "unlockValue": 1901475000,
+      "unlockValueYi": 19.01475,
       "issuePrice": 10.18,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -6890,7 +6754,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价跌幅39%，持仓处于亏损状态，解禁抛压相对可控。解禁市值19.3亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅40%，持仓处于亏损状态，解禁抛压相对可控。解禁市值19.0亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "01956.HK",
@@ -6903,6 +6767,7 @@
       "totalAmountHKD": 241800000,
       "unlockType": "基石解禁",
       "industry": "数码解决方案服务",
+      "source": "智通财经",
       "investors": [
         {
           "name": "嘉实国际资产管理有限公司",
@@ -6953,12 +6818,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 78.3,
-      "prevClose": 77.65,
-      "changePct": 0.84,
-      "unlockValue": 313246980,
-      "unlockValueYi": 3.1324698,
+      "price": 76.85,
+      "prevClose": 76.25,
+      "changePct": 0.79,
+      "unlockValue": 307446110,
+      "unlockValueYi": 3.0744611,
       "issuePrice": 60.43,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -6966,7 +6830,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价涨幅30%，存在一定减持动力。解禁市值3.1亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅27%，存在一定减持动力。解禁市值3.1亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "03661.HK",
@@ -6979,6 +6843,7 @@
       "totalAmountHKD": 2295398760,
       "unlockType": "基石解禁",
       "industry": "半导体",
+      "source": "智通财经",
       "investors": [
         {
           "name": "GIC Private Limited",
@@ -7189,12 +7054,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 97.25,
-      "prevClose": 96.9,
-      "changePct": 0.36,
-      "unlockValue": 2620041425,
-      "unlockValueYi": 26.20041425,
+      "price": 96.55,
+      "prevClose": 95.9,
+      "changePct": 0.68,
+      "unlockValue": 2601182515,
+      "unlockValueYi": 26.01182515,
       "issuePrice": 85.2,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -7202,19 +7066,20 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价变动14%，浮动空间有限。解禁市值26.2亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价变动13%，浮动空间有限。解禁市值26.0亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06228.HK",
       "code_raw": "06228",
-      "name": "Merdekagold-Drs",
+      "name": "MERDEKAGOLD-DRS",
       "listingDate": "2026-06-26",
       "liftDate": "2026-12-26",
       "liftDateObj": "2026-12-26",
-      "totalShares": 44779800,
+      "totalShares": 44779799,
       "totalAmountHKD": 1191160000,
       "unlockType": "基石解禁",
       "industry": "黄金及贵金属",
+      "source": "智通财经",
       "investors": [
         {
           "name": "中国平安资产管理(香港)有限公司",
@@ -7305,12 +7170,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 34.28,
-      "prevClose": 34.3,
-      "changePct": -0.06,
-      "unlockValue": 1535051544,
-      "unlockValueYi": 15.35051544,
+      "price": 34.5,
+      "prevClose": 34.16,
+      "changePct": 1.0,
+      "unlockValue": 1544903066,
+      "unlockValueYi": 15.449030655,
       "issuePrice": 26.6,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -7318,7 +7182,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅29%，存在一定减持动力。解禁市值15.4亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅30%，存在一定减持动力。解禁市值15.4亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "09630.HK",
@@ -7327,10 +7191,11 @@
       "listingDate": "2026-06-26",
       "liftDate": "2026-12-26",
       "liftDateObj": "2026-12-26",
-      "totalShares": 6416350,
+      "totalShares": 6416300,
       "totalAmountHKD": 1581008158,
       "unlockType": "基石解禁",
       "industry": "工业零件及器材",
+      "source": "智通财经",
       "investors": [
         {
           "name": "胜宏科技集团(香港)有限公司",
@@ -7485,12 +7350,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 378.0,
-      "prevClose": 365.0,
-      "changePct": 3.56,
-      "unlockValue": 2425380300,
-      "unlockValueYi": 24.253803,
+      "price": 361.6,
+      "prevClose": 356.2,
+      "changePct": 1.52,
+      "unlockValue": 2320134080,
+      "unlockValueYi": 23.2013408,
       "issuePrice": 246.43,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -7498,7 +7362,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅53%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值24.3亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅47%，存在一定减持动力。解禁市值23.2亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "01191.HK",
@@ -7507,10 +7371,11 @@
       "listingDate": "2026-06-29",
       "liftDate": "2026-12-29",
       "liftDateObj": "2026-12-29",
-      "totalShares": 6696150,
+      "totalShares": 6696200,
       "totalAmountHKD": 763380000,
       "unlockType": "基石解禁",
       "industry": "电子零件",
+      "source": "智通财经",
       "investors": [
         {
           "name": "JSC International Investment Fund SPC",
@@ -7561,12 +7426,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 176.2,
-      "prevClose": 164.5,
-      "changePct": 7.11,
-      "unlockValue": 1179861630,
-      "unlockValueYi": 11.7986163,
+      "price": 159.0,
+      "prevClose": 156.0,
+      "changePct": 1.92,
+      "unlockValue": 1064695800,
+      "unlockValueYi": 10.646958,
       "issuePrice": 114.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -7574,7 +7438,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅55%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值11.8亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅39%，存在一定减持动力。解禁市值10.6亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "09637.HK",
@@ -7583,10 +7447,11 @@
       "listingDate": "2026-06-29",
       "liftDate": "2026-12-29",
       "liftDateObj": "2026-12-29",
-      "totalShares": 28254900,
+      "totalShares": 28254899,
       "totalAmountHKD": 638560740,
       "unlockType": "基石解禁",
       "industry": "药品",
+      "source": "智通财经",
       "investors": [
         {
           "name": "GIC Private Limited",
@@ -7741,12 +7606,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 27.14,
-      "prevClose": 26.76,
-      "changePct": 1.42,
-      "unlockValue": 766837986,
-      "unlockValueYi": 7.66837986,
+      "price": 26.22,
+      "prevClose": 26.26,
+      "changePct": -0.15,
+      "unlockValue": 740843452,
+      "unlockValueYi": 7.4084345178,
       "issuePrice": 22.6,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -7754,63 +7618,20 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅20%，存在一定减持动力。解禁市值7.7亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
-    },
-    {
-      "code": "06636.HK",
-      "code_raw": "06636",
-      "name": "极视角",
-      "listingDate": "2026-03-30",
-      "liftDate": "2026-12-30",
-      "liftDateObj": "2026-12-30",
-      "totalShares": 1180000,
-      "totalAmountHKD": 47200000,
-      "unlockType": "基石解禁",
-      "industry": "数码解决方案服务",
-      "investors": [
-        {
-          "name": "政金(香港)国际有限公司",
-          "shares": 1130000,
-          "amount": 45200000,
-          "currency": "HKD",
-          "percentage": 9.05,
-          "lockupMonths": 9
-        },
-        {
-          "name": "George Kent International Pte.Ltd.",
-          "shares": 50000,
-          "amount": 2000000,
-          "currency": "HKD",
-          "percentage": 0.4,
-          "lockupMonths": 9
-        }
-      ],
-      "source": "Excel补充",
-      "price": 79.95,
-      "prevClose": 78.0,
-      "changePct": 2.5,
-      "unlockValue": 94341000,
-      "unlockValueYi": 0.94341,
-      "issuePrice": 40.0,
-      "ccassValidated": false,
-      "ccassRatio": 0,
-      "ccassNote": "未经过CCASS交叉校验，仅供参考",
-      "deviation": 0,
-      "deviationFlag": "ok",
-      "isLarge": false,
-      "riskText": "现价较发行价涨幅100%，基石投资者浮盈丰厚，解禁后减持意愿较强。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价变动16%，浮动空间有限。解禁市值7.4亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "03952.HK",
       "code_raw": "03952",
       "name": "来福谐波",
       "listingDate": "2026-06-30",
-      "liftDate": "2026-12-31",
-      "liftDateObj": "2026-12-31",
+      "liftDate": "2026-12-30",
+      "liftDateObj": "2026-12-30",
       "totalShares": 5040000,
       "totalAmountHKD": 430920000,
       "unlockType": "基石解禁",
       "industry": "工业零件及器材",
+      "source": "智通财经",
       "investors": [
         {
           "name": "OAKTREE CAPITAL MANAGEMENT, L.P.",
@@ -7893,12 +7714,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 49.66,
-      "prevClose": 49.58,
-      "changePct": 0.16,
-      "unlockValue": 250286400,
-      "unlockValueYi": 2.5028639999999998,
+      "price": 47.8,
+      "prevClose": 48.96,
+      "changePct": -2.37,
+      "unlockValue": 240912000,
+      "unlockValueYi": 2.40912,
       "issuePrice": 85.5,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -7906,19 +7726,64 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价跌幅42%，持仓处于亏损状态，解禁抛压相对可控。解禁市值2.5亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅44%，持仓处于亏损状态，解禁抛压相对可控。解禁市值2.4亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+    },
+    {
+      "code": "06636.HK",
+      "code_raw": "06636",
+      "name": "极视角",
+      "listingDate": "2026-03-30",
+      "liftDate": "2026-12-30",
+      "liftDateObj": "2026-12-30",
+      "totalShares": 1180000,
+      "totalAmountHKD": 47200000,
+      "unlockType": "基石解禁",
+      "industry": "数码解决方案服务",
+      "source": "智通财经",
+      "investors": [
+        {
+          "name": "政金(香港)国际有限公司",
+          "shares": 1130000,
+          "amount": 45200000,
+          "currency": "HKD",
+          "percentage": 9.05,
+          "lockupMonths": 9
+        },
+        {
+          "name": "George Kent International Pte.Ltd.",
+          "shares": 50000,
+          "amount": 2000000,
+          "currency": "HKD",
+          "percentage": 0.4,
+          "lockupMonths": 9
+        }
+      ],
+      "price": 78.0,
+      "prevClose": 77.5,
+      "changePct": 0.65,
+      "unlockValue": 92040000,
+      "unlockValueYi": 0.9204,
+      "issuePrice": 40.0,
+      "ccassValidated": false,
+      "ccassRatio": 0,
+      "ccassNote": "未经过CCASS交叉校验，仅供参考",
+      "deviation": 0,
+      "deviationFlag": "ok",
+      "isLarge": false,
+      "riskText": "现价较发行价涨幅95%，基石投资者浮盈丰厚，解禁后减持意愿较强。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06715.HK",
       "code_raw": "06715",
       "name": "鲟龙科技",
       "listingDate": "2026-06-30",
-      "liftDate": "2026-12-31",
-      "liftDateObj": "2026-12-31",
+      "liftDate": "2026-12-30",
+      "liftDateObj": "2026-12-30",
       "totalShares": 8146100,
       "totalAmountHKD": 615070000,
       "unlockType": "基石解禁",
       "industry": "包装食品",
+      "source": "智通财经",
       "investors": [
         {
           "name": "贝莱德基金",
@@ -7985,12 +7850,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 66.05,
-      "prevClose": 64.9,
-      "changePct": 1.77,
-      "unlockValue": 538049905,
-      "unlockValueYi": 5.38049905,
+      "price": 67.2,
+      "prevClose": 67.2,
+      "changePct": 0.0,
+      "unlockValue": 547417920,
+      "unlockValueYi": 5.4741792,
       "issuePrice": 75.5,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -7998,19 +7862,20 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价低于发行价13%，基石投资者处于浮亏，被动减持可能性较低。解禁市值5.4亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价低于发行价11%，基石投资者处于浮亏，被动减持可能性较低。解禁市值5.5亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06915.HK",
       "code_raw": "06915",
       "name": "江西生物",
       "listingDate": "2026-06-30",
-      "liftDate": "2026-12-31",
-      "liftDateObj": "2026-12-31",
+      "liftDate": "2026-12-30",
+      "liftDateObj": "2026-12-30",
       "totalShares": 4464000,
       "totalAmountHKD": 50000000,
       "unlockType": "基石解禁",
       "industry": "药品",
+      "source": "智通财经",
       "investors": [
         {
           "name": "富策控股有限公司",
@@ -8021,12 +7886,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 14.85,
-      "prevClose": 15.27,
-      "changePct": -2.75,
-      "unlockValue": 66290400,
-      "unlockValueYi": 0.662904,
+      "price": 13.52,
+      "prevClose": 13.79,
+      "changePct": -1.96,
+      "unlockValue": 60353280,
+      "unlockValueYi": 0.6035328,
       "issuePrice": 11.2,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -8034,7 +7898,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价涨幅33%，存在一定减持动力。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅21%，存在一定减持动力。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "00668.HK",
@@ -8047,6 +7911,7 @@
       "totalAmountHKD": 2311413500,
       "unlockType": "基石解禁",
       "industry": "消费电子产品",
+      "source": "智通财经",
       "investors": [
         {
           "name": "施罗德",
@@ -8145,12 +8010,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 119.7,
-      "prevClose": 117.5,
-      "changePct": 1.87,
-      "unlockValue": 2785622490,
-      "unlockValueYi": 27.8562249,
+      "price": 118.7,
+      "prevClose": 116.5,
+      "changePct": 1.89,
+      "unlockValue": 2762350790,
+      "unlockValueYi": 27.6235079,
       "issuePrice": 99.32,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -8158,7 +8022,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅21%，存在一定减持动力。解禁市值27.9亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价变动20%，浮动空间有限。解禁市值27.6亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06880.HK",
@@ -8167,10 +8031,11 @@
       "listingDate": "2026-07-08",
       "liftDate": "2027-01-08",
       "liftDateObj": "2027-01-08",
-      "totalShares": 9960080,
+      "totalShares": 9960100,
       "totalAmountHKD": 2944264275,
       "unlockType": "基石解禁",
       "industry": "数码解决方案服务",
+      "source": "智通财经",
       "investors": [
         {
           "name": "GIC Private Limited",
@@ -8285,12 +8150,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 184.2,
-      "prevClose": 187.4,
-      "changePct": -1.71,
-      "unlockValue": 1834646736,
-      "unlockValueYi": 18.34646736,
+      "price": 173.8,
+      "prevClose": 179.0,
+      "changePct": -2.91,
+      "unlockValue": 1731065380,
+      "unlockValueYi": 17.3106538,
       "issuePrice": 295.6,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -8298,7 +8162,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价跌幅38%，持仓处于亏损状态，解禁抛压相对可控。解禁市值18.3亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅41%，持仓处于亏损状态，解禁抛压相对可控。解禁市值17.3亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "07687.HK",
@@ -8307,10 +8171,11 @@
       "listingDate": "2026-07-08",
       "liftDate": "2027-01-08",
       "liftDateObj": "2027-01-08",
-      "totalShares": 13011650,
+      "totalShares": 13011600,
       "totalAmountHKD": 1143984268,
       "unlockType": "基石解禁",
       "industry": "数码解决方案服务",
+      "source": "智通财经",
       "investors": [
         {
           "name": "富达基金(香港)有限公司",
@@ -8401,12 +8266,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 77.2,
-      "prevClose": 75.0,
-      "changePct": 2.93,
-      "unlockValue": 1004499380,
-      "unlockValueYi": 10.0449938,
+      "price": 73.45,
+      "prevClose": 75.9,
+      "changePct": -3.23,
+      "unlockValue": 955702020,
+      "unlockValueYi": 9.5570202,
       "issuePrice": 87.92,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -8414,7 +8278,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价低于发行价12%，基石投资者处于浮亏，被动减持可能性较低。解禁市值10.0亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价低于发行价16%，基石投资者处于浮亏，被动减持可能性较低。解禁市值9.6亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "00537.HK",
@@ -8427,6 +8291,7 @@
       "totalAmountHKD": 480265698,
       "unlockType": "基石解禁",
       "industry": "工业零件及器材",
+      "source": "智通财经",
       "investors": [
         {
           "name": "HHLR Advisors, Ltd.",
@@ -8485,12 +8350,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 23.8,
-      "prevClose": 23.1,
-      "changePct": 3.03,
-      "unlockValue": 248593380,
-      "unlockValueYi": 2.4859338,
+      "price": 23.46,
+      "prevClose": 23.28,
+      "changePct": 0.77,
+      "unlockValue": 245042046,
+      "unlockValueYi": 2.45042046,
       "issuePrice": 45.98,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -8498,7 +8362,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价跌幅48%，持仓处于亏损状态，解禁抛压相对可控。解禁市值2.5亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅49%，持仓处于亏损状态，解禁抛压相对可控。解禁市值2.5亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "01377.HK",
@@ -8511,6 +8375,7 @@
       "totalAmountHKD": 1989870000,
       "unlockType": "基石解禁",
       "industry": "工业零件及器材",
+      "source": "智通财经",
       "investors": [
         {
           "name": "HHLR ADVISORS, LTD.",
@@ -8649,12 +8514,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 300.0,
-      "prevClose": 287.0,
-      "changePct": 4.53,
-      "unlockValue": 1570950000,
-      "unlockValueYi": 15.7095,
+      "price": 272.4,
+      "prevClose": 274.4,
+      "changePct": -0.73,
+      "unlockValue": 1426422600,
+      "unlockValueYi": 14.264226,
       "issuePrice": 380.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -8662,7 +8526,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价跌幅21%，持仓处于亏损状态，解禁抛压相对可控。解禁市值15.7亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅28%，持仓处于亏损状态，解禁抛压相对可控。解禁市值14.3亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "02475.HK",
@@ -8671,10 +8535,11 @@
       "listingDate": "2026-07-09",
       "liftDate": "2027-01-09",
       "liftDateObj": "2027-01-09",
-      "totalShares": 185736900,
+      "totalShares": 186000000,
       "totalAmountHKD": 11753545528,
       "unlockType": "基石解禁",
       "industry": "消费性电讯设备",
+      "source": "智通财经",
       "investors": [
         {
           "name": "HHLR Advisors, Ltd.",
@@ -8901,12 +8766,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 60.4,
-      "prevClose": 59.0,
-      "changePct": 2.37,
-      "unlockValue": 11218508760,
-      "unlockValueYi": 112.1850876,
+      "price": 60.25,
+      "prevClose": 60.25,
+      "changePct": 0.0,
+      "unlockValue": 11206500000,
+      "unlockValueYi": 112.065,
       "issuePrice": 63.28,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -8914,7 +8778,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价低于发行价5%，基石投资者处于浮亏，被动减持可能性较低。解禁市值112.2亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价低于发行价5%，基石投资者处于浮亏，被动减持可能性较低。解禁市值112.1亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "03752.HK",
@@ -8923,10 +8787,11 @@
       "listingDate": "2026-07-09",
       "liftDate": "2027-01-09",
       "liftDateObj": "2027-01-09",
-      "totalShares": 7233100,
+      "totalShares": 7233099,
       "totalAmountHKD": 274857800,
       "unlockType": "基石解禁",
       "industry": "数码解决方案服务",
+      "source": "智通财经",
       "investors": [
         {
           "name": "北京金融街资本运营集团有限公司",
@@ -8969,12 +8834,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 47.28,
-      "prevClose": 47.94,
-      "changePct": -1.38,
-      "unlockValue": 341980968,
-      "unlockValueYi": 3.41980968,
+      "price": 52.0,
+      "prevClose": 52.65,
+      "changePct": -1.23,
+      "unlockValue": 376121148,
+      "unlockValueYi": 3.76121148,
       "issuePrice": 38.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -8982,7 +8846,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价涨幅24%，存在一定减持动力。解禁市值3.4亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅37%，存在一定减持动力。解禁市值3.8亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06951.HK",
@@ -8995,6 +8859,7 @@
       "totalAmountHKD": 3565665000,
       "unlockType": "基石解禁",
       "industry": "电子零件",
+      "source": "智通财经",
       "investors": [
         {
           "name": "JPMorgan Asset Management (Asia Pacific) Limited",
@@ -9133,12 +8998,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 135.7,
-      "prevClose": 133.9,
-      "changePct": 1.34,
-      "unlockValue": 4824135000,
-      "unlockValueYi": 48.24135,
+      "price": 139.2,
+      "prevClose": 133.0,
+      "changePct": 4.66,
+      "unlockValue": 4948560000,
+      "unlockValueYi": 49.4856,
       "issuePrice": 100.3,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -9146,7 +9010,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅35%，存在一定减持动力。解禁市值48.2亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅39%，存在一定减持动力。解禁市值49.5亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "02249.HK",
@@ -9155,10 +9019,11 @@
       "listingDate": "2026-07-10",
       "liftDate": "2027-01-10",
       "liftDateObj": "2027-01-10",
-      "totalShares": 107910400,
+      "totalShares": 108000000,
       "totalAmountHKD": 3485505920,
       "unlockType": "基石解禁",
       "industry": "半导体",
+      "source": "智通财经",
       "investors": [
         {
           "name": "合肥集创(香港)有限公司及集创北方(香港)有限公司",
@@ -9321,12 +9186,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 28.74,
-      "prevClose": 28.26,
-      "changePct": 1.7,
-      "unlockValue": 3101344896,
-      "unlockValueYi": 31.01344896,
+      "price": 28.28,
+      "prevClose": 27.84,
+      "changePct": 1.58,
+      "unlockValue": 3054240000,
+      "unlockValueYi": 30.5424,
       "issuePrice": 32.3,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -9334,7 +9198,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价低于发行价11%，基石投资者处于浮亏，被动减持可能性较低。解禁市值31.0亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价低于发行价12%，基石投资者处于浮亏，被动减持可能性较低。解禁市值30.5亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06745.HK",
@@ -9343,10 +9207,11 @@
       "listingDate": "2026-07-10",
       "liftDate": "2027-01-10",
       "liftDateObj": "2027-01-10",
-      "totalShares": 112261000,
+      "totalShares": 112000000,
       "totalAmountHKD": 390668280,
       "unlockType": "基石解禁",
       "industry": "特殊化工用品",
+      "source": "智通财经",
       "investors": [
         {
           "name": "北京益安资本管理有限公司与华泰资本投资有限公司",
@@ -9405,12 +9270,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 3.1,
-      "prevClose": 3.085,
-      "changePct": 0.32,
-      "unlockValue": 347447795,
-      "unlockValueYi": 3.47447795,
+      "price": 3.04,
+      "prevClose": 3.06,
+      "changePct": -0.65,
+      "unlockValue": 340480000,
+      "unlockValueYi": 3.4048,
       "issuePrice": 3.48,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -9418,7 +9282,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价低于发行价11%，基石投资者处于浮亏，被动减持可能性较低。解禁市值3.5亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价低于发行价13%，基石投资者处于浮亏，被动减持可能性较低。解禁市值3.4亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "03308.HK",
@@ -9431,6 +9295,7 @@
       "totalAmountHKD": 26704412000,
       "unlockType": "基石解禁",
       "industry": "电讯网路基建设施",
+      "source": "智通财经",
       "investors": [
         {
           "name": "HHLR Advisors, Ltd.",
@@ -9713,12 +9578,11 @@
           "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 1273.0,
-      "prevClose": 1250.0,
-      "changePct": 1.84,
-      "unlockValue": 34688486200,
-      "unlockValueYi": 346.884862,
+      "price": 1220.0,
+      "prevClose": 1219.0,
+      "changePct": 0.08,
+      "unlockValue": 33244268000,
+      "unlockValueYi": 332.44268,
       "issuePrice": 980.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -9726,19 +9590,692 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅30%，存在一定减持动力。解禁市值346.9亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅24%，存在一定减持动力。解禁市值332.4亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+    },
+    {
+      "code": "02720.HK",
+      "code_raw": "02720",
+      "name": "乐欣户外",
+      "listingDate": "2026-02-10",
+      "liftDate": "2027-02-10",
+      "liftDateObj": "2027-02-10",
+      "totalShares": 10612000,
+      "totalAmountHKD": 130000000,
+      "unlockType": "基石解禁",
+      "industry": "玩具及消闲用品",
+      "source": "智通财经",
+      "investors": [
+        {
+          "name": "地平线创业投资管理有限公司",
+          "shares": 6530500,
+          "amount": 80000000,
+          "currency": "HKD",
+          "percentage": 23.15,
+          "lockupMonths": 12
+        },
+        {
+          "name": "黄山德钧企业管理有限公司",
+          "shares": 4081500,
+          "amount": 50000000,
+          "currency": "HKD",
+          "percentage": 14.47,
+          "lockupMonths": 12
+        }
+      ],
+      "price": 25.64,
+      "prevClose": 25.7,
+      "changePct": -0.23,
+      "unlockValue": 272091680,
+      "unlockValueYi": 2.7209168,
+      "issuePrice": 12.25,
+      "ccassValidated": false,
+      "ccassRatio": 0,
+      "ccassNote": "未经过CCASS交叉校验，仅供参考",
+      "deviation": 0,
+      "deviationFlag": "ok",
+      "isLarge": false,
+      "riskText": "现价较发行价涨幅109%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值2.7亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+    },
+    {
+      "code": "03223.HK",
+      "code_raw": "03223",
+      "name": "君正股份",
+      "listingDate": "2026-08-25",
+      "liftDate": "2027-02-25",
+      "liftDateObj": "2027-02-25",
+      "totalShares": 15034000,
+      "totalAmountHKD": 0,
+      "unlockType": "基石解禁",
+      "industry": "",
+      "source": "智通财经",
+      "investors": [
+        {
+          "name": "Arrow Target Investment L.P.",
+          "shares": 15034000,
+          "amount": 0,
+          "currency": "HKD",
+          "percentage": 0,
+          "lockupMonths": 6
+        }
+      ],
+      "price": 103.2,
+      "prevClose": 101.0,
+      "changePct": 2.18,
+      "unlockValue": 1551508800,
+      "unlockValueYi": 15.515088,
+      "issuePrice": 0.0,
+      "ccassValidated": false,
+      "ccassRatio": 0,
+      "ccassNote": "未经过CCASS交叉校验，仅供参考",
+      "deviation": 0,
+      "deviationFlag": "ok",
+      "isLarge": true,
+      "riskText": "解禁市值15.5亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+    },
+    {
+      "code": "00625.HK",
+      "code_raw": "00625",
+      "name": "希音-W",
+      "listingDate": "2026-09-01",
+      "liftDate": "2027-03-01",
+      "liftDateObj": "2027-03-01",
+      "totalShares": 61890000,
+      "totalAmountHKD": 0,
+      "unlockType": "基石解禁",
+      "industry": "",
+      "source": "智通财经",
+      "investors": [
+        {
+          "name": "Boyu",
+          "shares": 61890000,
+          "amount": 0,
+          "currency": "HKD",
+          "percentage": 0,
+          "lockupMonths": 6
+        }
+      ],
+      "price": 38.24,
+      "prevClose": 37.8,
+      "changePct": 1.16,
+      "unlockValue": 2366673600,
+      "unlockValueYi": 23.666736,
+      "issuePrice": 0.0,
+      "ccassValidated": false,
+      "ccassRatio": 0,
+      "ccassNote": "未经过CCASS交叉校验，仅供参考",
+      "deviation": 0,
+      "deviationFlag": "ok",
+      "isLarge": true,
+      "riskText": "解禁市值23.7亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+    },
+    {
+      "code": "09615.HK",
+      "code_raw": "09615",
+      "name": "梅卡曼德机器人",
+      "listingDate": "2026-09-01",
+      "liftDate": "2027-03-01",
+      "liftDateObj": "2027-03-01",
+      "totalShares": 14351300,
+      "totalAmountHKD": 0,
+      "unlockType": "基石解禁",
+      "industry": "",
+      "source": "智通财经",
+      "investors": [
+        {
+          "name": "Baillie Gifford Overseas Limited及Baillie Gifford & Co",
+          "shares": 14351300,
+          "amount": 0,
+          "currency": "HKD",
+          "percentage": 0,
+          "lockupMonths": 6
+        }
+      ],
+      "price": 82.5,
+      "prevClose": 81.9,
+      "changePct": 0.73,
+      "unlockValue": 1183982250,
+      "unlockValueYi": 11.8398225,
+      "issuePrice": 0.0,
+      "ccassValidated": false,
+      "ccassRatio": 0,
+      "ccassNote": "未经过CCASS交叉校验，仅供参考",
+      "deviation": 0,
+      "deviationFlag": "ok",
+      "isLarge": true,
+      "riskText": "解禁市值11.8亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+    },
+    {
+      "code": "09976.HK",
+      "code_raw": "09976",
+      "name": "江波龙",
+      "listingDate": "2026-09-08",
+      "liftDate": "2027-03-08",
+      "liftDateObj": "2027-03-08",
+      "totalShares": 5022000,
+      "totalAmountHKD": 0,
+      "unlockType": "基石解禁",
+      "industry": "",
+      "source": "智通财经",
+      "investors": [
+        {
+          "name": "Admiralty Harbour Growth Opportunities SPC SP1",
+          "shares": 5022000,
+          "amount": 0,
+          "currency": "HKD",
+          "percentage": 0,
+          "lockupMonths": 6
+        }
+      ],
+      "price": 199.4,
+      "prevClose": 194.1,
+      "changePct": 2.73,
+      "unlockValue": 1001386800,
+      "unlockValueYi": 10.013868,
+      "issuePrice": 0.0,
+      "ccassValidated": false,
+      "ccassRatio": 0,
+      "ccassNote": "未经过CCASS交叉校验，仅供参考",
+      "deviation": 0,
+      "deviationFlag": "ok",
+      "isLarge": true,
+      "riskText": "解禁市值10.0亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+    },
+    {
+      "code": "06658.HK",
+      "code_raw": "06658",
+      "name": "溜溜梅",
+      "listingDate": "2026-06-15",
+      "liftDate": "2027-03-15",
+      "liftDateObj": "2027-03-15",
+      "totalShares": 3387100,
+      "totalAmountHKD": 148516000,
+      "unlockType": "基石解禁",
+      "industry": "包装食品",
+      "source": "智通财经",
+      "investors": [
+        {
+          "name": "达隆发展有限公司",
+          "shares": 1777100,
+          "amount": 78352000,
+          "currency": "HKD",
+          "percentage": 15.5,
+          "lockupMonths": 9
+        },
+        {
+          "name": "Wuhu Fanchang District Rural Revitalization Development Group (Hong Kong) Limited",
+          "shares": 1610000,
+          "amount": 70164000,
+          "currency": "HKD",
+          "percentage": 14.04,
+          "lockupMonths": 9
+        }
+      ],
+      "price": 203.8,
+      "prevClose": 200.4,
+      "changePct": 1.7,
+      "unlockValue": 690290980,
+      "unlockValueYi": 6.9029098,
+      "issuePrice": 44.09,
+      "ccassValidated": false,
+      "ccassRatio": 0,
+      "ccassNote": "未经过CCASS交叉校验，仅供参考",
+      "deviation": 0,
+      "deviationFlag": "ok",
+      "isLarge": true,
+      "riskText": "现价较发行价涨幅362%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值6.9亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+    },
+    {
+      "code": "06727.HK",
+      "code_raw": "06727",
+      "name": "星环科技",
+      "listingDate": "2026-09-21",
+      "liftDate": "2027-03-21",
+      "liftDateObj": "2027-03-21",
+      "totalShares": 1506500,
+      "totalAmountHKD": 0,
+      "unlockType": "基石解禁",
+      "industry": "",
+      "source": "智通财经",
+      "investors": [
+        {
+          "name": "Electronic Channel Limited",
+          "shares": 1506500,
+          "amount": 0,
+          "currency": "HKD",
+          "percentage": 0,
+          "lockupMonths": 6
+        }
+      ],
+      "price": 42.76,
+      "prevClose": 42.44,
+      "changePct": 0.75,
+      "unlockValue": 64417940,
+      "unlockValueYi": 0.6441794,
+      "issuePrice": 0.0,
+      "ccassValidated": false,
+      "ccassRatio": 0,
+      "ccassNote": "未经过CCASS交叉校验，仅供参考",
+      "deviation": 0,
+      "deviationFlag": "ok",
+      "isLarge": false,
+      "riskText": "解禁到期≠必然减持，需持续跟踪交易所CCASS持仓变动。本页面数据仅供资讯参考，不构成任何投资建议。"
+    },
+    {
+      "code": "06700.HK",
+      "code_raw": "06700",
+      "name": "四方精创",
+      "listingDate": "2026-09-22",
+      "liftDate": "2027-03-22",
+      "liftDateObj": "2027-03-22",
+      "totalShares": 7431200,
+      "totalAmountHKD": 0,
+      "unlockType": "基石解禁",
+      "industry": "",
+      "source": "智通财经",
+      "investors": [
+        {
+          "name": "Successful Lotus Limited",
+          "shares": 7431200,
+          "amount": 0,
+          "currency": "HKD",
+          "percentage": 0,
+          "lockupMonths": 6
+        }
+      ],
+      "price": 0.0,
+      "prevClose": 0.0,
+      "changePct": 0.0,
+      "unlockValue": 0,
+      "unlockValueYi": 0.0,
+      "issuePrice": 0.0,
+      "ccassValidated": false,
+      "ccassRatio": 0,
+      "ccassNote": "未经过CCASS交叉校验，仅供参考",
+      "deviation": 0,
+      "deviationFlag": "ok",
+      "isLarge": false,
+      "riskText": "解禁到期≠必然减持，需持续跟踪交易所CCASS持仓变动。本页面数据仅供资讯参考，不构成任何投资建议。"
+    },
+    {
+      "code": "09856.HK",
+      "code_raw": "09856",
+      "name": "纳真科技",
+      "listingDate": "2026-09-22",
+      "liftDate": "2027-03-22",
+      "liftDateObj": "2027-03-22",
+      "totalShares": 80876700,
+      "totalAmountHKD": 0,
+      "unlockType": "基石解禁",
+      "industry": "",
+      "source": "智通财经",
+      "investors": [
+        {
+          "name": "Ambre Lau Trade Limited",
+          "shares": 80876700,
+          "amount": 0,
+          "currency": "HKD",
+          "percentage": 0,
+          "lockupMonths": 6
+        }
+      ],
+      "price": 35.72,
+      "prevClose": 34.48,
+      "changePct": 3.6,
+      "unlockValue": 2888915724,
+      "unlockValueYi": 28.88915724,
+      "issuePrice": 0.0,
+      "ccassValidated": false,
+      "ccassRatio": 0,
+      "ccassNote": "未经过CCASS交叉校验，仅供参考",
+      "deviation": 0,
+      "deviationFlag": "ok",
+      "isLarge": true,
+      "riskText": "解禁市值28.9亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+    },
+    {
+      "code": "03228.HK",
+      "code_raw": "03228",
+      "name": "景旺电子",
+      "listingDate": "2026-09-29",
+      "liftDate": "2027-03-29",
+      "liftDateObj": "2027-03-29",
+      "totalShares": 34788400,
+      "totalAmountHKD": 0,
+      "unlockType": "基石解禁",
+      "industry": "",
+      "source": "智通财经",
+      "investors": [
+        {
+          "name": "3W Fund Management Limited",
+          "shares": 34788400,
+          "amount": 0,
+          "currency": "HKD",
+          "percentage": 0,
+          "lockupMonths": 6
+        }
+      ],
+      "price": 0.0,
+      "prevClose": 0.0,
+      "changePct": 0.0,
+      "unlockValue": 0,
+      "unlockValueYi": 0.0,
+      "issuePrice": 0.0,
+      "ccassValidated": false,
+      "ccassRatio": 0,
+      "ccassNote": "未经过CCASS交叉校验，仅供参考",
+      "deviation": 0,
+      "deviationFlag": "ok",
+      "isLarge": false,
+      "riskText": "解禁到期≠必然减持，需持续跟踪交易所CCASS持仓变动。本页面数据仅供资讯参考，不构成任何投资建议。"
+    },
+    {
+      "code": "03757.HK",
+      "code_raw": "03757",
+      "name": "罗博特科",
+      "listingDate": "2026-09-29",
+      "liftDate": "2027-03-29",
+      "liftDateObj": "2027-03-29",
+      "totalShares": 4629500,
+      "totalAmountHKD": 0,
+      "unlockType": "基石解禁",
+      "industry": "",
+      "source": "智通财经",
+      "investors": [
+        {
+          "name": "Arrowpoint Master Fund",
+          "shares": 4629500,
+          "amount": 0,
+          "currency": "HKD",
+          "percentage": 0,
+          "lockupMonths": 6
+        }
+      ],
+      "price": 0.0,
+      "prevClose": 0.0,
+      "changePct": 0.0,
+      "unlockValue": 0,
+      "unlockValueYi": 0.0,
+      "issuePrice": 0.0,
+      "ccassValidated": false,
+      "ccassRatio": 0,
+      "ccassNote": "未经过CCASS交叉校验，仅供参考",
+      "deviation": 0,
+      "deviationFlag": "ok",
+      "isLarge": false,
+      "riskText": "解禁到期≠必然减持，需持续跟踪交易所CCASS持仓变动。本页面数据仅供资讯参考，不构成任何投资建议。"
+    },
+    {
+      "code": "06731.HK",
+      "code_raw": "06731",
+      "name": "本末科技",
+      "listingDate": "2026-09-29",
+      "liftDate": "2027-03-29",
+      "liftDateObj": "2027-03-29",
+      "totalShares": 29701300,
+      "totalAmountHKD": 0,
+      "unlockType": "基石解禁",
+      "industry": "",
+      "source": "智通财经",
+      "investors": [
+        {
+          "name": "JSC International Investment Fund SPC-Shenghai SP为 JSC International Investment Fund SPC",
+          "shares": 29701300,
+          "amount": 0,
+          "currency": "HKD",
+          "percentage": 0,
+          "lockupMonths": 6
+        }
+      ],
+      "price": 0.0,
+      "prevClose": 0.0,
+      "changePct": 0.0,
+      "unlockValue": 0,
+      "unlockValueYi": 0.0,
+      "issuePrice": 0.0,
+      "ccassValidated": false,
+      "ccassRatio": 0,
+      "ccassNote": "未经过CCASS交叉校验，仅供参考",
+      "deviation": 0,
+      "deviationFlag": "ok",
+      "isLarge": false,
+      "riskText": "解禁到期≠必然减持，需持续跟踪交易所CCASS持仓变动。本页面数据仅供资讯参考，不构成任何投资建议。"
+    },
+    {
+      "code": "09607.HK",
+      "code_raw": "09607",
+      "name": "彤程新材",
+      "listingDate": "2026-09-29",
+      "liftDate": "2027-03-29",
+      "liftDateObj": "2027-03-29",
+      "totalShares": 23877500,
+      "totalAmountHKD": 0,
+      "unlockType": "基石解禁",
+      "industry": "",
+      "source": "智通财经",
+      "investors": [
+        {
+          "name": "Golden Valley Value Select Master Fund",
+          "shares": 23877500,
+          "amount": 0,
+          "currency": "HKD",
+          "percentage": 0,
+          "lockupMonths": 6
+        }
+      ],
+      "price": 0.0,
+      "prevClose": 0.0,
+      "changePct": 0.0,
+      "unlockValue": 0,
+      "unlockValueYi": 0.0,
+      "issuePrice": 0.0,
+      "ccassValidated": false,
+      "ccassRatio": 0,
+      "ccassNote": "未经过CCASS交叉校验，仅供参考",
+      "deviation": 0,
+      "deviationFlag": "ok",
+      "isLarge": false,
+      "riskText": "解禁到期≠必然减持，需持续跟踪交易所CCASS持仓变动。本页面数据仅供资讯参考，不构成任何投资建议。"
+    },
+    {
+      "code": "06802.HK",
+      "code_raw": "06802",
+      "name": "欢创科技",
+      "listingDate": "2026-09-30",
+      "liftDate": "2027-03-30",
+      "liftDateObj": "2027-03-30",
+      "totalShares": 1869199,
+      "totalAmountHKD": 0,
+      "unlockType": "基石解禁",
+      "industry": "",
+      "source": "智通财经",
+      "investors": [
+        {
+          "name": "Golden Link Worldwide Limited",
+          "shares": 1869199,
+          "amount": 0,
+          "currency": "HKD",
+          "percentage": 0,
+          "lockupMonths": 6
+        }
+      ],
+      "price": 0.0,
+      "prevClose": 0.0,
+      "changePct": 0.0,
+      "unlockValue": 0,
+      "unlockValueYi": 0.0,
+      "issuePrice": 0.0,
+      "ccassValidated": false,
+      "ccassRatio": 0,
+      "ccassNote": "未经过CCASS交叉校验，仅供参考",
+      "deviation": 0,
+      "deviationFlag": "ok",
+      "isLarge": false,
+      "riskText": "解禁到期≠必然减持，需持续跟踪交易所CCASS持仓变动。本页面数据仅供资讯参考，不构成任何投资建议。"
+    },
+    {
+      "code": "03231.HK",
+      "code_raw": "03231",
+      "name": "优地机器人",
+      "listingDate": "2026-09-09",
+      "liftDate": "2027-06-09",
+      "liftDateObj": "2027-06-09",
+      "totalShares": 1634400,
+      "totalAmountHKD": 0,
+      "unlockType": "基石解禁",
+      "industry": "",
+      "source": "智通财经",
+      "investors": [
+        {
+          "name": "CYGG Holding Limited",
+          "shares": 1634400,
+          "amount": 0,
+          "currency": "HKD",
+          "percentage": 0,
+          "lockupMonths": 9
+        }
+      ],
+      "price": 38.8,
+      "prevClose": 39.0,
+      "changePct": -0.51,
+      "unlockValue": 63414720,
+      "unlockValueYi": 0.6341471999999999,
+      "issuePrice": 0.0,
+      "ccassValidated": false,
+      "ccassRatio": 0,
+      "ccassNote": "未经过CCASS交叉校验，仅供参考",
+      "deviation": 0,
+      "deviationFlag": "ok",
+      "isLarge": false,
+      "riskText": "解禁到期≠必然减持，需持续跟踪交易所CCASS持仓变动。本页面数据仅供资讯参考，不构成任何投资建议。"
+    },
+    {
+      "code": "02672.HK",
+      "code_raw": "02672",
+      "name": "白鸽在线",
+      "listingDate": "2026-06-29",
+      "liftDate": "2027-06-29",
+      "liftDateObj": "2027-06-29",
+      "totalShares": 1282000,
+      "totalAmountHKD": 19999200,
+      "unlockType": "基石解禁",
+      "industry": "保险",
+      "source": "智通财经",
+      "investors": [
+        {
+          "name": "GLY New Mobility 2. LP",
+          "shares": 641000,
+          "amount": 9999600,
+          "currency": "HKD",
+          "percentage": 1.92,
+          "lockupMonths": 12
+        },
+        {
+          "name": "柯家琪",
+          "shares": 641000,
+          "amount": 9999600,
+          "currency": "HKD",
+          "percentage": 1.92,
+          "lockupMonths": 12
+        }
+      ],
+      "price": 54.8,
+      "prevClose": 55.2,
+      "changePct": -0.72,
+      "unlockValue": 70253600,
+      "unlockValueYi": 0.702536,
+      "issuePrice": 15.6,
+      "ccassValidated": false,
+      "ccassRatio": 0,
+      "ccassNote": "未经过CCASS交叉校验，仅供参考",
+      "deviation": 0,
+      "deviationFlag": "ok",
+      "isLarge": false,
+      "riskText": "现价较发行价涨幅251%，基石投资者浮盈丰厚，解禁后减持意愿较强。本页面数据仅供资讯参考，不构成任何投资建议。"
+    },
+    {
+      "code": "02726.HK",
+      "code_raw": "02726",
+      "name": "瀚天天成",
+      "listingDate": "2026-03-30",
+      "liftDate": "2027-09-30",
+      "liftDateObj": "2027-09-30",
+      "totalShares": 20117000,
+      "totalAmountHKD": 774797022,
+      "unlockType": "基石解禁",
+      "industry": "半导体设备与材料",
+      "source": "智通财经",
+      "investors": [
+        {
+          "name": "厦门先进制造业股权投资基金合伙企业(有限合伙)",
+          "shares": 10058500,
+          "amount": 774797022,
+          "currency": "HKD",
+          "percentage": 46.8,
+          "lockupMonths": 18
+        }
+      ],
+      "price": 83.05,
+      "prevClose": 83.15,
+      "changePct": -0.12,
+      "unlockValue": 1670716850,
+      "unlockValueYi": 16.7071685,
+      "issuePrice": 77.03,
+      "ccassValidated": false,
+      "ccassRatio": 0,
+      "ccassNote": "未经过CCASS交叉校验，仅供参考",
+      "deviation": 0,
+      "deviationFlag": "ok",
+      "isLarge": true,
+      "riskText": "现价较发行价变动8%，浮动空间有限。解禁市值16.7亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+    },
+    {
+      "code": "02520.HK",
+      "code_raw": "02520",
+      "name": "山西安装",
+      "listingDate": "2023-11-22",
+      "liftDate": "2028-08-22",
+      "liftDateObj": "2028-08-22",
+      "totalShares": 72018000,
+      "totalAmountHKD": 0,
+      "unlockType": "基石解禁",
+      "industry": "",
+      "source": "智通财经",
+      "investors": [
+        {
+          "name": "明阳智慧能源集团股份公司",
+          "shares": 72018000,
+          "amount": 0,
+          "currency": "HKD",
+          "percentage": 0,
+          "lockupMonths": 36
+        }
+      ],
+      "price": 2.41,
+      "prevClose": 2.41,
+      "changePct": 0.0,
+      "unlockValue": 173563380,
+      "unlockValueYi": 1.7356338,
+      "issuePrice": 0.0,
+      "ccassValidated": false,
+      "ccassRatio": 0,
+      "ccassNote": "未经过CCASS交叉校验，仅供参考",
+      "deviation": 0,
+      "deviationFlag": "ok",
+      "isLarge": false,
+      "riskText": "解禁市值1.7亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "02667.HK",
       "code_raw": "02667",
       "name": "同仁堂医养",
       "listingDate": "2026-07-07",
-      "liftDate": "2027-02-07",
-      "liftDateObj": "2027-02-07",
+      "liftDate": "2028-09-30",
+      "liftDateObj": "2028-09-30",
       "totalShares": 53828500,
       "totalAmountHKD": 296056750,
       "unlockType": "基石解禁",
       "industry": "医疗及医学美容服务",
+      "source": "智通财经",
       "investors": [
         {
           "name": "航空港科技资本(香港)有限公司",
@@ -9765,12 +10302,11 @@
           "lockupMonths": 7
         }
       ],
-      "source": "Excel补充",
-      "price": 2.3,
-      "prevClose": 2.38,
-      "changePct": -3.36,
-      "unlockValue": 123805550,
-      "unlockValueYi": 1.2380554999999998,
+      "price": 2.29,
+      "prevClose": 2.295,
+      "changePct": 0.0,
+      "unlockValue": 123536408,
+      "unlockValueYi": 1.235364075,
       "issuePrice": 5.5,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -9781,175 +10317,179 @@
       "riskText": "现价较发行价跌幅58%，持仓处于亏损状态，解禁抛压相对可控。解禁市值1.2亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
-      "code": "02720.HK",
-      "code_raw": "02720",
-      "name": "乐欣户外",
-      "listingDate": "2026-02-10",
-      "liftDate": "2027-02-10",
-      "liftDateObj": "2027-02-10",
-      "totalShares": 10612000,
-      "totalAmountHKD": 130000000,
+      "code": "06810.HK",
+      "code_raw": "06810",
+      "name": "商米科技-W",
+      "listingDate": "2026-04-29",
+      "liftDate": "2029-07-29",
+      "liftDateObj": "2029-07-29",
+      "totalShares": 11520800,
+      "totalAmountHKD": 286407088,
       "unlockType": "基石解禁",
-      "industry": "玩具及消闲用品",
+      "industry": "电脑及周边器材",
+      "source": "智通财经",
       "investors": [
         {
-          "name": "地平线创业投资管理有限公司",
-          "shares": 6530500,
-          "amount": 80000000,
+          "name": "XINWUTANG CO., LIMITED",
+          "shares": 9945700,
+          "amount": 247250102,
           "currency": "HKD",
-          "percentage": 23.15,
-          "lockupMonths": 12
+          "percentage": 23.33,
+          "lockupMonths": 6
         },
         {
-          "name": "黄山德钧企业管理有限公司",
-          "shares": 4081500,
-          "amount": 50000000,
+          "name": "China Orient Enhanced Income Fund",
+          "shares": 1575100,
+          "amount": 39156986,
           "currency": "HKD",
-          "percentage": 14.47,
-          "lockupMonths": 12
+          "percentage": 3.7,
+          "lockupMonths": 11
         }
       ],
-      "source": "Excel补充",
-      "price": 26.5,
-      "prevClose": 26.98,
-      "changePct": -1.78,
-      "unlockValue": 281218000,
-      "unlockValueYi": 2.81218,
-      "issuePrice": 12.25,
-      "ccassValidated": false,
-      "ccassRatio": 0,
-      "ccassNote": "未经过CCASS交叉校验，仅供参考",
-      "deviation": 0,
-      "deviationFlag": "ok",
-      "isLarge": false,
-      "riskText": "现价较发行价涨幅116%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值2.8亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
-    },
-    {
-      "code": "06658.HK",
-      "code_raw": "06658",
-      "name": "溜溜梅",
-      "listingDate": "2026-06-15",
-      "liftDate": "2027-03-15",
-      "liftDateObj": "2027-03-15",
-      "totalShares": 3387100,
-      "totalAmountHKD": 148516000,
-      "unlockType": "基石解禁",
-      "industry": "包装食品",
-      "investors": [
-        {
-          "name": "达隆发展有限公司",
-          "shares": 1777100,
-          "amount": 78352000,
-          "currency": "HKD",
-          "percentage": 15.5,
-          "lockupMonths": 9
-        },
-        {
-          "name": "Wuhu Fanchang District Rural Revitalization Development Group (Hong Kong) Limited",
-          "shares": 1610000,
-          "amount": 70164000,
-          "currency": "HKD",
-          "percentage": 14.04,
-          "lockupMonths": 9
-        }
-      ],
-      "source": "Excel补充",
-      "price": 200.6,
-      "prevClose": 199.3,
-      "changePct": 0.65,
-      "unlockValue": 679452260,
-      "unlockValueYi": 6.7945226,
-      "issuePrice": 44.09,
+      "price": 60.8,
+      "prevClose": 59.5,
+      "changePct": 2.18,
+      "unlockValue": 700464640,
+      "unlockValueYi": 7.0046464,
+      "issuePrice": 24.86,
       "ccassValidated": false,
       "ccassRatio": 0,
       "ccassNote": "未经过CCASS交叉校验，仅供参考",
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅355%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值6.8亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅145%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值7.0亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
-      "code": "02672.HK",
-      "code_raw": "02672",
-      "name": "白鸽在线",
-      "listingDate": "2026-06-29",
-      "liftDate": "2027-06-29",
-      "liftDateObj": "2027-06-29",
-      "totalShares": 1282000,
-      "totalAmountHKD": 19999200,
+      "code": "03636.HK",
+      "code_raw": "03636",
+      "name": "金浔资源",
+      "listingDate": "2026-01-09",
+      "liftDate": "2030-10-09",
+      "liftDateObj": "2030-10-09",
+      "totalShares": 5187200,
+      "totalAmountHKD": 468816000,
       "unlockType": "基石解禁",
-      "industry": "保险",
+      "industry": "铜",
+      "source": "智通财经",
       "investors": [
         {
-          "name": "GLY New Mobility 2. LP",
-          "shares": 641000,
-          "amount": 9999600,
+          "name": "Glencore International AG",
+          "shares": 7780800,
+          "amount": 233424000,
           "currency": "HKD",
-          "percentage": 1.92,
-          "lockupMonths": 12
+          "percentage": 21.16,
+          "lockupMonths": 36
         },
         {
-          "name": "柯家琪",
-          "shares": 641000,
-          "amount": 9999600,
+          "name": "Stoneylake Global Alpha Fund",
+          "shares": 2593600,
+          "amount": 77808000,
           "currency": "HKD",
-          "percentage": 1.92,
-          "lockupMonths": 12
+          "percentage": 7.05,
+          "lockupMonths": 6
+        },
+        {
+          "name": "NR 1 SP",
+          "shares": 2074800,
+          "amount": 62244000,
+          "currency": "HKD",
+          "percentage": 5.64,
+          "lockupMonths": 6
+        },
+        {
+          "name": "华夏基金管理(香港)有限公司",
+          "shares": 778000,
+          "amount": 23340000,
+          "currency": "HKD",
+          "percentage": 2.12,
+          "lockupMonths": 6
+        },
+        {
+          "name": "新亚洲富怡资产管理有限公司",
+          "shares": 778000,
+          "amount": 23340000,
+          "currency": "HKD",
+          "percentage": 2.12,
+          "lockupMonths": 6
+        },
+        {
+          "name": "联域集团有限公司",
+          "shares": 770200,
+          "amount": 23106000,
+          "currency": "HKD",
+          "percentage": 2.09,
+          "lockupMonths": 6
+        },
+        {
+          "name": "Zhengxin Group Investment Limited",
+          "shares": 518600,
+          "amount": 15558000,
+          "currency": "HKD",
+          "percentage": 1.41,
+          "lockupMonths": 6
+        },
+        {
+          "name": "欣旺达财资(香港)有限公司",
+          "shares": 333200,
+          "amount": 9996000,
+          "currency": "HKD",
+          "percentage": 0.91,
+          "lockupMonths": 6
         }
       ],
-      "source": "Excel补充",
-      "price": 52.95,
-      "prevClose": 51.65,
-      "changePct": 2.52,
-      "unlockValue": 67881900,
-      "unlockValueYi": 0.678819,
-      "issuePrice": 15.6,
+      "price": 17.9,
+      "prevClose": 17.15,
+      "changePct": 4.37,
+      "unlockValue": 92850880,
+      "unlockValueYi": 0.9285088,
+      "issuePrice": 30.0,
       "ccassValidated": false,
       "ccassRatio": 0,
       "ccassNote": "未经过CCASS交叉校验，仅供参考",
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价涨幅239%，基石投资者浮盈丰厚，解禁后减持意愿较强。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅40%，持仓处于亏损状态，解禁抛压相对可控。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
-      "code": "02726.HK",
-      "code_raw": "02726",
-      "name": "瀚天天成",
-      "listingDate": "2026-03-30",
-      "liftDate": "2027-09-30",
-      "liftDateObj": "2027-09-30",
-      "totalShares": 10058500,
-      "totalAmountHKD": 774797022,
+      "code": "02619.HK",
+      "code_raw": "02619",
+      "name": "香江电器",
+      "listingDate": "2025-06-25",
+      "liftDate": "2031-03-25",
+      "liftDateObj": "2031-03-25",
+      "totalShares": 30016000,
+      "totalAmountHKD": 0,
       "unlockType": "基石解禁",
-      "industry": "半导体设备与材料",
+      "industry": "",
+      "source": "智通财经",
       "investors": [
         {
-          "name": "厦门先进制造业股权投资基金合伙企业(有限合伙)",
-          "shares": 10058500,
-          "amount": 774797022,
+          "name": "湖北顺捷投资（香港）有限公司",
+          "shares": 30016000,
+          "amount": 0,
           "currency": "HKD",
-          "percentage": 46.8,
-          "lockupMonths": 18
+          "percentage": 0,
+          "lockupMonths": 60
         }
       ],
-      "source": "Excel补充",
-      "price": 87.15,
-      "prevClose": 83.35,
-      "changePct": 4.56,
-      "unlockValue": 876598275,
-      "unlockValueYi": 8.76598275,
-      "issuePrice": 77.03,
+      "price": 1.17,
+      "prevClose": 1.17,
+      "changePct": 0.0,
+      "unlockValue": 35118720,
+      "unlockValueYi": 0.3511872,
+      "issuePrice": 0.0,
       "ccassValidated": false,
       "ccassRatio": 0,
       "ccassNote": "未经过CCASS交叉校验，仅供参考",
       "deviation": 0,
       "deviationFlag": "ok",
-      "isLarge": true,
-      "riskText": "现价较发行价变动13%，浮动空间有限。解禁市值8.8亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "isLarge": false,
+      "riskText": "解禁到期≠必然减持，需持续跟踪交易所CCASS持仓变动。本页面数据仅供资讯参考，不构成任何投资建议。"
     }
   ],
   "dropped": [],
   "warnings": [],
-  "today": "2026-09-22"
+  "today": "2026-09-23"
 }
