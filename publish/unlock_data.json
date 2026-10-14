@@ -214,11 +214,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 28.14,
-      "prevClose": 29.9,
-      "changePct": -5.89,
-      "unlockValue": 4162648896,
-      "unlockValueYi": 41.62648896,
+      "price": 28.64,
+      "prevClose": 28.24,
+      "changePct": 1.42,
+      "unlockValue": 4236612096,
+      "unlockValueYi": 42.36612096,
       "issuePrice": 19.6,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -226,7 +226,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅44%，存在一定减持动力。解禁市值41.6亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅46%，存在一定减持动力。解禁市值42.4亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "02513.HK",
@@ -330,11 +330,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 612.5,
-      "prevClose": 619.0,
-      "changePct": -1.05,
-      "unlockValue": 15729980000,
-      "unlockValueYi": 157.2998,
+      "price": 597.5,
+      "prevClose": 601.0,
+      "changePct": -0.58,
+      "unlockValue": 15344756000,
+      "unlockValueYi": 153.44756,
       "issuePrice": 116.2,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -342,7 +342,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅427%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值157.3亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅414%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值153.4亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "02675.HK",
@@ -470,11 +470,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 32.9,
-      "prevClose": 32.88,
-      "changePct": 0.06,
-      "unlockValue": 443972340,
-      "unlockValueYi": 4.4397234,
+      "price": 33.02,
+      "prevClose": 33.02,
+      "changePct": 0.0,
+      "unlockValue": 445591692,
+      "unlockValueYi": 4.455916920000001,
       "issuePrice": 43.24,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -482,7 +482,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价跌幅24%，持仓处于亏损状态，解禁抛压相对可控。解禁市值4.4亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅24%，持仓处于亏损状态，解禁抛压相对可控。解禁市值4.5亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "09903.HK",
@@ -650,11 +650,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 85.1,
-      "prevClose": 88.0,
-      "changePct": -3.3,
-      "unlockValue": 931019530,
-      "unlockValueYi": 9.310195299999998,
+      "price": 85.8,
+      "prevClose": 84.9,
+      "changePct": 1.06,
+      "unlockValue": 938677740,
+      "unlockValueYi": 9.3867774,
       "issuePrice": 144.6,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -662,7 +662,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价跌幅41%，持仓处于亏损状态，解禁抛压相对可控。解禁市值9.3亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅41%，持仓处于亏损状态，解禁抛压相对可控。解禁市值9.4亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "00100.HK",
@@ -790,11 +790,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 211.6,
-      "prevClose": 214.0,
-      "changePct": -1.12,
-      "unlockValue": 3492254864,
-      "unlockValueYi": 34.92254864,
+      "price": 214.6,
+      "prevClose": 212.0,
+      "changePct": 1.23,
+      "unlockValue": 3541766984,
+      "unlockValueYi": 35.41766984,
       "issuePrice": 165.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -802,7 +802,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅28%，存在一定减持动力。解禁市值34.9亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅30%，存在一定减持动力。解禁市值35.4亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06938.HK",
@@ -914,11 +914,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 52.15,
-      "prevClose": 54.55,
-      "changePct": -4.4,
-      "unlockValue": 699873860,
-      "unlockValueYi": 6.9987386,
+      "price": 51.9,
+      "prevClose": 52.9,
+      "changePct": -1.89,
+      "unlockValue": 696518760,
+      "unlockValueYi": 6.9651876,
       "issuePrice": 57.97,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -1022,11 +1022,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 65.9,
+      "price": 65.7,
       "prevClose": 65.8,
-      "changePct": 0.15,
-      "unlockValue": 1366779180,
-      "unlockValueYi": 13.6677918,
+      "changePct": -0.15,
+      "unlockValue": 1362631140,
+      "unlockValueYi": 13.6263114,
       "issuePrice": 104.8,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -1034,7 +1034,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价跌幅37%，持仓处于亏损状态，解禁抛压相对可控。解禁市值13.7亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅37%，持仓处于亏损状态，解禁抛压相对可控。解禁市值13.6亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "01641.HK",
@@ -1058,11 +1058,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 3.29,
-      "prevClose": 3.455,
-      "changePct": -4.63,
-      "unlockValue": 5868395,
-      "unlockValueYi": 0.05868395,
+      "price": 3.28,
+      "prevClose": 3.28,
+      "changePct": 0.0,
+      "unlockValue": 5841680,
+      "unlockValueYi": 0.0584168,
       "issuePrice": 12.26,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -1230,11 +1230,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 363.0,
-      "prevClose": 375.6,
-      "changePct": -3.35,
-      "unlockValue": 5225130900,
-      "unlockValueYi": 52.251309,
+      "price": 357.4,
+      "prevClose": 360.2,
+      "changePct": -0.78,
+      "unlockValue": 5144522820,
+      "unlockValueYi": 51.4452282,
       "issuePrice": 162.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -1242,7 +1242,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅124%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值52.3亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅121%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值51.4亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "09611.HK",
@@ -1306,11 +1306,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 19.5,
-      "prevClose": 19.8,
-      "changePct": -1.52,
-      "unlockValue": 276917550,
-      "unlockValueYi": 2.7691755,
+      "price": 19.84,
+      "prevClose": 19.89,
+      "changePct": -0.25,
+      "unlockValue": 281745856,
+      "unlockValueYi": 2.81745856,
       "issuePrice": 31.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -1318,7 +1318,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价跌幅37%，持仓处于亏损状态，解禁抛压相对可控。解禁市值2.8亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅36%，持仓处于亏损状态，解禁抛压相对可控。解禁市值2.8亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "01768.HK",
@@ -1398,11 +1398,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 339.2,
-      "prevClose": 344.8,
-      "changePct": -1.62,
-      "unlockValue": 2178885120,
-      "unlockValueYi": 21.7888512,
+      "price": 346.6,
+      "prevClose": 335.4,
+      "changePct": 3.34,
+      "unlockValue": 2226419760,
+      "unlockValueYi": 22.2641976,
       "issuePrice": 236.61,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -1410,7 +1410,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅43%，存在一定减持动力。解禁市值21.8亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅46%，存在一定减持动力。解禁市值22.3亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "09980.HK",
@@ -1554,11 +1554,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 97.05,
-      "prevClose": 99.5,
-      "changePct": -2.46,
-      "unlockValue": 1952655705,
-      "unlockValueYi": 19.52655705,
+      "price": 97.15,
+      "prevClose": 98.55,
+      "changePct": -1.42,
+      "unlockValue": 1954667715,
+      "unlockValueYi": 19.54667715,
       "issuePrice": 248.01,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -1646,11 +1646,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 37.8,
-      "prevClose": 44.8,
-      "changePct": -15.63,
-      "unlockValue": 335255760,
-      "unlockValueYi": 3.3525576,
+      "price": 31.52,
+      "prevClose": 37.52,
+      "changePct": -15.99,
+      "unlockValue": 279557184,
+      "unlockValueYi": 2.79557184,
       "issuePrice": 36.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -1658,7 +1658,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价变动5%，浮动空间有限。解禁市值3.4亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价低于发行价12%，基石投资者处于浮亏，被动减持可能性较低。解禁市值2.8亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "02677.HK",
@@ -1706,11 +1706,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 21.54,
-      "prevClose": 21.88,
-      "changePct": -1.55,
-      "unlockValue": 32318616,
-      "unlockValueYi": 0.32318616,
+      "price": 22.58,
+      "prevClose": 21.58,
+      "changePct": 4.63,
+      "unlockValue": 33879032,
+      "unlockValueYi": 0.33879032,
       "issuePrice": 60.51,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -1718,7 +1718,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价跌幅64%，持仓处于亏损状态，解禁抛压相对可控。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅63%，持仓处于亏损状态，解禁抛压相对可控。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "02714.HK",
@@ -1854,11 +1854,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 35.66,
-      "prevClose": 36.66,
-      "changePct": -2.73,
-      "unlockValue": 4884450048,
-      "unlockValueYi": 48.84450048,
+      "price": 35.7,
+      "prevClose": 35.44,
+      "changePct": 0.73,
+      "unlockValue": 4889928960,
+      "unlockValueYi": 48.8992896,
       "issuePrice": 39.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -1866,7 +1866,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价低于发行价9%，基石投资者处于浮亏，被动减持可能性较低。解禁市值48.8亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价低于发行价8%，基石投资者处于浮亏，被动减持可能性较低。解禁市值48.9亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "03200.HK",
@@ -1970,11 +1970,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 77.7,
-      "prevClose": 78.8,
-      "changePct": -1.4,
-      "unlockValue": 1959469680,
-      "unlockValueYi": 19.5946968,
+      "price": 79.15,
+      "prevClose": 77.55,
+      "changePct": 2.06,
+      "unlockValue": 1996036360,
+      "unlockValueYi": 19.9603636,
       "issuePrice": 95.8,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -1982,7 +1982,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价低于发行价19%，基石投资者处于浮亏，被动减持可能性较低。解禁市值19.6亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价低于发行价17%，基石投资者处于浮亏，被动减持可能性较低。解禁市值20.0亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06809.HK",
@@ -2142,11 +2142,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 243.6,
-      "prevClose": 254.8,
-      "changePct": -4.4,
-      "unlockValue": 7996900800,
-      "unlockValueYi": 79.969008,
+      "price": 238.6,
+      "prevClose": 241.8,
+      "changePct": -1.32,
+      "unlockValue": 7832760800,
+      "unlockValueYi": 78.327608,
       "issuePrice": 106.89,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -2154,7 +2154,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅128%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值80.0亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅123%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值78.3亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "00600.HK",
@@ -2298,11 +2298,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 20.52,
-      "prevClose": 20.4,
-      "changePct": 0.59,
-      "unlockValue": 1049727276,
-      "unlockValueYi": 10.49727276,
+      "price": 21.02,
+      "prevClose": 19.33,
+      "changePct": 8.74,
+      "unlockValue": 1075305426,
+      "unlockValueYi": 10.75305426,
       "issuePrice": 28.2,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -2310,7 +2310,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价跌幅27%，持仓处于亏损状态，解禁抛压相对可控。解禁市值10.5亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅25%，持仓处于亏损状态，解禁抛压相对可控。解禁市值10.8亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "00470.HK",
@@ -2406,11 +2406,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 24.06,
-      "prevClose": 26.72,
-      "changePct": -9.96,
-      "unlockValue": 1126166796,
-      "unlockValueYi": 11.26166796,
+      "price": 22.96,
+      "prevClose": 23.86,
+      "changePct": -3.77,
+      "unlockValue": 1074679536,
+      "unlockValueYi": 10.74679536,
       "issuePrice": 45.8,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -2418,7 +2418,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价跌幅47%，持仓处于亏损状态，解禁抛压相对可控。解禁市值11.3亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅50%，持仓处于亏损状态，解禁抛压相对可控。解禁市值10.7亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "09981.HK",
@@ -2562,11 +2562,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 8.02,
-      "prevClose": 7.94,
-      "changePct": 0.94,
-      "unlockValue": 386577877,
-      "unlockValueYi": 3.86577877,
+      "price": 8.05,
+      "prevClose": 8.045,
+      "changePct": 0.12,
+      "unlockValue": 388507149,
+      "unlockValueYi": 3.88507149,
       "issuePrice": 20.12,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -2758,11 +2758,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 29.1,
-      "prevClose": 30.0,
-      "changePct": -3.0,
-      "unlockValue": 265994370,
-      "unlockValueYi": 2.6599437,
+      "price": 30.04,
+      "prevClose": 30.8,
+      "changePct": -2.47,
+      "unlockValue": 274586628,
+      "unlockValueYi": 2.74586628,
       "issuePrice": 71.28,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -2770,7 +2770,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价跌幅59%，持仓处于亏损状态，解禁抛压相对可控。解禁市值2.7亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅58%，持仓处于亏损状态，解禁抛压相对可控。解禁市值2.7亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "02715.HK",
@@ -2842,11 +2842,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 12.57,
-      "prevClose": 12.7,
-      "changePct": -1.02,
-      "unlockValue": 427990902,
-      "unlockValueYi": 4.27990902,
+      "price": 12.86,
+      "prevClose": 12.85,
+      "changePct": 0.08,
+      "unlockValue": 437864996,
+      "unlockValueYi": 4.37864996,
       "issuePrice": 15.36,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -2854,7 +2854,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价低于发行价18%，基石投资者处于浮亏，被动减持可能性较低。解禁市值4.3亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价低于发行价16%，基石投资者处于浮亏，被动减持可能性较低。解禁市值4.4亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "03268.HK",
@@ -2934,11 +2934,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 15.35,
-      "prevClose": 15.47,
-      "changePct": -0.78,
-      "unlockValue": 243871590,
-      "unlockValueYi": 2.4387159,
+      "price": 15.28,
+      "prevClose": 15.17,
+      "changePct": 0.73,
+      "unlockValue": 242759472,
+      "unlockValueYi": 2.42759472,
       "issuePrice": 28.86,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -3059,8 +3059,8 @@
       ],
       "source": "Excel补充",
       "price": 93.9,
-      "prevClose": 94.6,
-      "changePct": -0.74,
+      "prevClose": 92.25,
+      "changePct": 1.79,
       "unlockValue": 1941335550,
       "unlockValueYi": 19.4133555,
       "issuePrice": 71.88,
@@ -3126,11 +3126,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 6.7,
-      "prevClose": 6.88,
-      "changePct": -2.69,
-      "unlockValue": 86783268,
-      "unlockValueYi": 0.86783268,
+      "price": 6.83,
+      "prevClose": 6.765,
+      "changePct": 0.89,
+      "unlockValue": 88468380,
+      "unlockValueYi": 0.8846838,
       "issuePrice": 10.8,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -3138,7 +3138,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价跌幅38%，持仓处于亏损状态，解禁抛压相对可控。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅37%，持仓处于亏损状态，解禁抛压相对可控。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "03355.HK",
@@ -3242,11 +3242,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 34.54,
-      "prevClose": 33.3,
-      "changePct": 3.72,
-      "unlockValue": 584516966,
-      "unlockValueYi": 5.84516966,
+      "price": 34.7,
+      "prevClose": 34.58,
+      "changePct": 0.35,
+      "unlockValue": 587224630,
+      "unlockValueYi": 5.8722463,
       "issuePrice": 41.6,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -3254,7 +3254,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价低于发行价17%，基石投资者处于浮亏，被动减持可能性较低。解禁市值5.8亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价低于发行价17%，基石投资者处于浮亏，被动减持可能性较低。解禁市值5.9亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "02632.HK",
@@ -3286,11 +3286,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 60.95,
-      "prevClose": 58.3,
-      "changePct": 4.55,
-      "unlockValue": 151613125,
-      "unlockValueYi": 1.51613125,
+      "price": 58.95,
+      "prevClose": 58.05,
+      "changePct": 1.55,
+      "unlockValue": 146638125,
+      "unlockValueYi": 1.46638125,
       "issuePrice": 44.2,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -3298,7 +3298,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价涨幅38%，存在一定减持动力。解禁市值1.5亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅33%，存在一定减持动力。解禁市值1.5亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "00664.HK",
@@ -3322,11 +3322,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 10.88,
-      "prevClose": 10.95,
-      "changePct": -0.64,
-      "unlockValue": 5440000,
-      "unlockValueYi": 0.0544,
+      "price": 10.82,
+      "prevClose": 10.88,
+      "changePct": -0.55,
+      "unlockValue": 5410000,
+      "unlockValueYi": 0.0541,
       "issuePrice": 60.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -3422,11 +3422,11 @@
         }
       ],
       "source": "Excel补充",
-      "price": 8.09,
-      "prevClose": 8.335,
-      "changePct": -3.0,
-      "unlockValue": 365972376,
-      "unlockValueYi": 3.6597237600000008,
+      "price": 7.67,
+      "prevClose": 7.91,
+      "changePct": -2.97,
+      "unlockValue": 347413480,
+      "unlockValueYi": 3.4741348,
       "issuePrice": 17.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -3434,7 +3434,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价跌幅52%，持仓处于亏损状态，解禁抛压相对可控。解禁市值3.7亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅55%，持仓处于亏损状态，解禁抛压相对可控。解禁市值3.5亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06656.HK",
@@ -3618,11 +3618,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 213.8,
-      "prevClose": 216.8,
-      "changePct": -1.38,
-      "unlockValue": 1445373520,
-      "unlockValueYi": 14.4537352,
+      "price": 219.4,
+      "prevClose": 219.0,
+      "changePct": 0.18,
+      "unlockValue": 1483231760,
+      "unlockValueYi": 14.8323176,
       "issuePrice": 324.21,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -3630,7 +3630,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价跌幅34%，持仓处于亏损状态，解禁抛压相对可控。解禁市值14.5亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅32%，持仓处于亏损状态，解禁抛压相对可控。解禁市值14.8亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "00068.HK",
@@ -3718,11 +3718,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 5.97,
-      "prevClose": 6.305,
-      "changePct": -5.31,
-      "unlockValue": 356092590,
-      "unlockValueYi": 3.5609259,
+      "price": 5.41,
+      "prevClose": 5.675,
+      "changePct": -4.67,
+      "unlockValue": 322690270,
+      "unlockValueYi": 3.2269027,
       "issuePrice": 7.62,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -3730,7 +3730,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价跌幅22%，持仓处于亏损状态，解禁抛压相对可控。解禁市值3.6亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅29%，持仓处于亏损状态，解禁抛压相对可控。解禁市值3.2亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "03277.HK",
@@ -3986,11 +3986,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 60.45,
-      "prevClose": 63.25,
-      "changePct": -4.43,
-      "unlockValue": 1985268675,
-      "unlockValueYi": 19.85268675,
+      "price": 63.25,
+      "prevClose": 61.25,
+      "changePct": 3.27,
+      "unlockValue": 2077224875,
+      "unlockValueYi": 20.77224875,
       "issuePrice": 39.88,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -3998,7 +3998,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅52%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值19.9亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅59%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值20.8亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "02476.HK",
@@ -4326,11 +4326,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 171.4,
-      "prevClose": 174.8,
-      "changePct": -1.95,
-      "unlockValue": 6763563980,
-      "unlockValueYi": 67.6356398,
+      "price": 179.8,
+      "prevClose": 172.8,
+      "changePct": 4.05,
+      "unlockValue": 7095033860,
+      "unlockValueYi": 70.9503386,
       "issuePrice": 209.89,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -4338,7 +4338,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价低于发行价18%，基石投资者处于浮亏，被动减持可能性较低。解禁市值67.6亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价低于发行价14%，基石投资者处于浮亏，被动减持可能性较低。解禁市值71.0亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "03296.HK",
@@ -4498,11 +4498,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 56.55,
-      "prevClose": 57.05,
-      "changePct": -0.88,
-      "unlockValue": 1654093155,
-      "unlockValueYi": 16.54093155,
+      "price": 56.8,
+      "prevClose": 57.3,
+      "changePct": -0.87,
+      "unlockValue": 1661405680,
+      "unlockValueYi": 16.6140568,
       "issuePrice": 77.7,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -4510,7 +4510,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价跌幅27%，持仓处于亏损状态，解禁抛压相对可控。解禁市值16.5亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅27%，持仓处于亏损状态，解禁抛压相对可控。解禁市值16.6亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "01879.HK",
@@ -4686,11 +4686,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 242.4,
-      "prevClose": 244.6,
-      "changePct": -0.9,
-      "unlockValue": 2175443040,
-      "unlockValueYi": 21.7544304,
+      "price": 238.6,
+      "prevClose": 238.2,
+      "changePct": 0.17,
+      "unlockValue": 2141339560,
+      "unlockValueYi": 21.4133956,
       "issuePrice": 183.2,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -4698,7 +4698,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅32%，存在一定减持动力。解禁市值21.8亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅30%，存在一定减持动力。解禁市值21.4亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "02493.HK",
@@ -4762,11 +4762,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 19.54,
-      "prevClose": 20.4,
-      "changePct": -4.22,
-      "unlockValue": 293502524,
-      "unlockValueYi": 2.93502524,
+      "price": 19.04,
+      "prevClose": 19.29,
+      "changePct": -1.3,
+      "unlockValue": 285992224,
+      "unlockValueYi": 2.85992224,
       "issuePrice": 27.64,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -4774,7 +4774,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价跌幅29%，持仓处于亏损状态，解禁抛压相对可控。解禁市值2.9亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅31%，持仓处于亏损状态，解禁抛压相对可控。解禁市值2.9亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "01609.HK",
@@ -4822,11 +4822,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 61.35,
-      "prevClose": 63.6,
-      "changePct": -3.54,
-      "unlockValue": 179319915,
-      "unlockValueYi": 1.79319915,
+      "price": 62.0,
+      "prevClose": 63.45,
+      "changePct": -2.29,
+      "unlockValue": 181219800,
+      "unlockValueYi": 1.812198,
       "issuePrice": 98.5,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -4834,7 +4834,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价跌幅38%，持仓处于亏损状态，解禁抛压相对可控。解禁市值1.8亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅37%，持仓处于亏损状态，解禁抛压相对可控。解禁市值1.8亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "01187.HK",
@@ -4946,11 +4946,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 29.12,
-      "prevClose": 30.12,
-      "changePct": -3.32,
-      "unlockValue": 281133216,
-      "unlockValueYi": 2.81133216,
+      "price": 29.16,
+      "prevClose": 29.2,
+      "changePct": -0.14,
+      "unlockValue": 281519388,
+      "unlockValueYi": 2.81519388,
       "issuePrice": 39.33,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -4982,11 +4982,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 24.46,
-      "prevClose": 25.02,
-      "changePct": -2.24,
-      "unlockValue": 257030572,
-      "unlockValueYi": 2.57030572,
+      "price": 23.96,
+      "prevClose": 23.88,
+      "changePct": 0.34,
+      "unlockValue": 251776472,
+      "unlockValueYi": 2.51776472,
       "issuePrice": 26.36,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -4994,7 +4994,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价低于发行价7%，基石投资者处于浮亏，被动减持可能性较低。解禁市值2.6亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价低于发行价9%，基石投资者处于浮亏，被动减持可能性较低。解禁市值2.5亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "02706.HK",
@@ -5042,11 +5042,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 32.4,
-      "prevClose": 33.86,
-      "changePct": -4.31,
-      "unlockValue": 83546640,
-      "unlockValueYi": 0.8354664,
+      "price": 30.88,
+      "prevClose": 32.14,
+      "changePct": -3.92,
+      "unlockValue": 79627168,
+      "unlockValueYi": 0.79627168,
       "issuePrice": 27.34,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -5054,7 +5054,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价变动19%，浮动空间有限。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价变动13%，浮动空间有限。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "07630.HK",
@@ -5158,11 +5158,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 12.1,
-      "prevClose": 12.37,
-      "changePct": -2.18,
-      "unlockValue": 168553000,
-      "unlockValueYi": 1.68553,
+      "price": 12.51,
+      "prevClose": 12.28,
+      "changePct": 1.87,
+      "unlockValue": 174264300,
+      "unlockValueYi": 1.742643,
       "issuePrice": 20.09,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -5170,7 +5170,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价跌幅40%，持仓处于亏损状态，解禁抛压相对可控。解禁市值1.7亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅38%，持仓处于亏损状态，解禁抛压相对可控。解禁市值1.7亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "07666.HK",
@@ -5330,11 +5330,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 12.26,
-      "prevClose": 13.25,
-      "changePct": -7.47,
-      "unlockValue": 1348600000,
-      "unlockValueYi": 13.486,
+      "price": 11.86,
+      "prevClose": 11.78,
+      "changePct": 0.68,
+      "unlockValue": 1304600000,
+      "unlockValueYi": 13.046,
       "issuePrice": 10.5,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -5342,7 +5342,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价变动17%，浮动空间有限。解禁市值13.5亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价变动13%，浮动空间有限。解禁市值13.0亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "01511.HK",
@@ -5382,11 +5382,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 32.84,
-      "prevClose": 34.0,
-      "changePct": -3.41,
-      "unlockValue": 142269448,
-      "unlockValueYi": 1.42269448,
+      "price": 32.98,
+      "prevClose": 33.04,
+      "changePct": -0.18,
+      "unlockValue": 142875956,
+      "unlockValueYi": 1.42875956,
       "issuePrice": 60.3,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -5394,7 +5394,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价跌幅46%，持仓处于亏损状态，解禁抛压相对可控。解禁市值1.4亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅45%，持仓处于亏损状态，解禁抛压相对可控。解禁市值1.4亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "07688.HK",
@@ -5522,11 +5522,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 19.45,
-      "prevClose": 20.26,
-      "changePct": -4.0,
-      "unlockValue": 877967165,
-      "unlockValueYi": 8.77967165,
+      "price": 19.68,
+      "prevClose": 18.27,
+      "changePct": 7.72,
+      "unlockValue": 888349296,
+      "unlockValueYi": 8.88349296,
       "issuePrice": 26.39,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -5534,7 +5534,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价跌幅26%，持仓处于亏损状态，解禁抛压相对可控。解禁市值8.8亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅25%，持仓处于亏损状态，解禁抛压相对可控。解禁市值8.9亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06872.HK",
@@ -5590,11 +5590,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 101.9,
-      "prevClose": 102.8,
-      "changePct": -0.88,
-      "unlockValue": 314106750,
-      "unlockValueYi": 3.1410675,
+      "price": 104.8,
+      "prevClose": 106.4,
+      "changePct": -1.5,
+      "unlockValue": 323046000,
+      "unlockValueYi": 3.23046,
       "issuePrice": 75.7,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -5602,7 +5602,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价涨幅35%，存在一定减持动力。解禁市值3.1亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅38%，存在一定减持动力。解禁市值3.2亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "03310.HK",
@@ -5634,11 +5634,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 22.58,
-      "prevClose": 24.16,
-      "changePct": -6.54,
-      "unlockValue": 422083424,
-      "unlockValueYi": 4.220834239999999,
+      "price": 26.5,
+      "prevClose": 22.1,
+      "changePct": 19.91,
+      "unlockValue": 495359200,
+      "unlockValueYi": 4.953592,
       "issuePrice": 20.81,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -5646,7 +5646,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价变动9%，浮动空间有限。解禁市值4.2亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅27%，存在一定减持动力。解禁市值5.0亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "03388.HK",
@@ -5782,11 +5782,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 26.94,
-      "prevClose": 27.18,
-      "changePct": -0.88,
-      "unlockValue": 987054660,
-      "unlockValueYi": 9.8705466,
+      "price": 25.1,
+      "prevClose": 26.64,
+      "changePct": -5.78,
+      "unlockValue": 919638900,
+      "unlockValueYi": 9.196389,
       "issuePrice": 18.8,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -5794,7 +5794,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅43%，存在一定减持动力。解禁市值9.9亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅34%，存在一定减持动力。解禁市值9.2亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "01081.HK",
@@ -5930,11 +5930,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 28.36,
-      "prevClose": 30.1,
-      "changePct": -5.78,
-      "unlockValue": 1197285464,
-      "unlockValueYi": 11.97285464,
+      "price": 25.12,
+      "prevClose": 26.58,
+      "changePct": -5.49,
+      "unlockValue": 1060501088,
+      "unlockValueYi": 10.60501088,
       "issuePrice": 66.4,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -5942,7 +5942,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价跌幅57%，持仓处于亏损状态，解禁抛压相对可控。解禁市值12.0亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅62%，持仓处于亏损状态，解禁抛压相对可控。解禁市值10.6亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "01779.HK",
@@ -6094,11 +6094,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 83.85,
-      "prevClose": 89.3,
-      "changePct": -6.1,
-      "unlockValue": 594530040,
-      "unlockValueYi": 5.9453004,
+      "price": 90.85,
+      "prevClose": 89.75,
+      "changePct": 1.23,
+      "unlockValue": 644162840,
+      "unlockValueYi": 6.4416284,
       "issuePrice": 96.06,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -6106,7 +6106,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价低于发行价13%，基石投资者处于浮亏，被动减持可能性较低。解禁市值5.9亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价低于发行价5%，基石投资者处于浮亏，被动减持可能性较低。解禁市值6.4亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06675.HK",
@@ -6194,11 +6194,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 18.81,
-      "prevClose": 18.51,
-      "changePct": 1.62,
-      "unlockValue": 289929797,
-      "unlockValueYi": 2.8992979719,
+      "price": 18.16,
+      "prevClose": 18.25,
+      "changePct": -0.49,
+      "unlockValue": 279910958,
+      "unlockValueYi": 2.7991095783999995,
       "issuePrice": 18.36,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -6206,7 +6206,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价变动2%，浮动空间有限。解禁市值2.9亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价低于发行价1%，基石投资者处于浮亏，被动减持可能性较低。解禁市值2.8亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06067.HK",
@@ -6326,11 +6326,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 6.03,
-      "prevClose": 6.41,
-      "changePct": -5.93,
-      "unlockValue": 447522480,
-      "unlockValueYi": 4.4752248,
+      "price": 6.08,
+      "prevClose": 6.01,
+      "changePct": 1.16,
+      "unlockValue": 451233280,
+      "unlockValueYi": 4.5123328,
       "issuePrice": 8.98,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -6338,7 +6338,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价跌幅33%，持仓处于亏损状态，解禁抛压相对可控。解禁市值4.5亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅32%，持仓处于亏损状态，解禁抛压相对可控。解禁市值4.5亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06132.HK",
@@ -6402,11 +6402,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 33.24,
-      "prevClose": 36.6,
-      "changePct": -9.18,
-      "unlockValue": 207012072,
-      "unlockValueYi": 2.07012072,
+      "price": 34.48,
+      "prevClose": 34.26,
+      "changePct": 0.64,
+      "unlockValue": 214734544,
+      "unlockValueYi": 2.1473454399999996,
       "issuePrice": 81.8,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -6414,7 +6414,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价跌幅59%，持仓处于亏损状态，解禁抛压相对可控。解禁市值2.1亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅58%，持仓处于亏损状态，解禁抛压相对可控。解禁市值2.1亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "02335.HK",
@@ -6454,11 +6454,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 20.04,
-      "prevClose": 21.9,
-      "changePct": -8.49,
-      "unlockValue": 494607240,
-      "unlockValueYi": 4.9460724,
+      "price": 19.09,
+      "prevClose": 19.04,
+      "changePct": 0.26,
+      "unlockValue": 471160290,
+      "unlockValueYi": 4.7116029,
       "issuePrice": 18.2,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -6466,7 +6466,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价变动10%，浮动空间有限。解禁市值4.9亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价变动5%，浮动空间有限。解禁市值4.7亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06106.HK",
@@ -6546,11 +6546,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 54.95,
-      "prevClose": 54.9,
-      "changePct": 0.09,
-      "unlockValue": 249989530,
-      "unlockValueYi": 2.4998953,
+      "price": 54.5,
+      "prevClose": 54.8,
+      "changePct": -0.55,
+      "unlockValue": 247942300,
+      "unlockValueYi": 2.479423,
       "issuePrice": 101.6,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -6743,10 +6743,10 @@
         }
       ],
       "price": 4.88,
-      "prevClose": 4.97,
-      "changePct": -1.81,
-      "unlockValue": 1527440000,
-      "unlockValueYi": 15.2744,
+      "prevClose": 4.85,
+      "changePct": 0.52,
+      "unlockValue": 1525875000,
+      "unlockValueYi": 15.25875,
       "issuePrice": 10.18,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -6818,11 +6818,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 64.0,
-      "prevClose": 64.4,
-      "changePct": -0.62,
-      "unlockValue": 256038400,
-      "unlockValueYi": 2.560384,
+      "price": 62.15,
+      "prevClose": 62.45,
+      "changePct": -0.48,
+      "unlockValue": 248637290,
+      "unlockValueYi": 2.4863729,
       "issuePrice": 60.43,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -6830,7 +6830,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价变动6%，浮动空间有限。解禁市值2.6亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价变动3%，浮动空间有限。解禁市值2.5亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "03661.HK",
@@ -7054,11 +7054,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 72.3,
-      "prevClose": 74.45,
-      "changePct": -2.89,
-      "unlockValue": 1947855990,
-      "unlockValueYi": 19.4785599,
+      "price": 73.35,
+      "prevClose": 72.85,
+      "changePct": 0.69,
+      "unlockValue": 1976144355,
+      "unlockValueYi": 19.76144355,
       "issuePrice": 85.2,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -7066,7 +7066,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价低于发行价15%，基石投资者处于浮亏，被动减持可能性较低。解禁市值19.5亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价低于发行价14%，基石投资者处于浮亏，被动减持可能性较低。解禁市值19.8亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06228.HK",
@@ -7170,11 +7170,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 34.54,
-      "prevClose": 35.02,
-      "changePct": -1.37,
-      "unlockValue": 1546694257,
-      "unlockValueYi": 15.4669425746,
+      "price": 35.18,
+      "prevClose": 36.8,
+      "changePct": -4.4,
+      "unlockValue": 1575353329,
+      "unlockValueYi": 15.7535332882,
       "issuePrice": 26.6,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -7182,7 +7182,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅30%，存在一定减持动力。解禁市值15.5亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅32%，存在一定减持动力。解禁市值15.8亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "09630.HK",
@@ -7350,11 +7350,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 266.0,
-      "prevClose": 263.4,
-      "changePct": 0.99,
-      "unlockValue": 1706735800,
-      "unlockValueYi": 17.067358,
+      "price": 269.0,
+      "prevClose": 260.0,
+      "changePct": 3.46,
+      "unlockValue": 1725984700,
+      "unlockValueYi": 17.259847,
       "issuePrice": 246.43,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -7362,7 +7362,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价变动8%，浮动空间有限。解禁市值17.1亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价变动9%，浮动空间有限。解禁市值17.3亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "01191.HK",
@@ -7426,11 +7426,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 104.7,
-      "prevClose": 101.7,
-      "changePct": 2.95,
-      "unlockValue": 701092140,
-      "unlockValueYi": 7.0109214,
+      "price": 110.0,
+      "prevClose": 107.1,
+      "changePct": 2.71,
+      "unlockValue": 736582000,
+      "unlockValueYi": 7.36582,
       "issuePrice": 114.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -7438,7 +7438,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价低于发行价8%，基石投资者处于浮亏，被动减持可能性较低。解禁市值7.0亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价低于发行价4%，基石投资者处于浮亏，被动减持可能性较低。解禁市值7.4亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "09637.HK",
@@ -7606,11 +7606,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 23.14,
-      "prevClose": 24.8,
-      "changePct": -6.69,
-      "unlockValue": 653818363,
-      "unlockValueYi": 6.538183628600001,
+      "price": 22.5,
+      "prevClose": 22.22,
+      "changePct": 1.26,
+      "unlockValue": 635735228,
+      "unlockValueYi": 6.357352275,
       "issuePrice": 22.6,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -7618,7 +7618,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价变动2%，浮动空间有限。解禁市值6.5亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价低于发行价0%，基石投资者处于浮亏，被动减持可能性较低。解禁市值6.4亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "03952.HK",
@@ -7714,11 +7714,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 34.7,
-      "prevClose": 37.06,
-      "changePct": -6.37,
-      "unlockValue": 174888000,
-      "unlockValueYi": 1.74888,
+      "price": 32.98,
+      "prevClose": 33.16,
+      "changePct": -0.54,
+      "unlockValue": 166219200,
+      "unlockValueYi": 1.6621919999999997,
       "issuePrice": 85.5,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -7726,7 +7726,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价跌幅59%，持仓处于亏损状态，解禁抛压相对可控。解禁市值1.7亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅61%，持仓处于亏损状态，解禁抛压相对可控。解禁市值1.7亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06636.HK",
@@ -7758,11 +7758,11 @@
           "lockupMonths": 9
         }
       ],
-      "price": 67.5,
-      "prevClose": 69.65,
-      "changePct": -3.09,
-      "unlockValue": 79650000,
-      "unlockValueYi": 0.7965,
+      "price": 66.6,
+      "prevClose": 67.45,
+      "changePct": -1.26,
+      "unlockValue": 78588000,
+      "unlockValueYi": 0.78588,
       "issuePrice": 40.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -7770,7 +7770,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价涨幅69%，基石投资者浮盈丰厚，解禁后减持意愿较强。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅66%，基石投资者浮盈丰厚，解禁后减持意愿较强。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06715.HK",
@@ -7850,11 +7850,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 53.45,
-      "prevClose": 53.65,
-      "changePct": -0.37,
-      "unlockValue": 435409045,
-      "unlockValueYi": 4.35409045,
+      "price": 51.6,
+      "prevClose": 53.25,
+      "changePct": -3.1,
+      "unlockValue": 420338760,
+      "unlockValueYi": 4.2033876,
       "issuePrice": 75.5,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -7862,7 +7862,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价跌幅29%，持仓处于亏损状态，解禁抛压相对可控。解禁市值4.4亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅32%，持仓处于亏损状态，解禁抛压相对可控。解禁市值4.2亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06915.HK",
@@ -7886,11 +7886,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 9.29,
-      "prevClose": 8.91,
-      "changePct": 4.26,
-      "unlockValue": 41470560,
-      "unlockValueYi": 0.41470559999999995,
+      "price": 8.82,
+      "prevClose": 8.775,
+      "changePct": 0.51,
+      "unlockValue": 39372480,
+      "unlockValueYi": 0.3937248,
       "issuePrice": 11.2,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -7898,7 +7898,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价低于发行价17%，基石投资者处于浮亏，被动减持可能性较低。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅21%，持仓处于亏损状态，解禁抛压相对可控。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "00668.HK",
@@ -8010,11 +8010,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 106.0,
-      "prevClose": 107.3,
-      "changePct": -1.21,
-      "unlockValue": 2466800200,
-      "unlockValueYi": 24.668002,
+      "price": 106.7,
+      "prevClose": 106.2,
+      "changePct": 0.47,
+      "unlockValue": 2483090390,
+      "unlockValueYi": 24.8309039,
       "issuePrice": 99.32,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -8022,7 +8022,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价变动7%，浮动空间有限。解禁市值24.7亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价变动7%，浮动空间有限。解禁市值24.8亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06880.HK",
@@ -8150,11 +8150,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 150.0,
-      "prevClose": 150.0,
-      "changePct": 0.0,
-      "unlockValue": 1494015000,
-      "unlockValueYi": 14.94015,
+      "price": 154.2,
+      "prevClose": 152.1,
+      "changePct": 1.38,
+      "unlockValue": 1535847420,
+      "unlockValueYi": 15.3584742,
       "issuePrice": 295.6,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -8162,7 +8162,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价跌幅49%，持仓处于亏损状态，解禁抛压相对可控。解禁市值14.9亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅48%，持仓处于亏损状态，解禁抛压相对可控。解禁市值15.4亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "07687.HK",
@@ -8266,11 +8266,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 72.75,
-      "prevClose": 65.75,
-      "changePct": 10.65,
-      "unlockValue": 946593900,
-      "unlockValueYi": 9.465939,
+      "price": 72.45,
+      "prevClose": 73.0,
+      "changePct": -0.75,
+      "unlockValue": 942690420,
+      "unlockValueYi": 9.4269042,
       "issuePrice": 87.92,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -8278,7 +8278,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价低于发行价17%，基石投资者处于浮亏，被动减持可能性较低。解禁市值9.5亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价低于发行价18%，基石投资者处于浮亏，被动减持可能性较低。解禁市值9.4亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "00537.HK",
@@ -8350,11 +8350,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 21.1,
-      "prevClose": 20.84,
-      "changePct": 1.25,
-      "unlockValue": 220391610,
-      "unlockValueYi": 2.2039161,
+      "price": 20.92,
+      "prevClose": 20.94,
+      "changePct": -0.1,
+      "unlockValue": 218511492,
+      "unlockValueYi": 2.18511492,
       "issuePrice": 45.98,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -8362,7 +8362,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价跌幅54%，持仓处于亏损状态，解禁抛压相对可控。解禁市值2.2亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅55%，持仓处于亏损状态，解禁抛压相对可控。解禁市值2.2亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "01377.HK",
@@ -8514,11 +8514,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 203.6,
-      "prevClose": 211.8,
-      "changePct": -3.87,
-      "unlockValue": 1066151400,
-      "unlockValueYi": 10.661514,
+      "price": 209.6,
+      "prevClose": 203.2,
+      "changePct": 3.15,
+      "unlockValue": 1097570400,
+      "unlockValueYi": 10.975704,
       "issuePrice": 380.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -8526,7 +8526,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价跌幅46%，持仓处于亏损状态，解禁抛压相对可控。解禁市值10.7亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅45%，持仓处于亏损状态，解禁抛压相对可控。解禁市值11.0亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "02475.HK",
@@ -8766,11 +8766,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 48.7,
-      "prevClose": 49.5,
-      "changePct": -1.62,
-      "unlockValue": 9058200000,
-      "unlockValueYi": 90.582,
+      "price": 49.44,
+      "prevClose": 48.86,
+      "changePct": 1.19,
+      "unlockValue": 9195840000,
+      "unlockValueYi": 91.9584,
       "issuePrice": 63.28,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -8778,7 +8778,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价跌幅23%，持仓处于亏损状态，解禁抛压相对可控。解禁市值90.6亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅22%，持仓处于亏损状态，解禁抛压相对可控。解禁市值92.0亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "03752.HK",
@@ -8834,11 +8834,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 48.94,
-      "prevClose": 50.8,
-      "changePct": -3.66,
-      "unlockValue": 353987865,
-      "unlockValueYi": 3.5398786506,
+      "price": 49.5,
+      "prevClose": 49.54,
+      "changePct": -0.08,
+      "unlockValue": 358038400,
+      "unlockValueYi": 3.580384005,
       "issuePrice": 38.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -8846,7 +8846,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价涨幅29%，存在一定减持动力。解禁市值3.5亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅30%，存在一定减持动力。解禁市值3.6亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06951.HK",
@@ -8998,11 +8998,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 101.9,
-      "prevClose": 104.3,
-      "changePct": -2.3,
-      "unlockValue": 3622545000,
-      "unlockValueYi": 36.22545,
+      "price": 103.6,
+      "prevClose": 103.4,
+      "changePct": 0.19,
+      "unlockValue": 3682980000,
+      "unlockValueYi": 36.8298,
       "issuePrice": 100.3,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -9010,7 +9010,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价变动2%，浮动空间有限。解禁市值36.2亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价变动3%，浮动空间有限。解禁市值36.8亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "02249.HK",
@@ -9186,11 +9186,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 20.28,
-      "prevClose": 20.68,
-      "changePct": -1.93,
-      "unlockValue": 2190240000,
-      "unlockValueYi": 21.9024,
+      "price": 20.26,
+      "prevClose": 20.44,
+      "changePct": -0.88,
+      "unlockValue": 2188080000,
+      "unlockValueYi": 21.8808,
       "issuePrice": 32.3,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -9270,11 +9270,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 2.78,
-      "prevClose": 2.88,
-      "changePct": -3.47,
-      "unlockValue": 311360000,
-      "unlockValueYi": 3.1136,
+      "price": 2.79,
+      "prevClose": 2.785,
+      "changePct": 0.0,
+      "unlockValue": 311920000,
+      "unlockValueYi": 3.1192,
       "issuePrice": 3.48,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -9282,7 +9282,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价跌幅20%，持仓处于亏损状态，解禁抛压相对可控。解禁市值3.1亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价低于发行价20%，基石投资者处于浮亏，被动减持可能性较低。解禁市值3.1亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "03308.HK",
@@ -9578,11 +9578,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 894.0,
-      "prevClose": 903.0,
-      "changePct": -1.0,
-      "unlockValue": 24360963600,
-      "unlockValueYi": 243.609636,
+      "price": 897.0,
+      "prevClose": 890.0,
+      "changePct": 0.79,
+      "unlockValue": 24442711800,
+      "unlockValueYi": 244.427118,
       "issuePrice": 980.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -9590,7 +9590,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价低于发行价9%，基石投资者处于浮亏，被动减持可能性较低。解禁市值243.6亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价低于发行价8%，基石投资者处于浮亏，被动减持可能性较低。解禁市值244.4亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "02720.HK",
@@ -9622,11 +9622,11 @@
           "lockupMonths": 12
         }
       ],
-      "price": 22.12,
-      "prevClose": 21.08,
-      "changePct": 4.93,
-      "unlockValue": 234737440,
-      "unlockValueYi": 2.3473744,
+      "price": 21.92,
+      "prevClose": 21.94,
+      "changePct": -0.09,
+      "unlockValue": 232615040,
+      "unlockValueYi": 2.3261504000000004,
       "issuePrice": 12.25,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -9634,7 +9634,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价涨幅81%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值2.3亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅79%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值2.3亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "03223.HK",
@@ -9658,11 +9658,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 74.95,
-      "prevClose": 77.2,
-      "changePct": -2.91,
-      "unlockValue": 1126798300,
-      "unlockValueYi": 11.267983,
+      "price": 76.4,
+      "prevClose": 75.8,
+      "changePct": 0.79,
+      "unlockValue": 1148597600,
+      "unlockValueYi": 11.485976,
       "issuePrice": 0.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -9670,7 +9670,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "解禁市值11.3亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "解禁市值11.5亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "00625.HK",
@@ -9694,11 +9694,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 33.8,
-      "prevClose": 32.42,
-      "changePct": 4.26,
-      "unlockValue": 2091882000,
-      "unlockValueYi": 20.918819999999997,
+      "price": 35.44,
+      "prevClose": 34.38,
+      "changePct": 3.08,
+      "unlockValue": 2193381600,
+      "unlockValueYi": 21.933816,
       "issuePrice": 0.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -9706,7 +9706,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "解禁市值20.9亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "解禁市值21.9亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "09615.HK",
@@ -9730,11 +9730,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 78.7,
-      "prevClose": 79.95,
-      "changePct": -1.56,
-      "unlockValue": 1129447310,
-      "unlockValueYi": 11.2944731,
+      "price": 83.5,
+      "prevClose": 80.0,
+      "changePct": 4.38,
+      "unlockValue": 1198333550,
+      "unlockValueYi": 11.9833355,
       "issuePrice": 0.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -9742,7 +9742,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "解禁市值11.3亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "解禁市值12.0亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "09976.HK",
@@ -9766,11 +9766,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 171.7,
-      "prevClose": 177.5,
-      "changePct": -3.27,
-      "unlockValue": 862277400,
-      "unlockValueYi": 8.622774,
+      "price": 168.8,
+      "prevClose": 169.0,
+      "changePct": -0.12,
+      "unlockValue": 847713600,
+      "unlockValueYi": 8.477136,
       "issuePrice": 0.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -9778,7 +9778,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "解禁市值8.6亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "解禁市值8.5亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06658.HK",
@@ -9810,11 +9810,11 @@
           "lockupMonths": 9
         }
       ],
-      "price": 166.2,
-      "prevClose": 175.5,
-      "changePct": -5.3,
-      "unlockValue": 562936020,
-      "unlockValueYi": 5.6293602,
+      "price": 162.9,
+      "prevClose": 127.3,
+      "changePct": 27.97,
+      "unlockValue": 551758590,
+      "unlockValueYi": 5.5175859,
       "issuePrice": 44.09,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -9822,7 +9822,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅277%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值5.6亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅269%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值5.5亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06727.HK",
@@ -9846,11 +9846,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 31.72,
-      "prevClose": 33.12,
-      "changePct": -4.23,
-      "unlockValue": 47786180,
-      "unlockValueYi": 0.4778618,
+      "price": 31.8,
+      "prevClose": 32.28,
+      "changePct": -1.49,
+      "unlockValue": 47906700,
+      "unlockValueYi": 0.479067,
       "issuePrice": 0.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -9918,11 +9918,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 30.36,
-      "prevClose": 29.94,
-      "changePct": 1.4,
-      "unlockValue": 2455416612,
-      "unlockValueYi": 24.55416612,
+      "price": 30.54,
+      "prevClose": 30.68,
+      "changePct": -0.46,
+      "unlockValue": 2469974418,
+      "unlockValueYi": 24.69974418,
       "issuePrice": 0.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -9930,7 +9930,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "解禁市值24.6亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "解禁市值24.7亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "03228.HK",
@@ -9954,11 +9954,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 74.95,
-      "prevClose": 71.2,
-      "changePct": 5.27,
-      "unlockValue": 2607390580,
-      "unlockValueYi": 26.0739058,
+      "price": 72.6,
+      "prevClose": 71.75,
+      "changePct": 1.18,
+      "unlockValue": 2525637840,
+      "unlockValueYi": 25.2563784,
       "issuePrice": 0.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -9966,7 +9966,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "解禁市值26.1亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "解禁市值25.3亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "03757.HK",
@@ -9990,11 +9990,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 369.0,
-      "prevClose": 385.8,
-      "changePct": -4.35,
-      "unlockValue": 1708285500,
-      "unlockValueYi": 17.082855,
+      "price": 421.0,
+      "prevClose": 384.6,
+      "changePct": 9.46,
+      "unlockValue": 1949019500,
+      "unlockValueYi": 19.490195,
       "issuePrice": 0.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -10002,7 +10002,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "解禁市值17.1亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "解禁市值19.5亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06731.HK",
@@ -10026,11 +10026,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 30.98,
-      "prevClose": 31.44,
-      "changePct": -1.46,
-      "unlockValue": 920146274,
-      "unlockValueYi": 9.20146274,
+      "price": 32.6,
+      "prevClose": 31.2,
+      "changePct": 4.49,
+      "unlockValue": 968262380,
+      "unlockValueYi": 9.6826238,
       "issuePrice": 0.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -10038,7 +10038,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "解禁市值9.2亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "解禁市值9.7亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "09607.HK",
@@ -10062,11 +10062,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 39.12,
-      "prevClose": 39.82,
-      "changePct": -1.76,
-      "unlockValue": 883235712,
-      "unlockValueYi": 8.83235712,
+      "price": 39.88,
+      "prevClose": 40.0,
+      "changePct": -0.3,
+      "unlockValue": 900394688,
+      "unlockValueYi": 9.00394688,
       "issuePrice": 0.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -10074,7 +10074,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "解禁市值8.8亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "解禁市值9.0亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06802.HK",
@@ -10098,11 +10098,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 106.6,
-      "prevClose": 105.8,
-      "changePct": 0.76,
-      "unlockValue": 199256613,
-      "unlockValueYi": 1.9925661339999998,
+      "price": 103.8,
+      "prevClose": 106.1,
+      "changePct": -2.17,
+      "unlockValue": 194022856,
+      "unlockValueYi": 1.940228562,
       "issuePrice": 0.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -10110,7 +10110,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "解禁市值2.0亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "解禁市值1.9亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "01256.HK",
@@ -10134,11 +10134,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 1.35,
-      "prevClose": 1.5,
-      "changePct": -9.67,
-      "unlockValue": 1014895000,
-      "unlockValueYi": 10.14895,
+      "price": 1.33,
+      "prevClose": 1.345,
+      "changePct": -1.12,
+      "unlockValue": 996170000,
+      "unlockValueYi": 9.9617,
       "issuePrice": 0.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -10146,7 +10146,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "解禁市值10.1亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "解禁市值10.0亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "02636.HK",
@@ -10206,11 +10206,11 @@
           "lockupMonths": 9
         }
       ],
-      "price": 34.96,
-      "prevClose": 35.26,
-      "changePct": -0.85,
-      "unlockValue": 57138624,
-      "unlockValueYi": 0.57138624,
+      "price": 35.0,
+      "prevClose": 35.14,
+      "changePct": -0.4,
+      "unlockValue": 57204000,
+      "unlockValueYi": 0.57204,
       "issuePrice": 0.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -10250,11 +10250,11 @@
           "lockupMonths": 12
         }
       ],
-      "price": 68.65,
-      "prevClose": 71.7,
-      "changePct": -4.25,
-      "unlockValue": 88009300,
-      "unlockValueYi": 0.880093,
+      "price": 65.35,
+      "prevClose": 70.0,
+      "changePct": -6.64,
+      "unlockValue": 83778700,
+      "unlockValueYi": 0.837787,
       "issuePrice": 15.6,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -10262,7 +10262,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价涨幅340%，基石投资者浮盈丰厚，解禁后减持意愿较强。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅319%，基石投资者浮盈丰厚，解禁后减持意愿较强。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "02726.HK",
@@ -10286,11 +10286,11 @@
           "lockupMonths": 18
         }
       ],
-      "price": 82.05,
-      "prevClose": 82.65,
-      "changePct": -0.73,
-      "unlockValue": 1650599850,
-      "unlockValueYi": 16.5059985,
+      "price": 79.7,
+      "prevClose": 79.0,
+      "changePct": 0.89,
+      "unlockValue": 1603324900,
+      "unlockValueYi": 16.033249,
       "issuePrice": 77.03,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -10298,7 +10298,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价变动7%，浮动空间有限。解禁市值16.5亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价变动3%，浮动空间有限。解禁市值16.0亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "02520.HK",
@@ -10374,11 +10374,11 @@
           "lockupMonths": 7
         }
       ],
-      "price": 1.88,
-      "prevClose": 1.95,
-      "changePct": -3.85,
-      "unlockValue": 100928438,
-      "unlockValueYi": 1.009284375,
+      "price": 1.85,
+      "prevClose": 1.86,
+      "changePct": -0.54,
+      "unlockValue": 99582725,
+      "unlockValueYi": 0.99582725,
       "issuePrice": 5.5,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -10386,7 +10386,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价跌幅66%，持仓处于亏损状态，解禁抛压相对可控。解禁市值1.0亿港元，对短期盘面有一定影响。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅66%，持仓处于亏损状态，解禁抛压相对可控。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "06810.HK",
@@ -10418,11 +10418,11 @@
           "lockupMonths": 11
         }
       ],
-      "price": 55.2,
-      "prevClose": 58.6,
-      "changePct": -5.8,
-      "unlockValue": 635948160,
-      "unlockValueYi": 6.3594816,
+      "price": 56.0,
+      "prevClose": 57.15,
+      "changePct": -2.01,
+      "unlockValue": 645164800,
+      "unlockValueYi": 6.451648,
       "issuePrice": 24.86,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -10430,7 +10430,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": true,
-      "riskText": "现价较发行价涨幅122%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值6.4亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价涨幅125%，基石投资者浮盈丰厚，解禁后减持意愿较强。解禁市值6.5亿港元，属于大额解禁，关注集中抛售风险。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "03636.HK",
@@ -10510,11 +10510,11 @@
           "lockupMonths": 6
         }
       ],
-      "price": 16.7,
-      "prevClose": 16.74,
-      "changePct": -0.24,
-      "unlockValue": 86626240,
-      "unlockValueYi": 0.8662624,
+      "price": 17.09,
+      "prevClose": 16.93,
+      "changePct": 0.95,
+      "unlockValue": 88649248,
+      "unlockValueYi": 0.88649248,
       "issuePrice": 30.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -10522,7 +10522,7 @@
       "deviation": 0,
       "deviationFlag": "ok",
       "isLarge": false,
-      "riskText": "现价较发行价跌幅44%，持仓处于亏损状态，解禁抛压相对可控。本页面数据仅供资讯参考，不构成任何投资建议。"
+      "riskText": "现价较发行价跌幅43%，持仓处于亏损状态，解禁抛压相对可控。本页面数据仅供资讯参考，不构成任何投资建议。"
     },
     {
       "code": "02619.HK",
@@ -10546,11 +10546,11 @@
           "lockupMonths": 60
         }
       ],
-      "price": 1.01,
-      "prevClose": 1.1,
-      "changePct": -7.73,
-      "unlockValue": 30466240,
-      "unlockValueYi": 0.30466239999999994,
+      "price": 1.1,
+      "prevClose": 1.105,
+      "changePct": -0.45,
+      "unlockValue": 33017600,
+      "unlockValueYi": 0.330176,
       "issuePrice": 0.0,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -10563,5 +10563,5 @@
   ],
   "dropped": [],
   "warnings": [],
-  "today": "2026-10-13"
+  "today": "2026-10-14"
 }
