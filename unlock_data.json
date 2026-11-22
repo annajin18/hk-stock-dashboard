@@ -5483,11 +5483,10 @@
       "listingDate": "2026-05-22",
       "liftDate": "2026-11-22",
       "liftDateObj": "2026-11-22",
-      "totalShares": 3082500,
+      "totalShares": 3082450,
       "totalAmountHKD": 233341465,
       "unlockType": "基石解禁",
       "industry": "药品",
-      "source": "智通财经",
       "investors": [
         {
           "name": "AMR Action Fund, L.P",
@@ -5530,11 +5529,12 @@
           "lockupMonths": 6
         }
       ],
+      "source": "Excel补充",
       "price": 73.3,
       "prevClose": 74.5,
       "changePct": -1.61,
-      "unlockValue": 225947250,
-      "unlockValueYi": 2.2594725,
+      "unlockValue": 225943585,
+      "unlockValueYi": 2.25943585,
       "issuePrice": 75.7,
       "ccassValidated": false,
       "ccassRatio": 0,
@@ -10887,5 +10887,5 @@
   ],
   "dropped": [],
   "warnings": [],
-  "today": "2026-11-21"
+  "today": "2026-11-22"
 }
